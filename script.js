@@ -1,10 +1,11 @@
 
-let generateBtn = document.querySelector('#generatebtn');
+let generateTextBtn = document.querySelector('#generateTextbtn');
+let generateImageBtn = document.querySelector('#generateImagebtn');
 let result = document.querySelector('.motivation');
 // let generateBtn = document.querySelector('#generatebtn');
 
 
-generateBtn.addEventListener('click', function(event)
+generateTextBtn.addEventListener('click', function(event)
 {
     event.preventDefault();
 
@@ -14,15 +15,18 @@ generateBtn.addEventListener('click', function(event)
     })
     .then(function(data) {
         
+        // console.log(data);
         let randomValue = Math.floor((Math.random() * 1) + (Math.random() * 9));
         result.innerHTML = data[randomValue].text;
     
-        // console.log(data[randomValue].text);
+        console.log(data[randomValue].text);
+        console.log(data[randomValue].author);
     });
+});
 
+generateImageBtn.addEventListener('click', function(event){
 
-    // images 
-var image = '';
+    var image = '';
 
 
 $(document).ready(function(){
@@ -77,12 +81,14 @@ $(document).ready(function(){
 
 
 
+
 });
 
 
 
 
-// background  
+//************************ [[ background canvas ]] **********************************************
+
 var HTMLbody = document.querySelector('body');
 var positionInfo = HTMLbody.getBoundingClientRect();
 var bodyHeight =  document.body.clientHeight;
@@ -102,36 +108,6 @@ canvas.height = bodyHeight;
 
 
 var c = canvas.getContext("2d");
-
-// c.fillRect(x,y,x-size,y-size)
-// c.fillStyle = 'rgba(255, 0, 0, 0.5)';  // for changing the color of line
-// c.fillRect(100, 100, 100, 100);
-// c.fillStyle = 'rgba(0, 0, 255, 0.5)';  // for changing the color of line
-// c.fillRect(400, 100, 100, 100);
-// c.fillStyle = 'rgba(0, 255, 0, 0.5)';  // for changing the color of line
-// c.fillRect(300, 300, 100, 100);
-
-
-// Line  
-// c.beginPath();
-// c.moveTo(50, 300);
-// c.lineTo(300, 100);
-// c.lineTo(400, 300);
-// c.strokeStyle ="#fa74aa";   // for changing the color of line
-// c.stroke();
-
-
-
-// arc / circle  
-// for(var i = 0 ; i< 100; i++)
-// {
-//     var x = Math.random() * window.bodyWidth;
-//     var y = Math.random() * window.bodyHeight;
-//     c.beginPath();
-//     c.arc(x, y, 30, 0, Math.PI * 2, false);
-//     c.strokeStyle = 'blue';
-//     c.stroke();
-// }
 
 var mouse = {   // mouse object
     x: undefined, 
@@ -219,18 +195,13 @@ function Circle(x, y, dx, dy, radius) {   // object name is always capital lette
     
 }
 
-// var x = Math.random() * window.bodyWidth;
-// var y = Math.random() * window.bodyHeight;
-// var dx = Math.random() - 0.5 * 8;
-// var dy = Math.random() - 0.5 * 8;
-// var radius = 30;
 
 
 var circleArray = [];
 function init()
 {
     circleArray = [];
-    for( var i =0; i< 1200; i++)
+    for( var i =0; i< 500; i++)
     {
         var radius = Math.random() * .5 + 1;
         var x = Math.random() * (window.bodyWidth - radius * 2) + radius;
