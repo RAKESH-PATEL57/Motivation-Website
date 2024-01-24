@@ -18,66 +18,73 @@ body
   height: 100vh;
   overflow: hidden;
   background: var(--bg-image);
+  /* position: relative; */
+  
+}
+
+canvas
+{
+    width: 100%;
+    position: absolute;
+    border: 2px solid red;
+    top: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-
-#Motivatimg img
+/* #Motivatimg img
 {
     height: 100vh;
     width: 100vw;
     object-fit: cover;
     position: absolute;
     opacity: .8;
-    /* background: linear-gradient(aqua, purple, blue); */
-    /* background: black; */
-}
+    /* background: linear-gradient(aqua, purple, blue); 
+    /* background: black; 
+} */
 
 
-.heading
+.motivation-content
 {
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40rem;
-    z-index: 11;
-    height: 100vh;
-    /* border: 2px solid red; */
+    gap: 4rem;
+    /* z-index: 11; */
+    margin-top: 5rem;
     width: 100%;
-    position: absolute;
     color: var(--text-color);
-    /* backdrop-filter: blur(10px); */
+    font-size: 2.5rem;
+    text-align: center;
+
 }
 
 .motivation-content .motivation-heading
 {
-    /* border: 2px solid aqua; */
-    width: 50%;
-    font-size: 2.5rem;
-    text-align: center;
-   
+    z-index: 10;
 }
+
 
 .motivation-content .motivation-line
 {
-    /* border: 2px solid red; */
-    /* text-align: center; */
     width: 50%;
-    height: 10rem;
     gap: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 10;
+    /* border: 2px solid red; */
 }
 
 .btn
 {
     cursor: pointer;
-    position: absolute;
-    bottom: 0;
     padding: 0.5rem 2rem;
     border-radius: 1rem;
     background: transparent;
@@ -85,6 +92,7 @@ body
     color: var(--font-color);
     transition: .3s linear;
     font-size: 1.1rem;
+    z-index: 10;
 }
 
 .btn:hover

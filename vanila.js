@@ -1,4 +1,4 @@
-var HTMLbody = document.querySelector('body');
+// var HTMLbody = document.querySelector('body');
 // var positionInfo = HTMLbody.getBoundingClientRect();
 var bodyHeight =  document.body.clientHeight;
 var bodyWidth =  document.body.clientWidth;
