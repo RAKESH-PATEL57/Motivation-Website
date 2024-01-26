@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 
@@ -63,10 +64,16 @@ canvas
 
 }
 
-.motivation-content .motivation-heading
+.motivation-content .motivation-heading h1 span
 {
     z-index: 10;
+    font-family: normal;
+    /* border: 2px solid red; */
+    color: aqua;
+    text-shadow: 0rem 0rem 1rem aqua;
+    text-transform:uppercase;
 }
+
 
 
 .motivation-content .motivation-line
@@ -100,4 +107,6 @@ canvas
     background: var(--main-color);
     color: var(--hover-font-color);
 }
+
+
 
