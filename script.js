@@ -13,12 +13,13 @@ generateTextBtn.addEventListener('click', function(event)
     .then(function(response) {
         return response.json();
     })
+   
     .then(function(data) {
-        
+        // result.innerHTML ='rakesh';
         // console.log(data);
         let randomValue = Math.floor((Math.random() * 1) + (Math.random() * 9));
         result.innerHTML = data[randomValue].text;
-    
+        console.log(result.innerHTML.clientWidth);
         console.log(data[randomValue].text);
         console.log(data[randomValue].author);
     });
