@@ -2,13 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
 }
 
 
 :root
 {
-    --bg-image:black;
+    --bg-image:rgb(1, 0, 19);
     --text-color:white;
     --main-color:aqua;
     --hover-font-color:black;
@@ -16,8 +16,8 @@
 
 body
 {
-  height: 100vh;
-  overflow: hidden;
+  /* height: 100vh; */
+  /* overflow: hidden; */
   background: var(--bg-image);
   /* position: relative; */
   
@@ -35,18 +35,30 @@ canvas
     align-items: center;
 }
 
-
-/* #Motivatimg img
+.motivation-container
 {
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    position: absolute;
-    opacity: .8;
-    /* background: linear-gradient(aqua, purple, blue); 
-    /* background: black; 
-} */
+    /* border: 2px solid red; */
+    /* width: 50vw; */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
 
+.motivation-container::before
+{
+    content: '';
+    position: absolute;
+    width: 50%;
+    border: 2px solid white;
+    height: 90vh;
+    box-shadow: inset 0rem 0rem .5rem aqua,
+                0rem 0rem .5rem aqua;
+    border-radius: 1rem;
+    overflow: hidden;
+}
 
 .motivation-content
 {
@@ -59,9 +71,14 @@ canvas
     margin-top: 5rem;
     width: 100%;
     color: var(--text-color);
-    font-size: 2.5rem;
     text-align: center;
+    position:absolute;
+    top: 0;
+}
 
+.motivation-content .motivation-heading h1
+{
+    font-size: 3.5rem;
 }
 
 .motivation-content .motivation-heading h1 span
@@ -69,8 +86,10 @@ canvas
     z-index: 10;
     font-family: normal;
     /* border: 2px solid red; */
-    color: aqua;
-    text-shadow: 0rem 0rem 1rem aqua;
+    color: rgb(0, 0, 0);
+    
+    text-shadow:0rem .5rem .1rem aqua;
+    
     text-transform:uppercase;
 }
 
@@ -110,12 +129,77 @@ canvas
 
 .motivation-content .motivation-line .motivation
 {
+    margin-top: 4.5rem;
    font-size: 2.5rem;
-   /* text-align: left; */
+   color: aqua;
+   text-shadow: -.5rem .1rem 10px aqua;
+   animation: motivation-text 5s linear infinite;
+}
+
+@keyframes motivation-text
+{
+   0%{
+       text-shadow: -.5rem .1rem 10px aqua;
+   }
+   50%{
+       text-shadow: .5rem .1rem 10px aqua;
+   }
+   100%{
+       text-shadow: -.5rem .5rem 10px aqua;
+   }
 }
 
 
 /* loading section   */
 
+.loading
+{
+    color: white;
+    position: absolute;
+    top: 80%;
+    z-index: 100;
+    width: 8rem;
+}
 
+/* .loading-bar
+{
+    width: 0px;
+    /* width: 515px; 
+    height: 8px;
+    background:aqua;
+    transition: .5s linear;
+    opacity: 0;
+} */
+
+/* .loading-bar.rakesh
+{
+    width: 20rem;
+    opacity: 1;
+} */
+
+.loading-bar
+{
+    font-size: 1.2rem;
+    transition: .1s linear;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+}
+
+.loading-text
+{
+   font-size: 1.4rem;
+   width: 0rem;
+   overflow: hidden;
+   transition: .5s linear;
+   /* border-bottom: 2px solid red;  */
+}
+
+.loading-text.loading-progress
+{
+    width: 8rem;
+}
 
