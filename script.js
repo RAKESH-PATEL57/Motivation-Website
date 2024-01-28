@@ -4,10 +4,18 @@ let generateImageBtn = document.querySelector('#generateImagebtn');
 let result = document.querySelector('.motivation');
 // let generateBtn = document.querySelector('#generatebtn');
 
+// loading 
+// const [loading, setLoading] = useState(false);
 
 generateTextBtn.addEventListener('click', function(event)
 {
     event.preventDefault();
+
+    
+    const loading = document.querySelector('.loading-text');
+    const loadingbar = document.querySelector('.loading-bar');
+  
+    // loadingbar.style.width='0px';
 
     fetch("https://type.fit/api/quotes")
     .then(function(response) {
@@ -15,14 +23,26 @@ generateTextBtn.addEventListener('click', function(event)
     })
    
     .then(function(data) {
+       
         // result.innerHTML ='rakesh';
         // console.log(data);
         let randomValue = Math.floor((Math.random() * 1) + (Math.random() * 9));
         result.innerHTML = data[randomValue].text;
-        console.log(result.innerHTML.clientWidth);
+        // console.log(result.innerHTML.clientWidth);
         console.log(data[randomValue].text);
         console.log(data[randomValue].author);
+    })
+    .then(onload = () => {
+        // loading.innerHTML = 'loading succesful';
+        // loading.style.width='8rem';
+        // loadingbar.style.width='512px';
+        // loading.innerHTML = 'loading succesful';
+        loading.classList.toggle('loading-progress');
+        // loadingbar.classList.toggle('rakesh');
+        loading.style.opacity = 0;
     });
+   loadingbar.classList.toggle('rakesh');
+   loading.style.opacity = 1;
 });
 
 // generateImageBtn.addEventListener('click', function(event){
