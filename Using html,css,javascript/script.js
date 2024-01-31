@@ -2,11 +2,13 @@
 let generateTextBtn = document.querySelector('#generateTextbtn');
 let generateImageBtn = document.querySelector('#generateImagebtn');
 let result = document.querySelector('.motivation');
+const speakeBtn = document.querySelector('#Speakerbtn');
 // let generateBtn = document.querySelector('#generatebtn');
 
 // loading 
 // const [loading, setLoading] = useState(false);
 
+var count = 1;  // speking ko ek se jyada baar rokne ke liye
 generateTextBtn.addEventListener('click', function(event)
 {
     event.preventDefault();
@@ -37,13 +39,53 @@ generateTextBtn.addEventListener('click', function(event)
         // loading.style.width='8rem';
         // loadingbar.style.width='512px';
         // loading.innerHTML = 'loading succesful';
-        loading.classList.toggle('loading-progress');
+        
+        // *
+        // loading.classList.toggle('loading-progress');
+        // loading.style.opacity = 0;
+        // *
+
         // loadingbar.classList.toggle('rakesh');
-        loading.style.opacity = 0;
+
+        speakeBtn.style.opacity=1;
+        speakeBtn.style.border = '2px solid aqua';
+        speakeBtn.style.pointerEvents='auto';
+        if(count == 1)
+        {
+
+            speakeBtn.addEventListener('click', function()
+            {
+                voices = window.speechSynthesis.getVoices();
+                
+                var motivationLineSpeaker = new SpeechSynthesisUtterance();
+                
+            motivationLineSpeaker.voice = voices[0];
+            motivationLineSpeaker.lang = voices.lang;
+            // utterance.lang = voices[23].lang;
+            motivationLineSpeaker.text = result.innerHTML;
+            
+            speechSynthesis.speak(motivationLineSpeaker);
+            console.log('click');
+            count++;
+        });
+        }
+        
     });
-   loadingbar.classList.toggle('rakesh');
-   loading.style.opacity = 1;
+//    loadingbar.classList.toggle('rakesh');
+//    loading.style.opacity = 0;
 });
+
+count = 1;
+
+
+
+// window.speechSynthesis.onvoiceschanged = function() {
+//   voices = window.speechSynthesis.getVoices()
+//   var utterance = new SpeechSynthesisUtterance("bargarh");
+//   utterance.voice = voices[19];
+//   utterance.lang = voices[0].lang;
+//   window.speechSynthesis.speak(utterance);
+//   };
 
 // generateImageBtn.addEventListener('click', function(event){
 
