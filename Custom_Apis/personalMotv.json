@@ -1,0 +1,59 @@
+[
+    {
+        "id":1,
+        "motivationLine":"“The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.”",
+        "writer":"Winston Churchill"
+      },
+      {
+        "id":2,
+        "motivationLine":"“Don’t let yesterday take up too much of today.”",
+        "writer":"Will Rogers"
+      },
+      {
+        "id":3,
+        "motivationLine":"“The people who succeed aren’t the ones who avoid failure; they’re the ones who learn how to respond to failure with optimism.”",
+        "writer":"Darrin Donnelly"
+      },
+      {
+        "id":4,
+        "motivationLine":"“If you are working on something that you really care about, you don’t have to be pushed. The vision pulls you.”",
+        "writer":"Steve Jobs"
+      },
+      {
+        "id":5,
+        "motivationLine":"“Experience is a hard teacher because she gives the test first, the lesson afterward.”",
+        "writer":"Vernon Sanders Law"
+      },
+      {
+        "id":6,
+        "motivationLine":"“To know how much there is to know is the beginning of learning to live.”",
+        "writer":"Dorothy West"
+      },
+      {
+        "id":7,
+        "motivationLine":"“Goal setting is the secret to a compelling future.”",
+        "writer":"LeBron James"
+      },
+      {
+        "id":8,
+        "motivationLine":"“Don’t be afraid of failure. This is the way to succeed.”",
+        "writer":"Tony Robbins"
+      },
+      {
+        "id":9,
+        "motivationLine":"“Failure will never overtake me if my determination to succeed is strong enough.”",
+        "writer":"Og Mandino"
+      },
+      {
+        "id":10,
+        "motivationLine":"“It is literally true that you can succeed best and quickest by helping others to succeed.”",
+        "writer":"Napoleon Hill"
+      },
+      {
+        "id":11,
+        "motivationLine":"“We met for a reason, either you’re a blessing or a lesson.”",
+        "writer":"Frank Ocean"
+      }
+ 
+      
+]

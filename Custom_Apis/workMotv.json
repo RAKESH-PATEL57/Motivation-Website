@@ -1,0 +1,52 @@
+[
+    {
+        "id":1,
+        "motivationLine":"“Work hard in silence, let success make the noise.”",
+        "writer":"Frank Ocean"
+    },
+    {
+        "id":2,
+        "motivationLine":"“Concentrate all your thoughts upon the work in hand. The sun’s rays do not burn until brought to a focus.”",
+        "writer":"Alexander Graham Bell"
+    },
+    {
+        "id":3,
+        "motivationLine":"“Either you run the day or the day runs you.”",
+        "writer":"Jim Rohn"
+    },
+    {
+        "id":4,
+        "motivationLine":"“I’m a great believer in luck, and I find the harder I work, the more I have of it.”",
+        "writer":"Thomas Jefferson"
+    },
+    {
+        "id":5,
+        "motivationLine":"“When we strive to become better than we are, everything around us becomes better too.”",
+        "writer":"Paulo Coelho"
+    },
+    {
+        "id":6,
+        "motivationLine":"“Opportunity is missed by most people because it is dressed in overalls and looks like work.”",
+        "writer":"Thomas Edison"
+    },
+    {
+        "id":7,
+        "motivationLine":"“Setting goals is the first step in turning the invisible into the visible.”",
+        "writer":"Tony Robbins"
+    },
+    {
+        "id":8,
+        "motivationLine":"“Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven’t found it yet, keep looking. Don’t settle. As with all matters of the heart, you’ll know when you find it.” ",
+        "writer":"Steve Jobs"
+    },
+    {
+        "id":9,
+        "motivationLine":"“Every pain gives a lesson and every lesson changes a person.”",
+        "writer":"Anonymous"
+    },
+    {
+        "id":10,
+        "motivationLine":"“There is always a reason to smile. You just have to find one.”",
+        "writer":"De philosopher DJ Kyos"
+    }
+]

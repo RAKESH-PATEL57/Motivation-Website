@@ -1,0 +1,63 @@
+[
+  {
+    "id":1,
+    "image":"../images/Success/success-1.jpg",
+    "motivationLine":"“Success is not final; failure is not fatal: It is the courage to continue that counts.”",
+    "writer":"Winston Churchill"
+  },
+  {
+    "id":2,
+    "image":"../images/Success/success-2.jpg",
+    "motivationLine":"“It is better to fail in originality than to succeed in imitation.”",
+    "writer":"Herman Melville"
+  },
+  {
+    "id":3,
+    "image":"../images/Success/success-1.jpg",
+    "motivationLine":"“The road to success and the road to failure are almost exactly the same.”",
+    "writer":"Colin R. Davis"
+  },
+  {
+    "id":4,
+    "image":"../images/Success/success-2.jpg",
+    "motivationLine":"“Success usually comes to those who are too busy to be looking for it.”",
+    "writer":"Henry David Thoreau"
+  },
+  {
+    "id":5,
+    "image":"../images/Success/success-1.jpg",
+    "motivationLine":"“Develop success from failures. Discouragement and failure are two of the surest stepping stones to success.”",
+    "writer":"Dale Carnegie"
+  },
+  {
+    "id":6,
+    "image":"../images/Success/success-1.jpg",
+    "motivationLine":"“Nothing in the world can take the place of persistence. Talent will not; nothing is more common than unsuccessful men with talent. Genius will not; unrewarded genius is almost a proverb. Education will not; the world is full of educated derelicts. The slogan ‘Press On’ has solved and always will solve the problems of the human race.”",
+    "writer":"Calvin Coolidge"
+  },
+  {
+    "id":7,
+    "image":"../images/Success/success-2.jpg",
+    "motivationLine":"“There are three ways to ultimate success: The first way is to be kind. The second way is to be kind. The third way is to be kind.”",
+    "writer":"Mister Rogers"
+  },
+  {
+    "id":8,
+    "image":"../images/Success/success-1.jpg",
+    "motivationLine":"“Success is peace of mind, which is a direct result of self-satisfaction in knowing you made the effort to become the best of which you are capable.”",
+    "writer":"John Wooden"
+  },
+  {
+    "id":9,
+    "image":"../images/Success/success-2.jpg",
+    "motivationLine":"“I never dreamed about success. I worked for it.”",
+    "writer":"Estée Lauder"
+  },
+  {
+    "id":10,
+    "image":"../images/Success/success-1.jpg",
+    "motivationLine":"“Success is getting what you want; happiness is wanting what you get.”",
+    "writer":"W. P. Kinsella"
+  }
+
+]
