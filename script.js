@@ -1,14 +1,123 @@
 //************************ [[ getting data from custom API ]] **********************************************
-let url = "./Custom_Apis/successMotvQuotes.json";
-async function rakesh()
+let deepMotv = "./Custom_Apis/deepMotv.json";
+let personalMotv = "./Custom_Apis/personalMotv.json";
+let successMotv = "./Custom_Apis/successMotv.json";
+let workMotv = "./Custom_Apis/workMotv.json";
+
+async function deepMotvGenerating()
 {
-    const MenuData = await fetch(url);
+    const MenuData = await fetch(deepMotv);
     const motivationLines = await MenuData.json();
     // console.log(MenuData);
     console.log(motivationLines[0].image);
 }
 
-rakesh();
+async function personalMotvGenerating()
+{
+    const MenuData = await fetch(personalMotv);
+    const motivationLines = await MenuData.json();
+    // console.log(MenuData);
+    console.log(motivationLines[0].image);
+}
+
+async function workMotvGenerating()
+{
+    const MenuData = await fetch(workMotv);
+    const motivationLines = await MenuData.json();
+    // console.log(MenuData);
+    console.log(motivationLines[0].image);
+}
+
+
+
+// deepMotvGenerating();
+// personalMotvGenerating();
+
+// workMotvGenerating();
+
+
+// let allCards = document.querySelectorAll('.card-details');
+
+// for(i=0;i<allCards.length;i++)
+// {
+    
+//     allCards[i].addEventListener('click',(e) => {
+//         console.log(e.target.style.border="5px solid red");
+//     });
+// }
+
+
+let homepage = document.querySelector('.home-page');
+let secondPage = document.querySelector('.second-page');
+let successMotvOpen = document.querySelector('#successMotvOpen');
+let backToHomeBtn = document.querySelector('.backtohomebtn');
+
+let motivationImg = document.querySelector('#motivation-img');
+let motivationHeading = document.querySelector('#motivation-heading');
+let motivationWriter = document.querySelector('#motivation-writer');
+
+let nextMotvBtn = document.querySelector('#next-Motv');
+let prevMotvBtn = document.querySelector('#prev-Motv');
+
+
+
+successMotvOpen.addEventListener('click',(e) => {
+    homepage.classList.add('homepage-OpenClose');
+    secondPage.classList.add('secondpage-OpenClose');
+
+    successMotvGenerating();
+
+});
+
+backToHomeBtn.addEventListener('click',(e) => {
+    homepage.classList.remove('homepage-OpenClose');
+    secondPage.classList.remove('secondpage-OpenClose');
+});
+
+async function successMotvGenerating()
+{
+    const MenuData = await fetch(successMotv);
+    const motivationLines = await MenuData.json();
+    console.log(motivationLines.length);
+    motivationImg.src = motivationLines[0].image;
+    motivationHeading.innerHTML = motivationLines[0].motivationLine;
+    motivationWriter.innerHTML = motivationLines[0].writer;
+  
+    let mcount = 0;
+    nextMotvBtn.addEventListener('click',() => {
+        // console.log('click');
+        if(mcount < motivationLines.length - 1)
+        {
+
+            mcount++;
+            motivationImg.src = motivationLines[mcount].image;
+            motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
+            motivationWriter.innerHTML = motivationLines[mcount].writer;
+            console.log(mcount);
+        }
+        else
+        {
+            mcount = 0;
+        }
+    });
+
+    prevMotvBtn.addEventListener('click',() => {
+
+        if(mcount>0)
+        {
+            mcount--;
+            // motivationImg.src = motivationLines[i--].image;
+            motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
+            motivationWriter.innerHTML = motivationLines[mcount].writer;
+        }
+        else
+        {
+            mcount = motivationLines.length - 1;
+        }
+    });
+
+  
+}
 
 
 
