@@ -1,7 +1,7 @@
 //************************ [[ getting data from custom API ]] **********************************************
 let deepMotv = "./Custom_Apis/deepMotv.json";
-let personalMotv = "./Custom_Apis/personalMotv.json";
 let successMotv = "./Custom_Apis/successMotv.json";
+let personalMotv = "./Custom_Apis/personalMotv.json";
 let workMotv = "./Custom_Apis/workMotv.json";
 
 async function deepMotvGenerating()
@@ -29,8 +29,6 @@ async function workMotvGenerating()
 }
 
 
-
-// deepMotvGenerating();
 // personalMotvGenerating();
 
 // workMotvGenerating();
@@ -50,6 +48,7 @@ async function workMotvGenerating()
 let homepage = document.querySelector('.home-page');
 let secondPage = document.querySelector('.second-page');
 let successMotvOpen = document.querySelector('#successMotvOpen');
+let deepMotvOpen = document.querySelector('#deepMotvOpen');
 let backToHomeBtn = document.querySelector('.backtohomebtn');
 
 let motivationImg = document.querySelector('#motivation-img');
@@ -58,8 +57,77 @@ let motivationWriter = document.querySelector('#motivation-writer');
 
 let nextMotvBtn = document.querySelector('#next-Motv');
 let prevMotvBtn = document.querySelector('#prev-Motv');
+let speakerBtn = document.querySelector('#speak');
 
 
+
+
+backToHomeBtn.addEventListener('click',(e) => {
+    homepage.classList.remove('homepage-OpenClose');
+    secondPage.classList.remove('secondpage-OpenClose');
+});
+
+//[[[[[[[[[[[[[[[[[[[[************** Deep motivation section   ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
+deepMotvOpen.addEventListener('click',(e) => {
+    homepage.classList.add('homepage-OpenClose');
+    secondPage.classList.add('secondpage-OpenClose');
+
+    deepMotvGenerating();
+
+});
+
+async function deepMotvGenerating()
+{
+    
+    const deepmotvdata = await fetch(deepMotv);
+    const motivationLines = await deepmotvdata.json();
+    console.log(motivationLines.length);
+    motivationImg.src = motivationLines[0].image;
+    motivationHeading.innerHTML = motivationLines[0].motivationLine;
+    motivationWriter.innerHTML = motivationLines[0].writer;
+
+      
+    let mcount = 0; //number of motivations lines
+
+    speakNow(motivationHeading);  //speaking the motivation line 
+
+    nextMotvBtn.addEventListener('click',() => {
+        // console.log('click');
+        if(mcount < motivationLines.length - 1)
+        {
+
+            mcount++;
+            motivationImg.src = motivationLines[mcount].image;
+            motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
+            motivationWriter.innerHTML = motivationLines[mcount].writer;
+            // console.log(mcount);
+
+        }
+        else
+        {
+            mcount = 0;
+        }
+    });
+
+    prevMotvBtn.addEventListener('click',() => {
+
+        if(mcount>0)
+        {
+            mcount--;
+            motivationImg.src = motivationLines[mcount].image;
+            motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
+            motivationWriter.innerHTML = motivationLines[mcount].writer;
+        }
+        else
+        {
+            mcount = motivationLines.length - 1;
+        }
+    });
+
+}
+
+//[[[[[[[[[[[[[[[[[[[[************** Succestion motivation section   ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
 successMotvOpen.addEventListener('click',(e) => {
     homepage.classList.add('homepage-OpenClose');
@@ -69,21 +137,19 @@ successMotvOpen.addEventListener('click',(e) => {
 
 });
 
-backToHomeBtn.addEventListener('click',(e) => {
-    homepage.classList.remove('homepage-OpenClose');
-    secondPage.classList.remove('secondpage-OpenClose');
-});
-
 async function successMotvGenerating()
 {
-    const MenuData = await fetch(successMotv);
-    const motivationLines = await MenuData.json();
+    const succmotvdata = await fetch(successMotv);
+    const motivationLines = await succmotvdata.json();
     console.log(motivationLines.length);
     motivationImg.src = motivationLines[0].image;
     motivationHeading.innerHTML = motivationLines[0].motivationLine;
     motivationWriter.innerHTML = motivationLines[0].writer;
   
-    let mcount = 0;
+    let mcount = 0; //number of motivations lines
+
+    speakNow(motivationHeading);  //speaking the motivation line 
+
     nextMotvBtn.addEventListener('click',() => {
         // console.log('click');
         if(mcount < motivationLines.length - 1)
@@ -106,7 +172,7 @@ async function successMotvGenerating()
         if(mcount>0)
         {
             mcount--;
-            // motivationImg.src = motivationLines[i--].image;
+            motivationImg.src = motivationLines[mcount].image;
             motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
             motivationWriter.innerHTML = motivationLines[mcount].writer;
         }
@@ -122,6 +188,30 @@ async function successMotvGenerating()
 
 
 
+//[[[[[[[[[[[[[[[[[******************* speaking section   ******************]]]]]]]]]]]]]]]]]]]]]]]]]]
+let count = 0; // for speaker repeatedly speek
+function speakNow()
+{
+
+    if(count == 0)
+    {
+        speakerBtn.addEventListener('click',() => {
+            voices = window.speechSynthesis.getVoices();
+            var motivationLineSpeaker = new SpeechSynthesisUtterance();
+
+            motivationLineSpeaker.voice = voices[0];
+            motivationLineSpeaker.lang = voices.lang;
+
+            motivationLineSpeaker.text = motivationHeading.innerHTML;
+            speechSynthesis.speak(motivationLineSpeaker);
+            console.log("click");
+        });
+        count++;
+    }
+
+}
+
+count = 0;
 
 
 
