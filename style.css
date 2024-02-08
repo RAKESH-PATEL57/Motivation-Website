@@ -23,6 +23,12 @@ body
   min-height: 100vh;
 }
 
+::-webkit-scrollbar
+{
+    opacity: 0;
+    display: none;
+}
+
 canvas
 {
     width: 100%;
@@ -172,6 +178,7 @@ header nav .search-section
     left: 50%;
     transform: translate(-50%,-50%);
     transition: .5s;
+    text-align: center; /* for centering to line motivation hading*/ 
 }
 
 .cdheading h2
@@ -181,12 +188,12 @@ header nav .search-section
 
 .cdheading h1
 {
-    bottom: 50%;
+    bottom: 30%;
 }
 
 .card-details:hover .cdheading h1
 {
-    bottom: -70%;
+    bottom: -100%;
 }
 
 .card-details:hover .cdheading h2
@@ -265,9 +272,10 @@ header nav .search-section
 .right-side-motvcontainer .headings-writer
 {
     color: var(--font-color);
-    min-height: max-content;
+    height: 9rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -283,7 +291,8 @@ header nav .search-section
     /* padding: 1rem; */
     border: none;
     cursor: pointer;
-
+     pointer-events: auto;
+     border-radius: 50%;
 }
 
 .btn i
@@ -293,6 +302,7 @@ header nav .search-section
     color: var(--font-color);
     padding: .5rem;
     border-radius: 50%;
+    transition: .3s;
 }
 
 .second-page .backtohomebtn
@@ -305,7 +315,16 @@ header nav .search-section
     cursor: pointer;
     position: absolute;
     left: 50%;
-    bottom: 1%;
+    bottom: 5%;
     transform: translate(-50%);
+    transition: .3s ;
+    font-weight: 600;
+}
+
+.prev-next-btn .btn i:hover, .backtohomebtn:hover
+{
+    background: var(--main-color);
+    color: var(--hover-font-color);
+    box-shadow: 0rem 0rem .5rem var(--main-color);
 }
 
