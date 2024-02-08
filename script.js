@@ -4,31 +4,6 @@ let successMotv = "./Custom_Apis/successMotv.json";
 let personalMotv = "./Custom_Apis/personalMotv.json";
 let workMotv = "./Custom_Apis/workMotv.json";
 
-async function deepMotvGenerating()
-{
-    const MenuData = await fetch(deepMotv);
-    const motivationLines = await MenuData.json();
-    // console.log(MenuData);
-    console.log(motivationLines[0].image);
-}
-
-async function personalMotvGenerating()
-{
-    const MenuData = await fetch(personalMotv);
-    const motivationLines = await MenuData.json();
-    // console.log(MenuData);
-    console.log(motivationLines[0].image);
-}
-
-async function workMotvGenerating()
-{
-    const MenuData = await fetch(workMotv);
-    const motivationLines = await MenuData.json();
-    // console.log(MenuData);
-    console.log(motivationLines[0].image);
-}
-
-
 // personalMotvGenerating();
 
 // workMotvGenerating();
@@ -62,7 +37,7 @@ let speakerBtn = document.querySelector('#speak');
 
 
 
-backToHomeBtn.addEventListener('click',(e) => {
+backToHomeBtn.addEventListener('click',() => {
     homepage.classList.remove('homepage-OpenClose');
     secondPage.classList.remove('secondpage-OpenClose');
 });
