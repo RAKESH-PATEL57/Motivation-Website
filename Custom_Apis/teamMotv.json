@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "motivationLine": "“Talent wins games, but teamwork and intelligence win championships.”",
+        "writer": "Michael Jordan"
+    },
+    {
+        "id": 2,
+        "motivationLine": "“Individual commitment to a group effort—that is what makes a team work, a company work, a society work, a civilization work.” ",
+        "writer": "Vince Lombardi"
+    },
+    {
+        "id": 3,
+        "motivationLine": "“Teamwork is the ability to work together toward a common vision. The ability to direct individual accomplishments toward organizational objectives. It is the fuel that allows common people to attain uncommon results.”",
+        "writer": "Andrew Carnegie"
+    },
+    {
+        "id": 4,
+        "motivationLine": "“Coming together is a beginning. Keeping together is progress. Working together is success.”",
+        "writer": "Henry Ford"
+    },
+    {
+        "id": 5,
+        "motivationLine": "“Alone we can do so little, together we can do so much.”",
+        "writer": "Helen Keller"
+    },
+    {
+        "id": 6,
+        "motivationLine": "“Remember, teamwork begins by building trust. And the only way to do that is to overcome our need for invulnerability.”",
+        "writer": "Patrick Lencioni"
+    },
+    {
+        "id": 7,
+        "motivationLine": "“I invite everyone to choose forgiveness rather than division, teamwork over personal ambition.”",
+        "writer": "Jean-Francois Cope"
+    }
+]
