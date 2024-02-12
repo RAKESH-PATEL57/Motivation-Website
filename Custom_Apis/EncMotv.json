@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "motivationLine": "“I can’t tell you how many times I’ve been given a no, only to find that a better, brighter, bigger yes was right around the corner.”",
+        "writer": "Arlan Hamilton"
+    },
+    {
+        "id": 2,
+        "motivationLine": "“We need to accept that we won’t always make the right decisions, that we’ll screw up royally sometimes—understanding that failure is not the opposite of success, it’s part of success.” ",
+        "writer": "Ariana Huffington"
+    },
+    {
+        "id": 3,
+        "motivationLine": "“When everything seems to be going against you, remember that the airplane takes off against the wind, not with it.”",
+        "writer": "Henry Ford"
+    },
+    {
+        "id": 4,
+        "motivationLine": "“You cannot always control what goes on outside. But you can always control what goes on inside.”",
+        "writer": "Wayne Dyer"
+    },
+    {
+        "id": 5,
+        "motivationLine": "“We are what we repeatedly do. Excellence, then, is not an act, but a habit.” ",
+        "writer": "Aristotle"
+    },
+    {
+        "id": 6,
+        "motivationLine": "“Start where you are. Use what you have. Do what you can.”",
+        "writer": "Arthur Ashe"
+    },
+    {
+        "id": 7,
+        "motivationLine": "“Hustle beats talent when talent doesn’t hustle.”",
+        "writer": "Ross Simmonds"
+    }
+]

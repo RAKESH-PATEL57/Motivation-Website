@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "motivationLine": "“He who conquers himself is the mightiest warrior.”",
+        "writer": "Confucius"
+    },
+    {
+        "id": 2,
+        "motivationLine": "“Try not to become a man of success, but rather become a man of value.”",
+        "writer": "Albert Einstein"
+    },
+    {
+        "id": 3,
+        "motivationLine": "“One man with courage makes a majority.”",
+        "writer": "Andrew Jackson"
+    },
+    {
+        "id": 4,
+        "motivationLine": "“One secret of success in life is for a man to be ready for his opportunity when it comes.”",
+        "writer": "Benjamin Disraeli"
+    },
+    {
+        "id": 5,
+        "motivationLine": "“A man who has committed a mistake and doesn’t correct it is committing another mistake.”",
+        "writer": "Confucius Kongzi"
+    },
+    {
+        "id": 6,
+        "motivationLine": "“The successful man will profit from his mistakes and try again in a different way.”",
+        "writer": "Dale Carnegie"
+    },
+    {
+        "id": 7,
+        "motivationLine": "“A successful man is one who can lay a firm foundation with the bricks others have thrown at him.” ",
+        "writer": "David Brinkley"
+    },
+    {
+        "id": 8,
+        "motivationLine": "“He is a wise man who does not grieve for the things which he has not, but rejoices for those which he has.” ",
+        "writer": "Epictetus"
+    }
+]

@@ -1,0 +1,77 @@
+[
+    {
+        "id": 1,
+        "motivationLine": "“Don’t look at your feet to see if you are doing it right. Just dance.”",
+        "writer":"Anne Lamott"
+    },
+    {
+        "id": 2,
+        "motivationLine": "“Someone’s sitting in the shade today because someone planted a tree a long time ago.”",
+        "writer": "Warren Buffet"
+    },
+    {
+        "id": 3,
+        "motivationLine": "“True freedom is impossible without a mind made free by discipline.”",
+        "writer": "Mortimer J. Adler"
+    },
+    {
+        "id": 4,
+        "motivationLine": "“Rivers know this: there is no hurry. We shall get there someday.”",
+        "writer": "A. A. Milne"
+    },
+    {
+        "id": 5,
+        "motivationLine": "“There is a vitality, a life force, an energy, a quickening that is translated through you into action, and because there is only one of you in all time, this expression is unique. And if you block it, it will never exist through any other medium and will be lost.”",
+        "writer": "Martha Graham"
+    },
+    {
+        "id": 6,
+        "motivationLine": "“Small is not just a stepping stone. Small is a great destination itself.”",
+        "writer": "Jason Fried"
+    },
+    {
+        "id": 7,
+        "motivationLine": "“He that can have patience can have what he will.”",
+        "writer": "Benjamin Franklin"
+    },
+    {
+        "id": 8,
+        "motivationLine": "“The only one who can tell you ‘you can’t win’ is you, and you don’t have to listen.”",
+        "writer": "Jessica Ennis"
+    },
+    {
+        "id": 9,
+        "motivationLine": "“Set your goals high, and don’t stop till you get there.” ",
+        "writer": "Bo Jackson"
+    },
+    {
+        "id": 10,
+        "motivationLine": "“Take your victories, whatever they may be, cherish them, use them, but don’t settle for them.”",
+        "writer": "Mia Hamm"
+    },
+    {
+        "id": 11,
+        "motivationLine": "“Failure is simply the opportunity to begin again, this time more intelligently.”",
+        "writer": "Henry Ford"
+    },
+    {
+        "id": 12,
+        "motivationLine": "“Our greatest glory is not in never falling, but in rising every time we fall.” ",
+        "writer": "Confucius"
+    },
+    {
+        "id": 13,
+        "motivationLine": "“If you change the way you look at things, the things you look at change.” ",
+        "writer": "Wayne Dyer"
+    },
+    {
+        "id": 14,
+        "motivationLine": "“We must reach out our hand in friendship and dignity, both to those who would befriend us and those who would be our enemy.”",
+        "writer": "Arthur Ashe"
+    },
+    {
+        "id": 15,
+        "motivationLine": "“It’s fine to celebrate success, but it is more important to heed the lessons of failure.”",
+        "writer": "Bill Gates"
+    }
+]
