@@ -14,7 +14,7 @@ let successMotvOpen = document.querySelector('#successMotvOpen');
 let deepMotvOpen = document.querySelector('#deepMotvOpen');
 let backToHomeBtn = document.querySelector('.backtohomebtn');
 
-let motivationImg = document.querySelector('#motivation-img');
+let motivationImg = document.querySelector('.left-side-img-container img');
 let motivationHeading = document.querySelector('#motivation-heading');
 let motivationWriter = document.querySelector('#motivation-writer');
 
@@ -42,8 +42,8 @@ deepMotvOpen.addEventListener('click',(e) => {
 
 function imageUpdate(srcImage)
 {
-    motivationImg.src = srcImage;
-    console.log(srcImage);
+    motivationImg.src = `${srcImage}`;
+    console.log(motivationImg);
 }
 
 async function deepMotvGenerating()
@@ -51,10 +51,9 @@ async function deepMotvGenerating()
     
     const deepmotvdata = await fetch(deepMotv);
     const motivationLines = await deepmotvdata.json();
-    // console.log(motivationLines.length);
 
     // motivationImg.src = motivationLines[0].image;
-    imageUpdate(motivationLines[0].image);
+    imageUpdate(motivationLines[0].image, 1);
 
     // motivationImg.innerHTML = `src="https://github.com/RAKESH-PATEL57/OurRestaurant"`;
     // console.log(motivationLines[0].image);
@@ -67,7 +66,7 @@ async function deepMotvGenerating()
 
     speakNow(motivationHeading);  //speaking the motivation line 
 
-    nextMotvBtn.addEventListener('click',() => {
+    nextMotvBtn.addEventListener('click',(e) => {
         // console.log('click');
         if(mcount < motivationLines.length - 1)
         {
