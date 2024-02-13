@@ -8,18 +8,6 @@ let workMotv = "./Custom_Apis/workMotv.json";
 
 // workMotvGenerating();
 
-
-// let allCards = document.querySelectorAll('.card-details');
-
-// for(i=0;i<allCards.length;i++)
-// {
-    
-//     allCards[i].addEventListener('click',(e) => {
-//         console.log(e.target.style.border="5px solid red");
-//     });
-// }
-
-
 let homepage = document.querySelector('.home-page');
 let secondPage = document.querySelector('.second-page');
 let successMotvOpen = document.querySelector('#successMotvOpen');
@@ -52,13 +40,25 @@ deepMotvOpen.addEventListener('click',(e) => {
 
 });
 
+function imageUpdate(srcImage)
+{
+    motivationImg.src = srcImage;
+    console.log(srcImage);
+}
+
 async function deepMotvGenerating()
 {
     
     const deepmotvdata = await fetch(deepMotv);
     const motivationLines = await deepmotvdata.json();
-    console.log(motivationLines.length);
-    motivationImg.src = motivationLines[0].image;
+    // console.log(motivationLines.length);
+
+    // motivationImg.src = motivationLines[0].image;
+    imageUpdate(motivationLines[0].image);
+
+    // motivationImg.innerHTML = `src="https://github.com/RAKESH-PATEL57/OurRestaurant"`;
+    // console.log(motivationLines[0].image);
+
     motivationHeading.innerHTML = motivationLines[0].motivationLine;
     motivationWriter.innerHTML = motivationLines[0].writer;
 
@@ -73,11 +73,12 @@ async function deepMotvGenerating()
         {
 
             mcount++;
-            motivationImg.src = motivationLines[mcount].image;
+            // motivationImg.src = motivationLines[mcount].image;
+            imageUpdate(motivationLines[mcount].image);
             motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
             motivationWriter.innerHTML = motivationLines[mcount].writer;
-            // console.log(mcount);
-
+            // console.log(motivationLines[mcount].image);
+            
         }
         else
         {
@@ -90,7 +91,8 @@ async function deepMotvGenerating()
         if(mcount>0)
         {
             mcount--;
-            motivationImg.src = motivationLines[mcount].image;
+            // motivationImg.src = motivationLines[mcount].image;
+            imageUpdate(motivationLines[mcount].image);
             motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
             motivationWriter.innerHTML = motivationLines[mcount].writer;
         }
@@ -99,6 +101,9 @@ async function deepMotvGenerating()
             mcount = motivationLines.length - 1;
         }
     });
+
+    // console.log(motivationImg.src);
+   
 
 }
 
