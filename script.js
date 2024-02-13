@@ -40,10 +40,9 @@ deepMotvOpen.addEventListener('click',(e) => {
 
 });
 
-function imageUpdate(srcImage)
+function imageUpdate(srcImage) //for slicing the src
 {
-    motivationImg.src = `${srcImage}`;
-    console.log(motivationImg);
+    motivationImg.src = srcImage.slice(1);
 }
 
 async function deepMotvGenerating()
@@ -52,11 +51,8 @@ async function deepMotvGenerating()
     const deepmotvdata = await fetch(deepMotv);
     const motivationLines = await deepmotvdata.json();
 
-    // motivationImg.src = motivationLines[0].image;
-    imageUpdate(motivationLines[0].image, 1);
+    imageUpdate(motivationLines[0].image);
 
-    // motivationImg.innerHTML = `src="https://github.com/RAKESH-PATEL57/OurRestaurant"`;
-    // console.log(motivationLines[0].image);
 
     motivationHeading.innerHTML = motivationLines[0].motivationLine;
     motivationWriter.innerHTML = motivationLines[0].writer;
@@ -66,17 +62,15 @@ async function deepMotvGenerating()
 
     speakNow(motivationHeading);  //speaking the motivation line 
 
-    nextMotvBtn.addEventListener('click',(e) => {
+    nextMotvBtn.addEventListener('click',() => {
         // console.log('click');
         if(mcount < motivationLines.length - 1)
         {
 
             mcount++;
-            // motivationImg.src = motivationLines[mcount].image;
             imageUpdate(motivationLines[mcount].image);
             motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
             motivationWriter.innerHTML = motivationLines[mcount].writer;
-            // console.log(motivationLines[mcount].image);
             
         }
         else
@@ -90,7 +84,6 @@ async function deepMotvGenerating()
         if(mcount>0)
         {
             mcount--;
-            // motivationImg.src = motivationLines[mcount].image;
             imageUpdate(motivationLines[mcount].image);
             motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
             motivationWriter.innerHTML = motivationLines[mcount].writer;
@@ -101,7 +94,6 @@ async function deepMotvGenerating()
         }
     });
 
-    // console.log(motivationImg.src);
    
 
 }
@@ -121,7 +113,9 @@ async function successMotvGenerating()
     const succmotvdata = await fetch(successMotv);
     const motivationLines = await succmotvdata.json();
     console.log(motivationLines.length);
-    motivationImg.src = motivationLines[0].image;
+
+    imageUpdate(motivationLines[0].image); //for slicing the src
+
     motivationHeading.innerHTML = motivationLines[0].motivationLine;
     motivationWriter.innerHTML = motivationLines[0].writer;
   
@@ -135,7 +129,7 @@ async function successMotvGenerating()
         {
 
             mcount++;
-            motivationImg.src = motivationLines[mcount].image;
+            imageUpdate(motivationLines[0].image); //for slicing the src
             motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
             motivationWriter.innerHTML = motivationLines[mcount].writer;
             console.log(mcount);
@@ -151,7 +145,7 @@ async function successMotvGenerating()
         if(mcount>0)
         {
             mcount--;
-            motivationImg.src = motivationLines[mcount].image;
+            imageUpdate(motivationLines[0].image); //for slicing the src
             motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
             motivationWriter.innerHTML = motivationLines[mcount].writer;
         }
