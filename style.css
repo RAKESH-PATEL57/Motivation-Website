@@ -46,7 +46,7 @@ header
 {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 4rem;
     padding: 2.5rem 5rem;
@@ -56,16 +56,7 @@ header
     /* border: 2px solid red; */
 }
 
-
-header nav 
-{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header nav .logo
+header .logo
 {
    font-size: 1.2rem;
    color: var(--font-color);
@@ -218,10 +209,6 @@ header nav .search-section
     width: 100%;
     position: relative;
     /* border: 2px solid red; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     display: none;
     transition: .5s linear;
     pointer-events: none;
@@ -245,7 +232,6 @@ header nav .search-section
 
 .second-page .left-side-img-container
 {
-    /* border: 2px solid red; */
     height: 55vh;
     width: 30vw;
 }
@@ -328,3 +314,62 @@ header nav .search-section
     box-shadow: 0rem 0rem .5rem var(--main-color);
 }
 
+
+/*******************[[[[[[[[[[[[[[[[[[[[    responssive section   ]]]]]]]]]]]]]]]]]]]]]]]]]]]*******************/
+
+@media(max-width:470px)
+{
+    header
+    {
+    
+        padding:0rem .3rem 0rem .8rem;
+        /* border: 2px solid red; */
+    }
+
+    header nav .search-section
+    {
+        border: 2px solid var(--main-color);
+        border-radius: 1rem;
+        padding: .2rem .5rem;
+        width: 15rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .second-page
+    {
+        padding-top: 4rem;
+    }
+
+    .second-page .second-page-content
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:0rem;
+        /* border: 2px solid rgb(166, 0, 255); */
+    }
+
+    .second-page .left-side-img-container
+    {
+        height: 15rem;
+        width: 22.8rem;
+        /* border: 2px solid red; */
+    }
+
+    .second-page .right-side-motvcontainer
+    {
+        width: 90%;
+        align-items: center;
+        gap: 1rem;
+        font-size: .8rem;
+    }
+    
+    .second-page .backtohomebtn
+    {
+        padding: .5rem .8rem;
+        bottom: 2%;
+    }
+
+}
