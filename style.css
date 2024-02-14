@@ -3,15 +3,14 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    /* font-family: sans-serif; */
+    font-family: sans-serif;
     scroll-behavior: smooth;
 }
 
 
 :root
 {
-    --bg-image:rgb(1, 0, 19);
-    --bg-image:rgb(0, 0, 0);
+    --bg-color:rgb(1, 0, 19);
     --font-color:rgb(255, 255, 255);
     --main-color:aqua;
     --hover-font-color:black;
@@ -19,7 +18,7 @@
 
 body
 {
-  background: var(--bg-image); 
+  background: var(--bg-color); 
   min-height: 100vh;
 }
 
@@ -60,6 +59,12 @@ header .logo
 {
    font-size: 1.2rem;
    color: var(--font-color);
+}
+
+.logo img
+{
+    height: 4rem;
+    /* width: 10rem; */
 }
 
 header nav .search-section
