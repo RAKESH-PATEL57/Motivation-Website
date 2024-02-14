@@ -1,8 +1,9 @@
 //************************ [[ getting data from custom API ]] **********************************************
 let deepMotv = "./Custom_Apis/deepMotv.json";
 let successMotv = "./Custom_Apis/successMotv.json";
-let personalMotv = "./Custom_Apis/personalMotv.json";
 let workMotv = "./Custom_Apis/workMotv.json";
+let personalMotv = "./Custom_Apis/personalMotv.json";
+let womenMotv = "./Custom_Apis/womenMotv.json";
 
 let homepage = document.querySelector('.home-page');
 let secondPage = document.querySelector('.second-page');
@@ -10,6 +11,7 @@ let successMotvOpen = document.querySelector('#successMotvOpen');
 let deepMotvOpen = document.querySelector('#deepMotvOpen');
 let workMotvOpen = document.querySelector('#workMotvOpen');
 let perLifeMotvOpen = document.querySelector('#perlifeMotvOpen');
+let womenMotvOpen = document.querySelector('#womenMotvOpen');
 let backToHomeBtn = document.querySelector('.backtohomebtn');
 
 let motivationImg = document.querySelector('.left-side-img-container img');
@@ -276,6 +278,66 @@ async function personalMotvGenerating()
   
 }
 
+//[[[[[[[[[[[[[[[[[[[[************** Women motivation section   ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
+womenMotvOpen.addEventListener('click',(e) => {
+    homepage.classList.add('homepage-OpenClose');
+    secondPage.classList.add('secondpage-OpenClose');
+
+    womenMotvGenerating();
+
+});
+
+async function womenMotvGenerating()
+{
+    const womenMotvData = await fetch(womenMotv);
+    const motivationLines = await womenMotvData.json();
+    console.log(motivationLines.length);
+
+    imageUpdate(motivationLines[0].image); //for slicing the src
+
+    motivationHeading.innerHTML = motivationLines[0].motivationLine;
+    motivationWriter.innerHTML = motivationLines[0].writer;
+  
+    let mcount = 0; //number of motivations lines
+
+    speakNow(motivationHeading);  //speaking the motivation line 
+
+    nextMotvBtn.addEventListener('click',() => {
+        // console.log('click');
+        if(mcount < motivationLines.length - 1)
+        {
+
+            mcount++;
+            imageUpdate(motivationLines[mcount].image);
+            motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
+            motivationWriter.innerHTML = motivationLines[mcount].writer;
+            console.log(mcount);
+        }
+        else
+        {
+            mcount = 0;
+        }
+    });
+
+    prevMotvBtn.addEventListener('click',() => {
+
+        if(mcount>0)
+        {
+            mcount--;
+            imageUpdate(motivationLines[mcount].image);
+            motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
+            motivationWriter.innerHTML = motivationLines[mcount].writer;
+        }
+        else
+        {
+            mcount = motivationLines.length - 1;
+        }
+    });
+
+  
+}
+
 
 
 
@@ -303,12 +365,6 @@ function speakNow()
 }
 
 count = 0;
-
-
-
-
-
-
 
 
 
