@@ -42,61 +42,15 @@ deepMotvOpen.addEventListener('click',(e) => {
 
 });
 
-function imageUpdate(srcImage) //for slicing the src
-{
-    motivationImg.src = srcImage.slice(1);
-}
-
 async function deepMotvGenerating()
 {
     
     const deepmotvdata = await fetch(deepMotv);
     const motivationLines = await deepmotvdata.json();
 
-    imageUpdate(motivationLines[0].image);
-
-
-    motivationHeading.innerHTML = motivationLines[0].motivationLine;
-    motivationWriter.innerHTML = motivationLines[0].writer;
-
-      
-    let mcount = 0; //number of motivations lines
-
     speakNow(motivationHeading);  //speaking the motivation line 
 
-    nextMotvBtn.addEventListener('click',() => {
-        // console.log('click');
-        if(mcount < motivationLines.length - 1)
-        {
-
-            mcount++;
-            imageUpdate(motivationLines[mcount].image);
-            motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
-            motivationWriter.innerHTML = motivationLines[mcount].writer;
-            
-        }
-        else
-        {
-            mcount = 0;
-        }
-    });
-
-    prevMotvBtn.addEventListener('click',() => {
-
-        if(mcount>0)
-        {
-            mcount--;
-            imageUpdate(motivationLines[mcount].image);
-            motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
-            motivationWriter.innerHTML = motivationLines[mcount].writer;
-        }
-        else
-        {
-            mcount = motivationLines.length - 1;
-        }
-    });
-
-   
+    allMotivations(motivationLines); //getting all motivations
 
 }
 
@@ -115,48 +69,10 @@ async function successMotvGenerating()
     const succmotvdata = await fetch(successMotv);
     const motivationLines = await succmotvdata.json();
 
-    imageUpdate(motivationLines[0].image); //for slicing the src
-
-    motivationHeading.innerHTML = motivationLines[0].motivationLine;
-    motivationWriter.innerHTML = motivationLines[0].writer;
-  
-    let mcount = 0; //number of motivations lines
-
     speakNow(motivationHeading);  //speaking the motivation line 
 
-    nextMotvBtn.addEventListener('click',() => {
-        // console.log('click');
-        if(mcount < motivationLines.length - 1)
-        {
+    allMotivations(motivationLines); //getting all motivations
 
-            mcount++;
-            imageUpdate(motivationLines[mcount].image);//for slicing the src
-            motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
-            motivationWriter.innerHTML = motivationLines[mcount].writer;
-            console.log(mcount);
-        }
-        else
-        {
-            mcount = 0;
-        }
-    });
-
-    prevMotvBtn.addEventListener('click',() => {
-
-        if(mcount>0)
-        {
-            mcount--;
-            imageUpdate(motivationLines[mcount].image);
-            motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
-            motivationWriter.innerHTML = motivationLines[mcount].writer;
-        }
-        else
-        {
-            mcount = motivationLines.length - 1;
-        }
-    });
-
-  
 }
 
 //[[[[[[[[[[[[[[[[[[[[************** Work motivation section   ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
@@ -174,48 +90,10 @@ async function workMotvGenerating()
     const workmotvdata = await fetch(workMotv);
     const motivationLines = await workmotvdata.json();
 
-    imageUpdate(motivationLines[0].image); //for slicing the src
-
-    motivationHeading.innerHTML = motivationLines[0].motivationLine;
-    motivationWriter.innerHTML = motivationLines[0].writer;
-  
-    let mcount = 0; //number of motivations lines
-
     speakNow(motivationHeading);  //speaking the motivation line 
 
-    nextMotvBtn.addEventListener('click',() => {
-        // console.log('click');
-        if(mcount < motivationLines.length - 1)
-        {
+    allMotivations(motivationLines); //getting all motivations
 
-            mcount++;
-            imageUpdate(motivationLines[mcount].image);
-            motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
-            motivationWriter.innerHTML = motivationLines[mcount].writer;
-            console.log(mcount);
-        }
-        else
-        {
-            mcount = 0;
-        }
-    });
-
-    prevMotvBtn.addEventListener('click',() => {
-
-        if(mcount>0)
-        {
-            mcount--;
-            imageUpdate(motivationLines[mcount].image);
-            motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
-            motivationWriter.innerHTML = motivationLines[mcount].writer;
-        }
-        else
-        {
-            mcount = motivationLines.length - 1;
-        }
-    });
-
-  
 }
 
 //[[[[[[[[[[[[[[[[[[[[************** Persional Life motivation section   ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
@@ -233,46 +111,9 @@ async function personalMotvGenerating()
     const perLifeMotvData = await fetch(personalMotv);
     const motivationLines = await perLifeMotvData.json();
 
-    imageUpdate(motivationLines[0].image); //for slicing the src
-
-    motivationHeading.innerHTML = motivationLines[0].motivationLine;
-    motivationWriter.innerHTML = motivationLines[0].writer;
-  
-    let mcount = 0; //number of motivations lines
-
     speakNow(motivationHeading);  //speaking the motivation line 
 
-    nextMotvBtn.addEventListener('click',() => {
-        // console.log('click');
-        if(mcount < motivationLines.length - 1)
-        {
-
-            mcount++;
-            imageUpdate(motivationLines[mcount].image);
-            motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
-            motivationWriter.innerHTML = motivationLines[mcount].writer;
-            console.log(mcount);
-        }
-        else
-        {
-            mcount = 0;
-        }
-    });
-
-    prevMotvBtn.addEventListener('click',() => {
-
-        if(mcount>0)
-        {
-            mcount--;
-            imageUpdate(motivationLines[mcount].image);
-            motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
-            motivationWriter.innerHTML = motivationLines[mcount].writer;
-        }
-        else
-        {
-            mcount = motivationLines.length - 1;
-        }
-    });
+    allMotivations(motivationLines); //getting all motivations
 
   
 }
@@ -292,51 +133,13 @@ async function womenMotvGenerating()
     const womenMotvData = await fetch(womenMotv);
     const motivationLines = await womenMotvData.json();
 
-    imageUpdate(motivationLines[0].image); //for slicing the src
-
-    motivationHeading.innerHTML = motivationLines[0].motivationLine;
-    motivationWriter.innerHTML = motivationLines[0].writer;
-  
-    let mcount = 0; //number of motivations lines
-
     speakNow(motivationHeading);  //speaking the motivation line 
 
-    nextMotvBtn.addEventListener('click',() => {
-        // console.log('click');
-        if(mcount < motivationLines.length - 1)
-        {
-
-            mcount++;
-            imageUpdate(motivationLines[mcount].image);
-            motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
-            motivationWriter.innerHTML = motivationLines[mcount].writer;
-            console.log(mcount);
-        }
-        else
-        {
-            mcount = 0;
-        }
-    });
-
-    prevMotvBtn.addEventListener('click',() => {
-
-        if(mcount>0)
-        {
-            mcount--;
-            imageUpdate(motivationLines[mcount].image);
-            motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
-            motivationWriter.innerHTML = motivationLines[mcount].writer;
-        }
-        else
-        {
-            mcount = motivationLines.length - 1;
-        }
-    });
-
+    allMotivations(motivationLines); //getting all motivations
   
 }
 
-//[[[[[[[[[[[[[[[[[[[[************** Men motivation section   ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+//[[[[[[[[[[[[[[[[[[[[************************   Men motivation section ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
 menMotvOpen.addEventListener('click',(e) => {
     homepage.classList.add('homepage-OpenClose');
@@ -351,14 +154,29 @@ async function menMotvGenerating()
     const menMotvData = await fetch(menMotv);
     const motivationLines = await menMotvData.json();
 
-    imageUpdate(motivationLines[0].image); //for slicing the src
+    speakNow(motivationHeading);  //speaking the motivation line 
+
+    allMotivations(motivationLines); //getting all motivations
+ 
+}
+
+
+//[[[[[[[[[[[[[[[[[[[[**********************    All Motivation Generating function  *************************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
+// function imageUpdate(srcImage) //for slicing the src
+// {
+//     motivationImg.src = srcImage.slice(1);
+// }
+
+function allMotivations(motivationLines)
+{
+
+    motivationImg.src = (motivationLines[0].image).slice(1);
 
     motivationHeading.innerHTML = motivationLines[0].motivationLine;
     motivationWriter.innerHTML = motivationLines[0].writer;
-  
+   
     let mcount = 0; //number of motivations lines
-
-    speakNow(motivationHeading);  //speaking the motivation line 
 
     nextMotvBtn.addEventListener('click',() => {
         // console.log('click');
@@ -366,10 +184,10 @@ async function menMotvGenerating()
         {
 
             mcount++;
-            imageUpdate(motivationLines[mcount].image);
+            motivationImg.src = (motivationLines[mcount].image).slice(1);
             motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
             motivationWriter.innerHTML = motivationLines[mcount].writer;
-            console.log(mcount);
+            
         }
         else
         {
@@ -382,7 +200,7 @@ async function menMotvGenerating()
         if(mcount>0)
         {
             mcount--;
-            imageUpdate(motivationLines[mcount].image);
+            motivationImg.src = (motivationLines[mcount].image).slice(1);
             motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
             motivationWriter.innerHTML = motivationLines[mcount].writer;
         }
@@ -392,7 +210,6 @@ async function menMotvGenerating()
         }
     });
 
-  
 }
 
 //[[[[[[[[[[[[[[[[[******************* speaking section   ******************]]]]]]]]]]]]]]]]]]]]]]]]]]
