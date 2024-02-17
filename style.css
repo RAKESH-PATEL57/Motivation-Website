@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     text-decoration: none;
     font-family: sans-serif;
     scroll-behavior: smooth;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
@@ -55,15 +57,9 @@ header
     /* border: 2px solid red; */
 }
 
-header .logo
-{
-   font-size: 1.2rem;
-   color: var(--font-color);
-}
-
 .logo img
 {
-    height: 4rem;
+    height: 3rem;
     /* width: 10rem; */
 }
 
@@ -105,6 +101,74 @@ header nav .search-section
     cursor: pointer;
 }
 
+/*[[[[[[[[[[[[[[[[[[[   Front-page section    ]]]]]]]]]]]]]]]]]]]]]]]*/
+.front-page
+{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.front-page .mainmotivation-container
+{
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    gap: 2rem;
+    /* border: 2px solid red; */
+}
+
+.mainmotivation-container h1
+{
+    letter-spacing: .2rem;
+    /* border: 2px solid aqua; */
+    text-align: center;
+}
+
+.mainmotivation-container span
+{
+    color: var(--main-color);
+    font-size: 6rem;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: .9rem;
+    font-weight: 800;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 0rem 0rem .4rem var(--main-color);
+}
+
+.front-page .scroll-container
+{
+    position: absolute;
+    display: flex;
+    border: 2px solid red;
+    flex-direction: column;
+    bottom: 3%;
+}
+
+.scroll-container .up-scroll-container
+{
+    font-size: 1.5rem;
+    color:var(--font-color);
+}
+
+.scroll-container .down-scroll-container
+{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   color: var(--main-color);
+   rotate: 180deg;
+   font-size: 1.3rem;
+   /* border: 2px solid red; */
+}
+
 /*[[[[[[[[[[[[[[[[[[[   Home-page section    ]]]]]]]]]]]]]]]]]]]]]]]*/
 .home-page
 {
@@ -117,6 +181,7 @@ header nav .search-section
     align-items: center;
     /* border: 2px solid red; */
     transition: .5s linear;
+    background: transparent;
 }
 
 .home-page.homepage-OpenClose
@@ -124,18 +189,12 @@ header nav .search-section
     display: none;
 }
 
-.home-page .intro-motivation
-{
-    height: 30%;
-    /* border: 2px solid red; */
-}
-
 .home-page .cards-container
 {
-    height: 65%;
-    /* border: 2px solid rgb(60, 255, 0); */
+    height: 100%;
+    border: 2px solid rgb(60, 255, 0);
     position: relative;
-    width: 90%;
+    width: 100%;
     gap: 3rem;
     display: flex;
     flex-wrap: wrap;
