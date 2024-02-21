@@ -30,6 +30,30 @@ body
     display: none;
 }
 
+.bg
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+
+    background: url('./images/bg.jpg');
+    /* background-size: cover; */
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+
+.bg img
+{
+    /* background-attachment: fixed; */
+    height: 90%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    /* top: 0; */
+}
+
 canvas
 {
     width: 100%;
@@ -49,10 +73,10 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 4rem;
-    padding: 2.5rem 5rem;
+    height: 3rem;
+    padding: 2rem 5rem;
     position: fixed;
-    backdrop-filter:blur(3px);
+    backdrop-filter:blur(1.5px);
     z-index: 100;
     /* border: 2px solid red; */
 }
@@ -60,7 +84,7 @@ header
 .logo img
 {
     height: 3rem;
-    /* width: 10rem; */
+    /* width: 10rem; */  
 }
 
 header nav .search-section
@@ -118,14 +142,15 @@ header nav .search-section
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     gap: 2rem;
     /* border: 2px solid red; */
 }
 
 .mainmotivation-container h1
 {
-    letter-spacing: .2rem;
+    letter-spacing: .25rem;
+    font-weight:1200;
     /* border: 2px solid aqua; */
     text-align: center;
 }
@@ -146,27 +171,30 @@ header nav .search-section
 {
     position: absolute;
     display: flex;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     flex-direction: column;
-    bottom: 3%;
+    justify-content: center;
+    align-items: center;
+    bottom: 5%;
+    color: var(--font-color);
+    font-size: 1.3rem;
+    letter-spacing: .3rem;
+    font-weight: bolder;
 }
 
-.scroll-container .up-scroll-container
+.scroll-container #scrl-arrow-animate
 {
-    font-size: 1.5rem;
-    color:var(--font-color);
+    animation: scrl-arrow 3s alternate-reverse infinite;
 }
 
-.scroll-container .down-scroll-container
+@keyframes scrl-arrow 
 {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   color: var(--main-color);
-   rotate: 180deg;
-   font-size: 1.3rem;
-   /* border: 2px solid red; */
+       0%, 100%{
+        transform: translateY(0rem);
+       }
+       50%{
+        transform: translateY(1rem);
+       }
 }
 
 /*[[[[[[[[[[[[[[[[[[[   Home-page section    ]]]]]]]]]]]]]]]]]]]]]]]*/
@@ -181,7 +209,7 @@ header nav .search-section
     align-items: center;
     /* border: 2px solid red; */
     transition: .5s linear;
-    background: transparent;
+    background: #000;
 }
 
 .home-page.homepage-OpenClose
@@ -192,10 +220,10 @@ header nav .search-section
 .home-page .cards-container
 {
     height: 100%;
-    border: 2px solid rgb(60, 255, 0);
+    /* border: 2px solid rgb(60, 255, 0); */
     position: relative;
-    width: 100%;
-    gap: 3rem;
+    width: 95%;
+    gap: 0rem 1.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
