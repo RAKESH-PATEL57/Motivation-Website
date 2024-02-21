@@ -9,7 +9,7 @@ let menMotv = "./Custom_Apis/menMotvQuotes.json";
 let homepage = document.querySelector('.home-page');
 let secondPage = document.querySelector('.second-page');
 let successMotvOpen = document.querySelector('#successMotvOpen');
-let deepMotvOpen = document.querySelector('#deepMotvOpen');
+// let deepMotvOpen = document.querySelector('#deepMotvOpen');
 let workMotvOpen = document.querySelector('#workMotvOpen');
 let perLifeMotvOpen = document.querySelector('#perlifeMotvOpen');
 let womenMotvOpen = document.querySelector('#womenMotvOpen');
@@ -25,6 +25,13 @@ let prevMotvBtn = document.querySelector('#prev-Motv');
 let speakerBtn = document.querySelector('#speak');
 
 
+const allSkeleton = document.querySelectorAll('.skeleton')
+
+window.addEventListener('load', function() {
+  allSkeleton.forEach(item=> {
+    item.classList.remove('skeleton')
+  })
+})
 
 
 backToHomeBtn.addEventListener('click',() => {
@@ -34,25 +41,25 @@ backToHomeBtn.addEventListener('click',() => {
 
 //[[[[[[[[[[[[[[[[[[[[************** Deep motivation section   ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
-deepMotvOpen.addEventListener('click',(e) => {
-    homepage.classList.add('homepage-OpenClose');
-    secondPage.classList.add('secondpage-OpenClose');
+// deepMotvOpen.addEventListener('click',(e) => {
+//     homepage.classList.add('homepage-OpenClose');
+//     secondPage.classList.add('secondpage-OpenClose');
 
-    deepMotvGenerating();
+//     deepMotvGenerating();
 
-});
+// });
 
-async function deepMotvGenerating()
-{
+// async function deepMotvGenerating()
+// {
     
-    const deepmotvdata = await fetch(deepMotv);
-    const motivationLines = await deepmotvdata.json();
+//     const deepmotvdata = await fetch(deepMotv);
+//     const motivationLines = await deepmotvdata.json();
 
-    speakNow(motivationHeading);  //speaking the motivation line 
+//     speakNow(motivationHeading);  //speaking the motivation line 
 
-    allMotivations(motivationLines); //getting all motivations
+//     allMotivations(motivationLines); //getting all motivations
 
-}
+// }
 
 //[[[[[[[[[[[[[[[[[[[[************** Success motivation section   ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
@@ -318,3 +325,5 @@ count = 0;
 // });
 
 // count = 1;
+
+
