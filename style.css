@@ -38,10 +38,12 @@ body
     z-index: -2;
 
     background: url('./images/bg.jpg');
-    /* background-size: cover; */
+    background-size: cover;
     background-attachment: fixed;
     display: flex;
     align-items: center;
+    filter: blur(5px);
+    opacity: .5;
 }
 
 .bg img
@@ -209,7 +211,21 @@ header nav .search-section
     align-items: center;
     /* border: 2px solid red; */
     transition: .5s linear;
-    background: #000;
+    /* background:var(--bg-color); */
+   opacity: 1;
+}
+
+.home-page::before
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: '';
+    background:url('./images/bg.jpg');
+    background-size: cover;
+    z-index: -1;
+    opacity: .5;
+    filter: blur(5px);
 }
 
 .home-page.homepage-OpenClose
@@ -241,6 +257,9 @@ header nav .search-section
     transition: .3s linear;
     border-radius: .5rem;
     border: 1px solid #2f2f2f;
+    opacity: 1;
+    z-index: 100;
+    /* backdrop-filter: blur(5px); */
 }
 
 .cards-container .card-details:hover
@@ -298,7 +317,7 @@ header nav .search-section
     height: 100%;
     width: 100%;
     object-fit: cover;
-    opacity: .5;
+    opacity: .8;
 }
 
 
@@ -413,6 +432,65 @@ header nav .search-section
     color: var(--hover-font-color);
     box-shadow: 0rem 0rem .5rem var(--main-color);
 }
+
+/* loading skelaton */
+
+.skeleton {
+    position: relative;
+}
+.skeleton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: linear-gradient(90deg, #c7c7c7, #585858, #8b8b8b);
+    background-size: 200%;
+    animation: skeleton 1s infinite reverse;
+}
+@keyframes skeleton {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+.scPage_skeleton
+{
+    position: relative;
+}
+
+.scPage_skeleton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: linear-gradient(90deg, #c7c7c7, #585858, #8b8b8b);
+    background-size: 200%;
+    animation: scPage_skeleton 1s infinite reverse;
+}
+
+.scPage_skeleton:last-child:before
+{
+    width: 50%;
+}
+@keyframes scPage_skeleton {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+
 
 
 /*******************[[[[[[[[[[[[[[[[[[[[    responssive section   ]]]]]]]]]]]]]]]]]]]]]]]]]]]*******************/
