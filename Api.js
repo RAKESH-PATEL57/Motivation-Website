@@ -41,13 +41,15 @@ function toggleHomePageAndSecondPage()
 //[[[[[[[[[[[[[[[[[[[[************** Deep motivation section   ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
 deepMotvOpen.addEventListener('click',(e) => {
+
+    loading();
     toggleHomePageAndSecondPage();
     deepMotvGenerating();
 });
 
 async function deepMotvGenerating()
 {
-    
+    loading();
     const deepmotvdata = await fetch(deepMotv);
     const motivationLines = await deepmotvdata.json();
 
@@ -61,6 +63,7 @@ async function deepMotvGenerating()
 
 successMotvOpen.addEventListener('click',(e) => {
 
+    loading();
     toggleHomePageAndSecondPage();
     successMotvGenerating();
 
@@ -81,6 +84,7 @@ async function successMotvGenerating()
 
 workMotvOpen.addEventListener('click',(e) => {
 
+    loading();
     toggleHomePageAndSecondPage();
     workMotvGenerating();
 
@@ -100,7 +104,8 @@ async function workMotvGenerating()
 //[[[[[[[[[[[[[[[[[[[[************** Persional Life motivation section   ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
 perLifeMotvOpen.addEventListener('click',(e) => {
-   
+
+    loading();
     toggleHomePageAndSecondPage();
     personalMotvGenerating();
 
@@ -122,6 +127,7 @@ async function personalMotvGenerating()
 
 womenMotvOpen.addEventListener('click',(e) => {
 
+    loading();
     toggleHomePageAndSecondPage();
     womenMotvGenerating();
 
@@ -141,7 +147,8 @@ async function womenMotvGenerating()
 //[[[[[[[[[[[[[[[[[[[[************************   Men motivation section ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
 menMotvOpen.addEventListener('click',(e) => {
-   
+
+    loading();
     toggleHomePageAndSecondPage();
     menMotvGenerating();
 
@@ -153,7 +160,7 @@ async function menMotvGenerating()
     const motivationLines = await menMotvData.json();
 
     speakNow(motivationHeading);  //speaking the motivation line 
-
+    
     allMotivations(motivationLines); //getting all motivations
  
 }
@@ -168,7 +175,7 @@ async function menMotvGenerating()
 
 function allMotivations(motivationLines)
 {
-
+    
     motivationImg.src = (motivationLines[0].image).slice(1);
 
     motivationHeading.innerHTML = motivationLines[0].motivationLine;
@@ -178,6 +185,7 @@ function allMotivations(motivationLines)
 
     nextMotvBtn.addEventListener('click',() => {
         // console.log('click');
+        loading();
         if(mcount < motivationLines.length - 1)
         {
 
@@ -194,7 +202,7 @@ function allMotivations(motivationLines)
     });
 
     prevMotvBtn.addEventListener('click',() => {
-
+        loading();
         if(mcount>0)
         {
             mcount--;
@@ -218,7 +226,7 @@ function speakNow()
     if(count == 0)
     {
         speakerBtn.addEventListener('click',() => {
-            voices = window.speechSynthesis.getVoices();
+            let voices = window.speechSynthesis.getVoices();
             var motivationLineSpeaker = new SpeechSynthesisUtterance();
 
             motivationLineSpeaker.voice = voices[0];
@@ -234,6 +242,24 @@ function speakNow()
 }
 
 count = 0;
+
+
+//*******************[[[[[[[[[[[[[[[[[[[[   loading section   ***********************]]]]]]]]]]]]]]]]]]]]
+const scPgAllLoadingElmts = document.querySelectorAll('.scPage_skeleton');
+function loading()
+{
+    scPgAllLoadingElmts.forEach(item=> {
+        item.classList.add('scPage_skeleton')
+      })
+    // to stop loading after some time
+     setTimeout(() => {
+        scPgAllLoadingElmts.forEach((item) => {
+           item.classList.remove('scPage_skeleton');
+        })
+     },1500)
+    
+}
+
 
 
 
