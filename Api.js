@@ -7,6 +7,7 @@ let womenMotv = "./Custom_Apis/womenMotv.json";
 let menMotv = "./Custom_Apis/menMotvQuotes.json";
 let encMotv = "./Custom_Apis/EncMotv.json";
 let newYearMotv = "./Custom_Apis/newyearMotv.json";
+let studentMotv = "./Custom_Apis/studentMotv.json";
 
 let homepage = document.querySelector('.home-page');
 let secondPage = document.querySelector('.second-page');
@@ -18,6 +19,7 @@ let womenMotvOpen = document.querySelector('#womenMotvOpen');
 let menMotvOpen = document.querySelector('#menMotvOpen');
 let encMotvOpen = document.querySelector('#encMotvOpen');
 let newYearMotvOpen = document.querySelector('#newYearMotvOpen');
+let studentMotvOpen = document.querySelector('#studentMotvOpen');
 
 let backToHomeBtn = document.querySelector('.backtohomebtn');
 
@@ -209,6 +211,25 @@ async function newYearMotvGenerating()
  
 }
 
+//[[[[[[[[[[[[[[[[[[[[************************   Student motivation section ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+studentMotvOpen.addEventListener('click',(e) => {
+
+    loading();
+    toggleHomePageAndSecondPage();
+    studentMotvGenerating();
+
+});
+
+async function studentMotvGenerating()
+{
+    const studentMotvData = await fetch(studentMotv);
+    const motivationLines = await studentMotvData.json();
+
+    speakNow(motivationHeading);  //speaking the motivation line 
+    
+    allMotivations(motivationLines); //getting all motivations
+ 
+}
 
 //[[[[[[[[[[[[[[[[[[[[**********************    All Motivation Generating function  *************************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
