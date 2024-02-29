@@ -52,20 +52,10 @@ deepMotvOpen.addEventListener('click',(e) => {
 
     loading();
     toggleHomePageAndSecondPage();
-    deepMotvGenerating();
+    // deepMotvGenerating();
+    fetchData(deepMotv);
+
 });
-
-async function deepMotvGenerating()
-{
-    loading();
-    const deepmotvdata = await fetch(deepMotv);
-    const motivationLines = await deepmotvdata.json();
-
-    speakNow(motivationHeading);  //speaking the motivation line 
-
-    allMotivations(motivationLines); //getting all motivations
-
-}
 
 //[[[[[[[[[[[[[[[[[[[[************** Success motivation section   ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
@@ -73,20 +63,10 @@ successMotvOpen.addEventListener('click',(e) => {
 
     loading();
     toggleHomePageAndSecondPage();
-    successMotvGenerating();
+    
+    fetchData(successMotv);
 
 });
-
-async function successMotvGenerating()
-{
-    const succmotvdata = await fetch(successMotv);
-    const motivationLines = await succmotvdata.json();
-
-    speakNow(motivationHeading);  //speaking the motivation line 
-
-    allMotivations(motivationLines); //getting all motivations
-
-}
 
 //[[[[[[[[[[[[[[[[[[[[************** Work motivation section   ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
@@ -94,20 +74,10 @@ workMotvOpen.addEventListener('click',(e) => {
 
     loading();
     toggleHomePageAndSecondPage();
-    workMotvGenerating();
+
+    fetchData(workMotv);
 
 });
-
-async function workMotvGenerating()
-{
-    const workmotvdata = await fetch(workMotv);
-    const motivationLines = await workmotvdata.json();
-
-    speakNow(motivationHeading);  //speaking the motivation line 
-
-    allMotivations(motivationLines); //getting all motivations
-
-}
 
 //[[[[[[[[[[[[[[[[[[[[************** Persional Life motivation section   ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
@@ -115,21 +85,10 @@ perLifeMotvOpen.addEventListener('click',(e) => {
 
     loading();
     toggleHomePageAndSecondPage();
-    personalMotvGenerating();
+
+    fetchData(personalMotv);
 
 });
-
-async function personalMotvGenerating()
-{
-    const perLifeMotvData = await fetch(personalMotv);
-    const motivationLines = await perLifeMotvData.json();
-
-    speakNow(motivationHeading);  //speaking the motivation line 
-
-    allMotivations(motivationLines); //getting all motivations
-
-  
-}
 
 //[[[[[[[[[[[[[[[[[[[[************** Women motivation section   ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
@@ -137,20 +96,10 @@ womenMotvOpen.addEventListener('click',(e) => {
 
     loading();
     toggleHomePageAndSecondPage();
-    womenMotvGenerating();
+    
+    fetchData(womenMotv);
 
 });
-
-async function womenMotvGenerating()
-{
-    const womenMotvData = await fetch(womenMotv);
-    const motivationLines = await womenMotvData.json();
-
-    speakNow(motivationHeading);  //speaking the motivation line 
-
-    allMotivations(motivationLines); //getting all motivations
-  
-}
 
 //[[[[[[[[[[[[[[[[[[[[************************   Men motivation section ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
@@ -158,100 +107,65 @@ menMotvOpen.addEventListener('click',(e) => {
 
     loading();
     toggleHomePageAndSecondPage();
-    menMotvGenerating();
+
+    fetchData(menMotv);
 
 });
-
-async function menMotvGenerating()
-{
-    const menMotvData = await fetch(menMotv);
-    const motivationLines = await menMotvData.json();
-
-    speakNow(motivationHeading);  //speaking the motivation line 
-    
-    allMotivations(motivationLines); //getting all motivations
- 
-}
 
 //[[[[[[[[[[[[[[[[[[[[************************   Encoraging motivation section ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 encMotvOpen.addEventListener('click',(e) => {
 
     loading();
     toggleHomePageAndSecondPage();
-    encMotvGenerating();
+   
+    fetchData(encMotv);
 
 });
-
-async function encMotvGenerating()
-{
-    const encMotvData = await fetch(encMotv);
-    const motivationLines = await encMotvData.json();
-
-    speakNow(motivationHeading);  //speaking the motivation line 
-    
-    allMotivations(motivationLines); //getting all motivations
- 
-}
 
 //[[[[[[[[[[[[[[[[[[[[************************   Encoraging motivation section ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 newYearMotvOpen.addEventListener('click',(e) => {
 
     loading();
     toggleHomePageAndSecondPage();
-    newYearMotvGenerating();
+    
+    fetchData(newYearMotv);
 
 });
 
-async function newYearMotvGenerating()
-{
-    const newYearMotvData = await fetch(newYearMotv);
-    const motivationLines = await newYearMotvData.json();
-
-    speakNow(motivationHeading);  //speaking the motivation line 
-    
-    allMotivations(motivationLines); //getting all motivations
- 
-}
 
 //[[[[[[[[[[[[[[[[[[[[************************   Student motivation section ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 studentMotvOpen.addEventListener('click',(e) => {
 
     loading();
     toggleHomePageAndSecondPage();
-    studentMotvGenerating();
+    
+    fetchData(studentMotv);
 
 });
-
-async function studentMotvGenerating()
-{
-    const studentMotvData = await fetch(studentMotv);
-    const motivationLines = await studentMotvData.json();
-
-    speakNow(motivationHeading);  //speaking the motivation line 
-    
-    allMotivations(motivationLines); //getting all motivations
- 
-}
 
 //[[[[[[[[[[[[[[[[[[[[************************   Student motivation section ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 teamMotvOpen.addEventListener('click',(e) => {
 
     loading();
     toggleHomePageAndSecondPage();
-    teamMotvGenerating();
+   
+    fetchData(teamMotv);
 
 });
 
-async function teamMotvGenerating()
+//[[[[[[[[[[[[[[[[[[[[[[[[[**************** fetching the current motivation data   *************************************]]]]]]]]]]]]]]]]]]]]]
+
+async function fetchData(motvData)
 {
-    const teamMotvData = await fetch(teamMotv);
-    const motivationLines = await teamMotvData.json();
+    loading();
+    const currentMotvdata = await fetch(motvData);
+    const motivationLines = await currentMotvdata.json();
 
     speakNow(motivationHeading);  //speaking the motivation line 
-    
+
     allMotivations(motivationLines); //getting all motivations
- 
 }
+
 
 //[[[[[[[[[[[[[[[[[[[[**********************    All Motivation Generating function  *************************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
@@ -329,7 +243,6 @@ function speakNow()
 }
 
 count = 0;
-
 
 //*******************[[[[[[[[[[[[[[[[[[[[   loading section   ***********************]]]]]]]]]]]]]]]]]]]]
 const scPgAllLoadingElmts = document.querySelectorAll('.scPage_skeleton');
