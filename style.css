@@ -224,7 +224,6 @@ ul li
 /*[[[[[[[[[[[[[[[[[[[   Home-page section    ]]]]]]]]]]]]]]]]]]]]]]]*/
 main
 {
-    border: 2px solid red;
     height: 100%;
     width: 80%;
     position: absolute;
@@ -239,29 +238,8 @@ main
     flex-direction: column;
     align-items: center;
     transition: .5s linear;
-    /* background:var(--bg-color); */
-    border: 2px solid red;
     opacity: 1;
     gap: 1rem;
-    overflow: scroll;
-}
-
-.home-page::-webkit-scrollbar
-{
-    opacity: 1;
-    display: block;
-    border: 2px solid red;
-}
-.home-page::-webkit-scrollbar-track
-{
-    background: var(--bg-color);
-}
-
-.home-page::-webkit-scrollbar-thumb
-{
-    color: red;
-    height: 1rem;
-    width: 1rem;
 }
 
 .home-page.homepage-OpenClose
@@ -278,16 +256,31 @@ main
 .home-page .cards-container
 {
     height: 100%;
-    /* border: 2px solid rgb(60, 255, 0); */
     position: relative;
     width: 95%;
     /* gap: 0rem 1.5rem; */
     gap: 2rem;
     display: flex;
     flex-wrap: wrap;
+    overflow-x: scroll;
+    overflow-x: hidden;
     justify-content: center;
     align-items: center;
 }
+
+.home-page .cards-container::-webkit-scrollbar
+{
+    background: transparent;
+    width: .5rem;
+}
+
+.home-page .cards-container::-webkit-scrollbar-thumb
+{
+    background: aqua;
+    border-radius: 1rem;
+    box-shadow: 0rem 0rem .5rem aqua;
+}
+
 
 .cards-container .card-details
 {
@@ -300,7 +293,6 @@ main
     transition: .3s linear;
     border-radius: .5rem;
     border: 1px solid #2f2f2f;
-    opacity: 1;
     z-index: 100;
     /* backdrop-filter: blur(5px); */
 }
@@ -310,19 +302,6 @@ main
    box-shadow: 0rem 1rem 1.1rem var(--main-color);
    border: 1px solid #fff;
 }
-
-/* .card-details .cdheading
-{
-    position: absolute;
-    z-index: 10;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: .3s linear;
-} */
-
 .cdheading h1, .cdheading h2
 {
     position: absolute;
@@ -331,7 +310,7 @@ main
     left: 50%;
     transform: translate(-50%,-50%);
     transition: .5s;
-    text-align: center; /* for centering to line motivation hading*/ 
+    text-align: center; /* for centering to line motivation heading*/ 
 }
 
 .cdheading h2
@@ -360,7 +339,7 @@ main
     height: 100%;
     width: 100%;
     object-fit: cover;
-    opacity: .8;
+    opacity: .3;
 }
 
 
