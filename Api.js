@@ -33,8 +33,6 @@ let nextMotvBtn = document.querySelector('#next-Motv');
 let prevMotvBtn = document.querySelector('#prev-Motv');
 let speakerBtn = document.querySelector('#speak');
 
-
-
 backToHomeBtn.addEventListener('click',() => {
     homepage.classList.remove('homepage-OpenClose');
     secondPage.classList.remove('secondpage-OpenClose');
@@ -181,42 +179,70 @@ function allMotivations(motivationLines)
 
     motivationHeading.innerHTML = motivationLines[0].motivationLine;
     motivationWriter.innerHTML = motivationLines[0].writer;
-   
-    let mcount = 0; //number of motivations lines
+
 
     nextMotvBtn.addEventListener('click',() => {
         // console.log('click');
         loading();
-        if(mcount < motivationLines.length - 1)
-        {
-
-            mcount++;
-            motivationImg.src = (motivationLines[mcount].image).slice(1);
-            motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
-            motivationWriter.innerHTML = motivationLines[mcount].writer;
-            
-        }
-        else
-        {
-            mcount = 0;
-        }
+        nextMotv(motivationLines);
     });
 
     prevMotvBtn.addEventListener('click',() => {
         loading();
-        if(mcount>0)
-        {
-            mcount--;
-            motivationImg.src = (motivationLines[mcount].image).slice(1);
-            motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
-            motivationWriter.innerHTML = motivationLines[mcount].writer;
-        }
-        else
-        {
-            mcount = motivationLines.length - 1;
-        }
+        prevMotv(motivationLines);
     });
 
+     //[[[[[[[[[[[[[[[[[[[[************** Arrow detection section   ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+     document.onkeydown = (event) => {
+        switch (event.keyCode) 
+        {
+            case 37:
+                loading();
+                prevMotv(motivationLines);
+                break;
+            case 39:
+                loading();
+                nextMotv(motivationLines);
+                break;
+        }
+    }
+
+}
+
+let mcount = 0; //number of motivations lines
+
+function nextMotv(motivationLines)
+{
+  
+    if(mcount < motivationLines.length - 1)
+    {
+
+        mcount++;
+        motivationImg.src = (motivationLines[mcount].image).slice(1);
+        motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
+        motivationWriter.innerHTML = motivationLines[mcount].writer;
+        
+    }
+    else
+    {
+        mcount = 0;
+    }
+}
+
+function  prevMotv(motivationLines)
+{
+    let mcount = 0; //number of motivations lines
+    if(mcount>0)
+    {
+        mcount--;
+        motivationImg.src = (motivationLines[mcount].image).slice(1);
+        motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
+        motivationWriter.innerHTML = motivationLines[mcount].writer;
+    }
+    else
+    {
+        mcount = motivationLines.length - 1;
+    }
 }
 
 //[[[[[[[[[[[[[[[[[******************* speaking section   ******************]]]]]]]]]]]]]]]]]]]]]]]]]]
