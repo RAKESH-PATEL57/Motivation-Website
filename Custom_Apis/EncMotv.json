@@ -40,5 +40,23 @@
         "image":"../images/Encourage/encourage-7.jpg",
         "motivationLine": "“Hustle beats talent when talent doesn’t hustle.”",
         "writer": "Ross Simmonds"
+    },
+    {
+        "id" : 8,
+        "image": "",
+        "motivationLine":"Success is not final, failure is not fatal: it is the courage to continue that counts.",
+        "writer":"Winston Churchill"
+    },
+    {
+        "id" : 9,
+        "image":"",
+        "motivationLine":"Through discipline comes freedom",
+        "writer":"Confucius"
+    },
+    {
+        "id":10,
+        "image":"",
+        "motivationLine":"Don’t be afraid to give up the good to go for the great." ,
+        "writer":"John D. Rockefeller"
     }
 ]

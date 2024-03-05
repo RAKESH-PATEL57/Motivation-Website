@@ -33,5 +33,26 @@
         "id": 7,
         "motivationLine": "“If you believe something needs to exist, if it’s something you want to use yourself, don’t let anyone ever stop you from doing it.”",
         "writer": "Tobias Lütke"
+    },
+    {
+        "id": 8,
+        "motivationLine": "Believe you can and you're halfway there.",
+        "writer": "Theodore Roosevelt"
+    },
+    {
+        "id": 9,
+        "motivationLine": "Life shrinks or expands in proportion to one’s courage.",
+        "writer": "Anaïs Nin"
+    },
+    {
+        "id": 8,
+        "motivationLine": " Try to be a rainbow in someone's cloud.",
+        "writer": " Maya Angelou"
+    },
+    {
+        "id": 10,
+        "motivationLine": "Real change, enduring change, happens one step at a time. ",
+        "writer": "Ruth Bader"
     }
+
 ]
