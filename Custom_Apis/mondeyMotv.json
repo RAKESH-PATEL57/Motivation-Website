@@ -38,5 +38,15 @@
         "id": 8,
         "motivationLine": "“Your Monday morning thoughts set the tone for your whole week. See yourself getting stronger, and living a fulfilling, happier, and healthier life.” ",
         "writer": "Germany Kent"
+    },
+    {
+        "id" : 9,
+        "motivationLine":"“If Joan of Arc could turn the tide of an entire war before her 18th birthday, you can get out of bed.”",
+        "writer" : "E. Jean Carroll"
+    },
+    {
+        "id" : 10,
+        "motivationLine":"“Inspiration comes from within yourself. One has to be positive. When you’re positive, good things happen.”",
+        "writer" : "Deep Roy"
     }
 ]
