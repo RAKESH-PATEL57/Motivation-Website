@@ -9,6 +9,7 @@ let encMotv = "./Custom_Apis/EncMotv.json";
 let newYearMotv = "./Custom_Apis/newyearMotv.json";
 let studentMotv = "./Custom_Apis/studentMotv.json";
 let teamMotv = "./Custom_Apis/teamMotv.json";
+let funnyMotv = "./Custom_Apis/funnyMotv.json";
 
 let homepage = document.querySelector('.home-page');
 let secondPage = document.querySelector('.second-page');
@@ -22,6 +23,7 @@ let encMotvOpen = document.querySelector('#encMotvOpen');
 let newYearMotvOpen = document.querySelector('#newYearMotvOpen');
 let studentMotvOpen = document.querySelector('#studentMotvOpen');
 let teamMotvOpen = document.querySelector('#teamMotvOpen');
+let funnyMotvOpen = document.querySelector('#funnyMotvOpen');
 
 let backToHomeBtn = document.querySelector('.backtohomebtn');
 
@@ -148,6 +150,16 @@ teamMotvOpen.addEventListener('click',(e) => {
     toggleHomePageAndSecondPage();
    
     fetchData(teamMotv);
+
+});
+
+//[[[[[[[[[[[[[[[[[[[[************************   Student motivation section ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+funnyMotvOpen.addEventListener('click',(e) => {
+
+    loading();
+    toggleHomePageAndSecondPage();
+   
+    fetchData(funnyMotv);
 
 });
 
