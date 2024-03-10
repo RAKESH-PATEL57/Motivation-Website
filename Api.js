@@ -267,8 +267,9 @@ function speakNow()
         speakerBtn.addEventListener('click',() => {
             let voices = window.speechSynthesis.getVoices();
             var motivationLineSpeaker = new SpeechSynthesisUtterance();
-
-            motivationLineSpeaker.voice = voices[0];
+            console.log(voices);
+            // motivationLineSpeaker.voice = voices[27];
+            motivationLineSpeaker.voice = voices[28];
             motivationLineSpeaker.lang = voices.lang;
 
             motivationLineSpeaker.text = motivationHeading.innerHTML;
@@ -298,18 +299,13 @@ function loading()
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+// var msg = new SpeechSynthesisUtterance();
+// var voices = window.speechSynthesis.getVoices();
+// console.log(voices);
+// msg.voice = voices[9];
+// msg.text = "hello world";
+// msg.lang = 'en-US';
+// speechSynthesis.speak(msg);
 
 
 
