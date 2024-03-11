@@ -76,7 +76,6 @@ header .logo
 
 header nav
 {
-    /* border: 2px solid red; */
     width: 100%;
     color: var(--font-color);
     display:flex;
@@ -88,7 +87,6 @@ nav ul
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* border: 2px solid aqua; */
     width: 100%;
     gap: .8rem;
 }
@@ -165,7 +163,6 @@ ul li
 {
     letter-spacing: .25rem;
     font-weight:1200;
-    /* border: 2px solid aqua; */
     text-align: center;
 }
 
@@ -218,7 +215,6 @@ main
     height: 100%;
     position: relative;
     width: 95%;
-    /* gap: 0rem 1.5rem; */
     gap: 2rem;
     display: flex;
     flex-wrap: wrap;
