@@ -38,5 +38,15 @@
         "id": 8,
         "motivationLine": "“Ideation without execution is delusion.”",
         "writer": "Robin Sharma"
+    },
+    {
+        "id" : 9,
+        "motivationLine":"“You’ve got to get up every morning with determination if you’re going to go to bed with satisfaction.” ",
+        "writer" : "George Lorimer"
+    },
+    {
+        "id" : 10,
+        "motivationLine":". “Believe on Monday the way you believe on Sunday.”",
+        "writer" : "Rita Schiano"
     }
 ]
