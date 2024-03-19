@@ -22,6 +22,7 @@ body
 {
   background: var(--bg-color); 
   min-height: 100vh;
+  border: 2px solid red;
 }
 
 .bg img
@@ -139,7 +140,7 @@ ul li
 } */
 
 /*[[[[[[[[[[[[[[[[[[[   Front-page section    ]]]]]]]]]]]]]]]]]]]]]]]*/
-.intro-page
+/* .intro-page
 {
     height: 100vh;
     display: flex;
@@ -176,9 +177,59 @@ ul li
     -webkit-text-stroke-width: .5px;
     -webkit-text-stroke-color: black;
     text-shadow: 0rem 0rem .4rem var(--main-color);
+} */
+
+.home-page
+{
+    display: flex;
+    height: 100vh;
+    width:100%;
+    justify-content: center;
+    align-items: center;
 }
 
-/*[[[[[[[[[[[[[[[[[[[   Home-page section    ]]]]]]]]]]]]]]]]]]]]]]]*/
+.home-page img
+{
+    object-fit: cover;
+    position: fixed;
+}
+
+/* .home-page h1
+{
+    position: fixed;
+    color: white;
+    font-size: 4.5rem;
+} */
+
+#heading
+{
+    font-size: 6rem;
+    color: white;
+}
+
+
+.home-page img, .home-page h1
+{
+    animation: zoom linear;
+    animation-timeline: scroll();
+    /* animation-timeline: view(); */
+    /* animation-range: contain 0% contain 100%; */
+}
+
+@keyframes zoom
+{
+    0%{
+        scale: 1;
+    }
+    100%{
+        scale: 5;
+        opacity: 0;
+        /* rotate: 50deg; */
+    }
+}
+
+
+/*[[[[[[[[[[[[[[[[[[[   motivation-container section    ]]]]]]]]]]]]]]]]]]]]]]]*/
 main
 {
     height: 100%;
@@ -186,7 +237,8 @@ main
     position: absolute;
     right: 0;
 }
-.home-page
+
+.motivation-container
 {
     position: absolute;
     height: 100%;
@@ -199,18 +251,18 @@ main
     gap: 1rem;
 }
 
-.home-page.homepage-OpenClose
+.motivation-container.motivationcontainer-OpenClose
 {  
     display: none;
 }
 
-.home-page #home-heading
+.motivation-container #home-heading
 {
     color: var(--main-color);
     font-size: 2.5rem;
 }
 
-.home-page .cards-container
+.motivation-container .cards-container
 {
     height: 100%;
     position: relative;
@@ -224,13 +276,13 @@ main
     align-items: center;
 }
 
-.home-page .cards-container::-webkit-scrollbar
+.motivation-container .cards-container::-webkit-scrollbar
 {
     background: transparent;
     width: .5rem;
 }
 
-.home-page .cards-container::-webkit-scrollbar-thumb
+.motivation-container .cards-container::-webkit-scrollbar-thumb
 {
     background: aqua;
     border-radius: 1rem;
@@ -529,4 +581,12 @@ main
         bottom: 2%;
     }
 
+}
+
+@media(max-width:720px)
+{
+    html
+    {
+        font-size: 40%;
+    }
 }
