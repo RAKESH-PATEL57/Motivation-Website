@@ -1,592 +1,204 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    scroll-behavior: smooth;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: sans-serif;
 }
-
 
 :root
 {
-    --bg-color:rgb(1, 0, 19);
-    --font-color:rgb(255, 255, 255);
-    --main-color:aqua;
-    --hover-font-color:black;
+    --bg-color:rgb(9, 7, 42);
+    --font-color:white;
+    --alpha-color:rgb(255, 136, 0);
+    --scrollBtn-color:gray;
 }
 
 body
 {
-  background: var(--bg-color); 
-  min-height: 100vh;
-  border: 2px solid red;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--bg-color);
 }
-
-.bg img
-{
-    /* background-attachment: fixed; */
-    height: 90%;
-    width: 100%;
-    object-fit: cover;
-    position: absolute;
-}
-
-/* canvas
-{
-    width: 100%;
-    position: absolute;
-    top: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-} */
 
 header
 {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    padding: 1rem .1rem;
     position: fixed;
-    backdrop-filter:blur(1.5px);
-    z-index: 100;
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
     border: 2px solid aqua;
-    width: 20%;
 }
 
-header .logo
+header .header-content
 {
-    border: 2px dotted var(--main-color);
-    text-align: center;
-    border-radius: 50%;
-    padding: 1rem;
-}
-
-.logo img
-{
-    height: 3rem;
-    /* width: 10rem; */  
-}
-
-header nav
-{
-    width: 100%;
-    color: var(--font-color);
-    display:flex;
-    height: 85%;
-}
-
-nav ul
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: .8rem;
-}
-
-ul h1
-{
-    color: var(--main-color);
-}
-
-ul li
-{
-    cursor: pointer;
-}
-
-/* header nav .search-section
-{
-    border: 2px solid var(--main-color);
-    border-radius: 1rem;
-    padding: .2rem .5rem;
-    width: 20rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-} */
-
-/* .search-section .search-input-box
-{
-    background: transparent;
-    border: none;
-    color: var(--font-color);
-    width: 88%;
-} */
-
-/* .search-section .search-input-box:focus
-{
-  outline: none;
-} */
-
-/* .search-section .search-input-box::placeholder
-{
-    /* color: var(--font-color); 
-    font-size: 1rem;
-} */
-
-/* .search-section .search-icon
-{
-    color: var(--font-color);
-    font-size: 1.5rem;
-    cursor: pointer;
-} */
-
-/*[[[[[[[[[[[[[[[[[[[   Front-page section    ]]]]]]]]]]]]]]]]]]]]]]]*/
-/* .intro-page
-{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.intro-page .mainmotivation-container
-{
-    color: var(--font-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.8rem;
-    gap: 2rem;
-}
-
-.mainmotivation-container h1
-{
-    letter-spacing: .25rem;
-    font-weight:1200;
-    text-align: center;
-}
-
-.mainmotivation-container span
-{
-    color: var(--main-color);
-    font-size: 6rem;
-    font-family: "Bebas Neue", sans-serif;
-    letter-spacing: .9rem;
-    font-weight: 800;
-    -webkit-text-stroke-width: .5px;
-    -webkit-text-stroke-color: black;
-    text-shadow: 0rem 0rem .4rem var(--main-color);
-} */
-
-.home-page
-{
-    display: flex;
-    height: 100vh;
-    width:100%;
-    justify-content: center;
-    align-items: center;
-}
-
-.home-page img
-{
-    object-fit: cover;
-    position: fixed;
-}
-
-/* .home-page h1
-{
-    position: fixed;
-    color: white;
-    font-size: 4.5rem;
-} */
-
-#heading
-{
-    font-size: 6rem;
-    color: white;
-}
-
-
-.home-page img, .home-page h1
-{
-    animation: zoom linear;
-    animation-timeline: scroll();
-    /* animation-timeline: view(); */
-    /* animation-range: contain 0% contain 100%; */
-}
-
-@keyframes zoom
-{
-    0%{
-        scale: 1;
-    }
-    100%{
-        scale: 5;
-        opacity: 0;
-        /* rotate: 50deg; */
-    }
-}
-
-
-/*[[[[[[[[[[[[[[[[[[[   motivation-container section    ]]]]]]]]]]]]]]]]]]]]]]]*/
-main
-{
-    height: 100%;
     width: 80%;
-    position: absolute;
-    right: 0;
-}
-
-.motivation-container
-{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: .5s linear;
-    opacity: 1;
-    gap: 1rem;
-}
-
-.motivation-container.motivationcontainer-OpenClose
-{  
-    display: none;
-}
-
-.motivation-container #home-heading
-{
-    color: var(--main-color);
-    font-size: 2.5rem;
-}
-
-.motivation-container .cards-container
-{
-    height: 100%;
-    position: relative;
-    width: 95%;
-    gap: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    overflow-x: scroll;
-    overflow-x: hidden;
-    justify-content: center;
-    align-items: center;
-}
-
-.motivation-container .cards-container::-webkit-scrollbar
-{
-    background: transparent;
-    width: .5rem;
-}
-
-.motivation-container .cards-container::-webkit-scrollbar-thumb
-{
-    background: aqua;
-    border-radius: 1rem;
-    box-shadow: 0rem 0rem .5rem aqua;
-}
-
-
-.cards-container .card-details
-{
-    height: 15rem;
-    width: 15rem;
-    position: relative;
-    color: var(--font-color);
-    cursor: pointer;
-    overflow: hidden;
-    transition: .3s linear;
-    border-radius: .5rem;
-    border: 1px solid #2f2f2f;
-    z-index: 100;
-    /* backdrop-filter: blur(5px); */
-}
-
-.cards-container .card-details:hover
-{
-   box-shadow: 0rem 1rem 1.1rem var(--main-color);
-   border: 1px solid var(--font-color);
-}
-.cdheading h1, .cdheading h2
-{
-    position: absolute;
-    z-index: 10;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    transition: .5s;
-    text-align: center; /* for centering to line motivation heading*/ 
-}
-
-.cdheading h2
-{
-    top: -20%;
-}
-
-.cdheading h1
-{
-    bottom: 30%;
-}
-
-.card-details:hover .cdheading h1
-{
-    bottom: -100%;
-}
-
-.card-details:hover .cdheading h2
-{
-    top: 50%;
-}  
-
-.card-details img
-{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    opacity: .3;
-}
-
-
-/*************[[[[[[[[[[[ second page making   ]]]]]]]]]]]]]]]]]]]]]]************/
-.second-page
-{
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    /* border: 2px solid red; */
-    display: none;
-    transition: .5s linear;
-    pointer-events: none;
-}
-
-.second-page.secondpage-OpenClose
-{
-    display: block;
-    pointer-events: auto;
-}
-
-.second-page .second-page-content
-{
-    min-height: 93%;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:0rem 2rem;
-}
-
-.second-page .left-side-img-container
-{
-    height: 55vh;
-    width: 30vw;
-}
-
-.second-page .left-side-img-container img
-{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.second-page .right-side-motvcontainer
-{
-    min-height:40%;
-    width: 50%;
+    z-index: 1000;
     color: var(--font-color);
+    font-size: 1.4rem;
+}
+
+.header-content .logo
+{
+    color: var(--alpha-color);
+}
+
+/****************[[[[[[[[[ first page section start ]]]]]]]]]]]]]]]]******************/
+main .firstPage
+{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    /* border: 2px solid red; */
-    gap: 3rem;
+
 }
 
-.right-side-motvcontainer .headings-writer
+.firstPage .firstPageContent
 {
-    color: var(--font-color);
-    height: 9rem;
+    position: absolute;
+    width: 90%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid aqua; */
 }
 
-.headings-writer #motivation-writer
-{
-    width: fit-content;
-}
-
-.right-side-motvcontainer .prev-next-btn
-{
-    display: flex;
-    gap: 1rem;
-}
-
-.prev-next-btn .btn
+.firstPageContent .scrollBtn
 {
     background: transparent;
-    /* padding: 1rem; */
     border: none;
+    font-size: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scrollBtn i
+{
+    /* font-size: 15rem; */
     cursor: pointer;
-     pointer-events: auto;
-     border-radius: 50%;
+    /* border: 2px solid red; */
+    padding: 0;
+    transition: .2s linear;
+    color: var(--scrollBtn-color);
 }
 
-.btn i
+.scrollBtn i:hover
 {
-    font-size: 1.3rem;
-    border: 2px solid var(--main-color);
-    color: var(--font-color);
-    padding: .5rem;
-    border-radius: 50%;
-    transition: .3s;
+    color: var(--alpha-color);
 }
 
-.second-page .backtohomebtn
+.firstPageContent .motivationContainer
 {
-    padding: .5rem;
+    position: relative;
+    height: 18rem;
+    width: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.motivationContainer .leftBottom
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid;
+    padding: 10px;
+    border-image-source: radial-gradient(
+        circle at top left,
+        aqua,
+        /* rgb(89, 255, 0), */
+        transparent 25%
+    );    
+    border-image-slice: 1;
+    z-index: 1;
+    transition: .5s;
+    filter: drop-shadow(10px 10px 10px aqua)
+}
+.motivationContainer .rightTop
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid;
+    padding: 10px;
+    border-image-source: radial-gradient(
+        circle at top right,
+        aqua,
+        /* rgb(89, 255, 0), */
+        transparent 25%
+    );    
+    border-image-slice: 1;
+    z-index: 1;
+    transition: .5s;
+    filter: drop-shadow(10px 10px 10px aqua)
+}
+.motivationContainer .rightBottom
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid;
+    padding: 10px;
+    border-image-source: radial-gradient(
+        circle at bottom right,
+        aqua,
+        /* rgb(89, 255, 0), */
+        transparent 25%
+    );    
+    border-image-slice: 1;
+    z-index: 1;
+    transition: .5s;
+    filter: drop-shadow(10px 10px 10px aqua)
+}
+.motivationContainer .leftTop
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid;
+    padding: 10px;
+    border-image-source: radial-gradient(
+        circle at bottom left,
+        aqua,
+        /* rgb(89, 255, 0), */
+        transparent 25%
+    );    
+    border-image-slice: 1;
+    z-index: 1;
+    transition: .5s;
+    filter: drop-shadow(10px 10px 10px aqua)
+}
+
+.motivationContainer .mName
+{
+    text-align: center;
+}
+
+.motivationContainer #openBtn
+{
+    cursor: pointer;
+    position: absolute;
+    bottom: 1%;
+    padding: .2rem 1rem;
     border-radius: 1rem;
-    background: transparent;
+    font-size: 1.3rem;
     color: var(--font-color);
-    border: 2px solid var(--main-color);
-    cursor: pointer;
-    position: absolute;
-    left: 50%;
-    bottom: 5%;
-    transform: translate(-50%);
-    transition: .3s ;
-    font-weight: 600;
+    background: transparent;
+    border: 2px solid aqua;
+    z-index: 2;
 }
+/****************[[[[[[[[[ first page section end ]]]]]]]]]]]]]]]]******************/
 
-.prev-next-btn .btn i:hover, .backtohomebtn:hover
-{
-    background: var(--main-color);
-    color: var(--hover-font-color);
-    box-shadow: 0rem 0rem .5rem var(--main-color);
-}
-
-/* loading skelaton */
-
-.skeleton {
-    position: relative;
-}
-.skeleton::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    background: linear-gradient(90deg, #c7c7c7, #585858, #8b8b8b);
-    background-size: 200%;
-    animation: skeleton 1s infinite reverse;
-}
-@keyframes skeleton {
-    0% {
-        background-position: -100% 0;
-    }
-    100% {
-        background-position: 100% 0;
-    }
-}
-
-.scPage_skeleton
-{
-    position: relative;
-}
-
-.scPage_skeleton::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    background: linear-gradient(90deg, #c7c7c7, #106f7c, #575757, #c7c7c7);
-    background-size: 200%;
-    animation: scPage_skeleton 1s infinite alternate-reverse;
-}
-
-@keyframes scPage_skeleton {
-    0% {
-        background-position: -100% 0;
-    }
-    100% {
-        background-position: 100% 0;
-    }
-}
-
-
-
-
-/*******************[[[[[[[[[[[[[[[[[[[[    responssive section   ]]]]]]]]]]]]]]]]]]]]]]]]]]]*******************/
-
-@media(max-width:470px)
-{
-    header
-    {
-    
-        padding:0rem .3rem 0rem .8rem;
-        /* border: 2px solid red; */
-    }
-
-    header nav .search-section
-    {
-        border: 2px solid var(--main-color);
-        border-radius: 1rem;
-        padding: .2rem .5rem;
-        width: 15rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .second-page
-    {
-        padding-top: 4rem;
-    }
-
-    .second-page .second-page-content
-    {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding:0rem;
-        /* border: 2px solid rgb(166, 0, 255); */
-    }
-
-    .second-page .left-side-img-container
-    {
-        height: 15rem;
-        width: 22.8rem;
-        /* border: 2px solid red; */
-    }
-
-    .second-page .right-side-motvcontainer
-    {
-        width: 90%;
-        align-items: center;
-        gap: 1rem;
-        font-size: .8rem;
-    }
-    
-    .second-page .backtohomebtn
-    {
-        padding: .5rem .8rem;
-        bottom: 2%;
-    }
-
-}
-
-@media(max-width:720px)
-{
-    html
-    {
-        font-size: 40%;
-    }
-}
