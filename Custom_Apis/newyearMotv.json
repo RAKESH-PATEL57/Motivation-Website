@@ -45,48 +45,56 @@
         "id": 8,
         "image":"../images/New_Year/newyear-8.png",
         "motivationLine": "“In order to be irreplaceable one must always be different.”",
-        "writer": "Coco Chanel"
+        "writer": "Coco Chanel",
+        "catagory": "New year motivation"
     },
     {
         "id": 9,
         "image":"../images/New_Year/newyear-9.jpg",
         "motivationLine": "“Anything can make me stop and look and wonder, and sometimes learn.”",
-        "writer": "Kurt Vonnegut"
+        "writer": "Kurt Vonnegut",
+        "catagory": "New year motivation"
     },
     {
         "id": 10,
         "image":"../images/New_Year/newyear-10.jpg",
         "motivationLine": "“People’s passion and desire for authenticity is strong.”",
-        "writer": "Constance Wu"
+        "writer": "Constance Wu",
+        "catagory": "New year motivation"
     },
     {
         "id": 11,
         "image":"../images/New_Year/newyear-11.jpg",
         "motivationLine": "“A surplus of effort could overcome a deficit of confidence.”",
-        "writer": "Sonia Sotomayor"
+        "writer": "Sonia Sotomayor",
+        "catagory": "New year motivation"
     },
     {
         "id": 12,
         "image":"../images/New_Year/newyear-12.jpg",
         "motivationLine": "“Doubt is a killer. You just have to know who you are and what you stand for.”",
-        "writer": "Jennifer Lopez"
+        "writer": "Jennifer Lopez",
+        "catagory": "New year motivation"
     },
     {
         "id": 13,
         "image":"../images/New_Year/newyear-13.jpg",
         "motivationLine": "“No one changes the world who isn’t obsessed.”",
-        "writer": "Billie Jean King"
+        "writer": "Billie Jean King",
+        "catagory": "New year motivation"
     },
     {
         "id": 14,
         "image":"../images/New_Year/newyear-14.jpg",
         "motivationLine": "“I learned a long time ago that there is something worse than missing the goal, and that’s not pulling the trigger.” ",
-        "writer": "Mia Hamm"
+        "writer": "Mia Hamm",
+        "catagory": "New year motivation"
     },
     {
         "id": 15,
         "image":"../images/New_Year/newyear-15.jpg",
         "motivationLine": "“Some people want it to happen, some wish it would happen, others make it happen.”",
-        "writer": "Michael Jordan"
+        "writer": "Michael Jordan",
+        "catagory": "New year motivation"
     }
 ]

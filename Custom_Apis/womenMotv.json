@@ -3,79 +3,92 @@
         "id": 1,
         "image": "../images/Women/women-1.jpg",
         "motivationLine": "“Women challenge the status quo because we are never it.”",
-        "writer": "Cindy Gallop"
+        "writer": "Cindy Gallop",
+        "catagory": " women motivation"
     },
     {
         "id": 2,
         "image": "../images/Women/women-2.jpg",
         "motivationLine": "“We don’t just sit around and wait for other people. We just make, and we do.”",
-        "writer": "Arlan Hamilton"
+        "writer": "Arlan Hamilton",
+        "catagory": " women motivation"
     },
     {
         "id": 3,
         "image": "../images/Women/women-3.jpg",
         "motivationLine": "“Think like a queen. A queen is not afraid to fail. Failure is another stepping stone to greatness.”",
-        "writer": "Oprah Winfrey"
+        "writer": "Oprah Winfrey",
+        "catagory": " women motivation"
     },
     {
         "id": 4,
         "image": "../images/Women/women-4.jpg",
         "motivationLine": "“The strongest actions for a woman is to love herself, be herself and shine amongst those who never believed she could.”",
-        "writer": "Unknown"
+        "writer": "Unknown",
+        "catagory": " women motivation"
     },
     {
         "id": 5,
         "image": "../images/Women/women-5.jpg",
         "motivationLine": "“Whenever you see a successful woman, look out for three men who are going out of their way to try to block her.”",
-        "writer": "Yulia Tymoshenko"
+        "writer": "Yulia Tymoshenko",
+        "catagory": " women motivation"
     },
     {
         "id": 6,
         "image": "../images/Women/women-6.jpg",
         "motivationLine": "“Some women choose to follow men, and some choose to follow their dreams. If you’re wondering which way to go, remember that your career will never wake up and tell you that it doesn’t love you anymore.” ",
-        "writer": "Lady Gaga"
+        "writer": "Lady Gaga",
+        "catagory": " women motivation"
     },
     {
         "id": 7,
         "image": "../images/Women/women-7.jpg",
         "motivationLine": "“The thing women have yet to learn is nobody gives you power. You just take it.”",
-        "writer": "Roseanne Barr"
+        "writer": "Roseanne Barr",
+        "catagory": " women motivation"
     },
     {
         "id": 8,
         "image": "../images/Women/women-8.jpg",
         "motivationLine": "“No woman wants to be in submission to a man who isn’t in submission to God!”",
-        "writer": "T. D. Jakes"
+        "writer": "T. D. Jakes",
+        "catagory": " women motivation"
     },
     {
         "id": 9,
         "image": "../images/Women/women-9.jpg",
         "motivationLine": "“When a woman becomes her own best friend, life is easier.”",
-        "writer": "Diane Von Furstenberg"
+        "writer": "Diane Von Furstenberg",
+        "catagory": " women motivation"
     },
     {
         "id": 10,
         "image": "../images/Women/women-10.jpg",
         "motivationLine": "“A witty woman is a treasure; a witty beauty is a power.” ",
-        "writer": "George Meredith"
+        "writer": "George Meredith",
+        "catagory": " women motivation"
     },
     {
         "id": 11,
         "image": "../images/Women/women-11.jpg",
         "motivationLine": "“If you want something said, ask a man; if you want something done, ask a woman.” ",
-        "writer": "Margaret Thatcher"
+        "writer": "Margaret Thatcher",
+        "catagory": " women motivation"
     },
     {
         "id": 12,
         "image": "../images/Women/women-12.jpg",
         "motivationLine": "“We need women at all levels, including the top, to change the dynamic, reshape the conversation, to make sure women’s voices are heard and heeded, not overlooked and ignored.” ",
-        "writer": "Sheryl Sandberg"
+        "writer": "Sheryl Sandberg",
+        "catagory": " women motivation"
     },
     {
         "id": 13,
         "image": "../images/Women/women-13.jpg",
         "motivationLine": "“It took me quite a long time to develop a voice, and now that I have it, I am not going to be silent.” ",
-        "writer": "Madeleine Albright"
+        "writer": "Madeleine Albright",
+        "catagory": " women motivation"
     },
     {
         "id": 14,

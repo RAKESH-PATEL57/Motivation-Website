@@ -3,61 +3,71 @@
       "id":1,
       "image":"../images/Deep_Motivation/dm1.jpg",
       "motivationLine":"“We cannot solve problems with the kind of thinking we employed when we came up with them.”",
-      "writer":"Albert Einstein"
+      "writer":"Albert Einstein",
+      "catagory": " Deep motivation"
     },
     {
         "id":2,
         "image":"../images/Deep_Motivation/dm2.jpg",
         "motivationLine":"“Learn as if you will live forever, live like you will die tomorrow.”",
-        "writer":"Mahatma Gandhi"
+        "writer":"Mahatma Gandhi",
+      "catagory": " Deep motivation"
     },
     {
         "id":3,
         "image":"../images/Deep_Motivation/dm3.jpg",
         "motivationLine":"“Stay away from those people who try to disparage your ambitions. Small minds will always do that, but great minds will give you a feeling that you can become great too.”",
-        "writer":"Mark Twain"
+        "writer":"Mark Twain",
+      "catagory": " Deep motivation"
     },
     {
         "id":4,
         "image":"../images/Deep_Motivation/dm4.jpg",
         "motivationLine":"“When you give joy to other people, you get more joy in return. You should give a good thought to the happiness that you can give out.”",
-        "writer":"Eleanor Roosevelt"
+        "writer":"Eleanor Roosevelt",
+      "catagory": " Deep motivation"
     },
     {
         "id":5,
         "image":"../images/Deep_Motivation/dm5.jpg",
         "motivationLine":"“When you change your thoughts, remember to also change your world.”",
-        "writer":"Norman Vincent Peale"
+        "writer":"Norman Vincent Peale",
+      "catagory": " Deep motivation"
     },
     {
         "id":6,
         "image":"../images/Deep_Motivation/dm6.jpg",
         "motivationLine":"“It is only when we take chances that our lives improve. The initial and the most difficult risk we need to take is to become honest.”",
-        "writer":"Walter Anderson"
+        "writer":"Walter Anderson",
+      "catagory": " Deep motivation"
     },
     {
         "id":7,
         "image":"../images/Deep_Motivation/dm7.jpg",
         "motivationLine":"“Nature has given us all the pieces required to achieve exceptional wellness and health, but has left it to us to put these pieces together.”",
-        "writer":"Diane McLaren"
+        "writer":"Diane McLaren",
+      "catagory": " Deep motivation"
     },
     {
         "id":8,
         "image":"../images/Deep_Motivation/dm8.jpg",
         "motivationLine":"“Always do your best. What you plant now, you will harvest later.”",
-        "writer":"Og Mandino"
+        "writer":"Og Mandino",
+      "catagory": " Deep motivation"
     },
     {
         "id":9,
         "image":"../images/Deep_Motivation/dm9.jpg",
         "motivationLine":"“Striving for success without hard work is like trying to harvest where you haven’t planted.”",
-        "writer":"David Bly"
+        "writer":"David Bly",
+      "catagory": " Deep motivation"
     },
     {
         "id":10,
         "image":"../images/Deep_Motivation/dm10.jpg",
         "motivationLine":"“Whatever you do, never run back to what broke you.”",
-        "writer":"Frank Ocean"
+        "writer":"Frank Ocean",
+      "catagory": " Deep motivation"
     }
 
    
