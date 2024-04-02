@@ -3,25 +3,30 @@
         "id": 1,
         "image":"../images/Encourage/encourage-1.jpg",
         "motivationLine": "“I can’t tell you how many times I’ve been given a no, only to find that a better, brighter, bigger yes was right around the corner.”",
-        "writer": "Arlan Hamilton"
+        "writer": "Arlan Hamilton",
+        "catagory": " Encourage motivation"
     },
     {
         "id": 2,
         "image":"../images/Encourage/encourage-2.jpg",
         "motivationLine": "“We need to accept that we won’t always make the right decisions, that we’ll screw up royally sometimes—understanding that failure is not the opposite of success, it’s part of success.” ",
-        "writer": "Ariana Huffington"
+        "writer": "Ariana Huffington",
+        "catagory": " Encourage motivation"
     },
     {
         "id": 3,
         "image":"../images/Encourage/encourage-3.jpg",
         "motivationLine": "“When everything seems to be going against you, remember that the airplane takes off against the wind, not with it.”",
-        "writer": "Henry Ford"
+        "writer": "Henry Ford",
+        "catagory": " Encourage motivation"
     },
     {
         "id": 4,
         "image":"../images/Encourage/encourage-4.jpg",
         "motivationLine": "“You cannot always control what goes on outside. But you can always control what goes on inside.”",
-        "writer": "Wayne Dyer"
+        "writer": "Wayne Dyer",
+        "catagory": " Encourage motivation"
+        
     },
     {
         "id": 5,
@@ -39,24 +44,28 @@
         "id": 7,
         "image":"../images/Encourage/encourage-7.jpg",
         "motivationLine": "“Hustle beats talent when talent doesn’t hustle.”",
-        "writer": "Ross Simmonds"
+        "writer": "Ross Simmonds",
+        "catagory": " Encourage motivation"
     },
     {
         "id" : 8,
         "image": "",
         "motivationLine":"Success is not final, failure is not fatal: it is the courage to continue that counts.",
-        "writer":"Winston Churchill"
+        "writer":"Winston Churchill",
+        "catagory": " Encourage motivation"
     },
     {
         "id" : 9,
         "image":"",
         "motivationLine":"Through discipline comes freedom",
-        "writer":"Confucius"
+        "writer":"Confucius",
+        "catagory": " Encourage motivation"
     },
     {
         "id":10,
         "image":"",
         "motivationLine":"Don’t be afraid to give up the good to go for the great." ,
-        "writer":"John D. Rockefeller"
+        "writer":"John D. Rockefeller",
+        "catagory": " Encourage motivation"
     }
 ]

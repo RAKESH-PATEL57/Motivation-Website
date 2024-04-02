@@ -2,52 +2,62 @@
     {
         "id": 1,
         "motivationLine": "“The elevator to success is out of order. You’ll have to use the stairs, one step at a time.”",
-        "writer": "Joe Girard"
+        "writer": "Joe Girard",
+        "catagory": " Funny motivation"
     },
     {
         "id": 2,
         "motivationLine": "“Be a positive energy trampoline—absorb what you need and rebound more back.” ",
-        "writer": "Dave Carolan"
+        "writer": "Dave Carolan",
+        "catagory": " Funny motivation"
     },
     {
         "id": 3,
         "motivationLine": "“People often say that motivation doesn’t last. Well, neither does bathing—that’s why we recommend it daily.”",
-        "writer": "Zig Ziglar"
+        "writer": "Zig Ziglar",
+        "catagory": " Funny motivation"
     },
     {
         "id": 4,
         "motivationLine": "“Work until your bank account looks like a phone number.” ",
-        "writer": "Unknown"
+        "writer": "Unknown",
+        "catagory": " Funny motivation"
     },
     {
         "id": 5,
         "motivationLine": "“I am so clever that sometimes I don’t understand a single word of what I am saying.”",
-        "writer": "Oscar Wilde"
+        "writer": "Oscar Wilde",
+        "catagory": " Funny motivation"
     },
     {
         "id": 6,
         "motivationLine": "“People say nothing is impossible, but I do nothing every day.” ",
-        "writer": "Winnie the Pooh"
+        "writer": "Winnie the Pooh",
+        "catagory": " Funny motivation"
     },
     {
         "id": 7,
         "motivationLine": "“Life is like a sewer … what you get out of it depends on what you put into it.”",
-        "writer": "Tom Lehrer"
+        "writer": "Tom Lehrer",
+        "catagory": " Funny motivation"
     },
     {
         "id": 8,
         "motivationLine": "“I always wanted to be somebody, but now I realize I should have been more specific.” ",
-        "writer": "Lily Tomlin"
+        "writer": "Lily Tomlin",
+        "catagory": " Funny motivation"
     },
     {
         "id": 9,
         "motivationLine": "“I always wanted to be somebody, but now I realize I should have been more specific.” ",
-        "writer": "Unknown"
+        "writer": "Unknown",
+        "catagory": " Funny motivation"
     },
     {
         "id": 10,
         "motivationLine": "“Whatever you do, always give 100%. Unless you’re donating blood. ",
-        "writer": "Unknown"
+        "writer": "Unknown",
+        "catagory": " Funny motivation"
     }
 
 

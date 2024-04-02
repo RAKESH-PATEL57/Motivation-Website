@@ -2,62 +2,74 @@
     {
         "id": 1,
         "motivationLine": "“Life can be much broader once you discover one simple fact: Everything around you that you call life was made up by people that were no smarter than you. And you can change it, you can influence it. … Once you learn that, you’ll never be the same again.” ",
-        "writer": "Steve Jobs"
+        "writer": "Steve Jobs",
+        "catagory": " Daily motivation"
     },
     {
         "id": 2,
         "motivationLine": "“Life is like riding a bicycle. To keep your balance, you must keep moving.”",
-        "writer": "Albert Einstein"
+        "writer": "Albert Einstein",
+        "catagory": " Daily motivation"
     },
     {
         "id": 3,
         "motivationLine": "“What you do speaks so loudly that I cannot hear what you say.” ",
-        "writer": "Ralph Waldo Emerson"
+        "writer": "Ralph Waldo Emerson",
+        "catagory": " Daily motivation"
     },
     {
         "id": 4,
         "motivationLine": "“I have never let my schooling interfere with my education.”",
-        "writer": "Mark Twain"
+        "writer": "Mark Twain",
+        "catagory": " Daily motivation"
     },
     {
         "id": 5,
         "motivationLine": "“If you can’t yet do great things, do small things in a great way.”",
-        "writer": "Napoleon Hill"
+        "writer": "Napoleon Hill",
+        "catagory": " Daily motivation"
     },
     {
         "id": 6,
         "motivationLine": "“If you really want to do something, you’ll find a way. If you don’t, you’ll find an excuse.”",
-        "writer": "Jim Rohn"
+        "writer": "Jim Rohn",
+        "catagory": " Daily motivation"
     },
     {
         "id": 7,
         "motivationLine": "“Be sure you put your feet in the right place, then stand firm.”",
-        "writer": "Abraham Lincoln"
+        "writer": "Abraham Lincoln",
+        "catagory": " Daily motivation"
     },
     {
         "id": 8,
         "motivationLine": "“Live out of your imagination, not your history.”",
-        "writer": "Stephen Covey"
+        "writer": "Stephen Covey",
+        "catagory": " Daily motivation"
     },
     {
         "id": 9,
         "motivationLine": "“Do not wait for the perfect time and place to enter, for you are already onstage.”",
-        "writer": "Unknown"
+        "writer": "Unknown",
+        "catagory": " Daily motivation"
     },
     {
         "id": 10,
         "motivationLine": "“The greater the difficulty, the more the glory in surmounting it.”",
-        "writer": "Epicurus "
+        "writer": "Epicurus ",
+        "catagory": " Daily motivation"
     },
     {
         "id":11,
         "motivationLine": "“Courage doesn’t always roar. Sometimes courage is a quiet voice at the end of the day saying, ‘I will try again tomorrow.’”",
-        "writer": "Mary Anne Radmacher"
+        "writer": "Mary Anne Radmacher",
+        "catagory": " Daily motivation"
     },
     {
         "id": 12,
         "motivationLine": "“If the decisions you make about where you invest your blood, sweat, and tears are not consistent with the person you aspire to be, you’ll never become that person.”",
-        "writer": "Clayton M. Christensen"
+        "writer": "Clayton M. Christensen",
+        "catagory": " Daily motivation"
     }
    
 ]

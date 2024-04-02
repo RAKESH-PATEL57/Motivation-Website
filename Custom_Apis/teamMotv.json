@@ -3,60 +3,70 @@
         "id": 1,
         "image":"../images/Team/team-1.jpg",
         "motivationLine": "“Talent wins games, but teamwork and intelligence win championships.”",
-        "writer": "Michael Jordan"
+        "writer": "Michael Jordan",
+        "catagory": " team motivation"
     },
     {
         "id": 2,
         "image":"../images/Team/team-2.jpg",
         "motivationLine": "“Individual commitment to a group effort—that is what makes a team work, a company work, a society work, a civilization work.” ",
-        "writer": "Vince Lombardi"
+        "writer": "Vince Lombardi",
+        "catagory": " team motivation"
     },
     {
         "id": 3,
         "image":"../images/Team/team-3.jpg",
         "motivationLine": "“Teamwork is the ability to work together toward a common vision. The ability to direct individual accomplishments toward organizational objectives. It is the fuel that allows common people to attain uncommon results.”",
-        "writer": "Andrew Carnegie"
+        "writer": "Andrew Carnegie",
+        "catagory": " team motivation"
     },
     {
         "id": 4,
         "image":"../images/Team/team-4.jpg",
         "motivationLine": "“Coming together is a beginning. Keeping together is progress. Working together is success.”",
-        "writer": "Henry Ford"
+        "writer": "Henry Ford",
+        "catagory": " team motivation"
     },
     {
         "id": 5,
         "image":"../images/Team/team-5.jpg",
         "motivationLine": "“Alone we can do so little, together we can do so much.”",
-        "writer": "Helen Keller"
+        "writer": "Helen Keller",
+        "catagory": " team motivation"
     },
     {
         "id": 6,
         "image":"../images/Team/team-6.jpg",
         "motivationLine": "“Remember, teamwork begins by building trust. And the only way to do that is to overcome our need for invulnerability.”",
-        "writer": "Patrick Lencioni"
+        "writer": "Patrick Lencioni",
+        "catagory": " team motivation"
     },
     {
         "id": 7,
         "image":"../images/Team/team-7.jpg",
         "motivationLine": "“I invite everyone to choose forgiveness rather than division, teamwork over personal ambition.”",
-        "writer": "Jean-Francois Cope"
+        "writer": "Jean-Francois Cope",
+        "catagory": " team motivation"
     },
     {
         "id": 8,
         "image":"../images/Team/team-8.jpg",
         "motivationLine": "“You are never too old to set another goal or to dream a new dream.”",
-        "writer": "Malala Yousafzai"
+        "writer": "Malala Yousafzai",
+        "catagory": " team motivation"
     },
     {
         "id": 9,
         "image":"../images/Team/team-9.jpg",
         "motivationLine": "“Do not allow people to dim your shine because they are blinded. Tell them to put some sunglasses on.”",
-        "writer": "Lady Gaga"
+        "writer": "Lady Gaga",
+        "catagory": " team motivation"
     },
     {
         "id": 10,
         "image":"../images/Team/team-10.jpg",
         "motivationLine": "“Belief creates the actual fact.”",
-        "writer": "William James"
+        "writer": "William James",
+        "catagory": " team motivation"
     }
 ]

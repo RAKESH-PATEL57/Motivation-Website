@@ -2,51 +2,62 @@
     {
         "id": 1,
         "motivationLine": "“Make sure your worst enemy doesn’t live between your own two ears.”",
-        "writer": "Laird Hamilton"
+        "writer": "Laird Hamilton",
+        "catagory": " about life motivation"
+
     },
     {
         "id": 2,
         "motivationLine": "“It is a rough road that leads to the heights of greatness.”",
-        "writer": "Lucius Annaeus Seneca"
+        "writer": "Lucius Annaeus Seneca",
+        "catagory": " about life motivation"
     },
     {
         "id": 3,
         "motivationLine": "“For the great doesn’t happen through impulse alone, and is a succession of little things that are brought together.”",
-        "writer": "Vincent Van Gogh"
+        "writer": "Vincent Van Gogh",
+        "catagory": " about life motivation"
     },
     {
         "id": 4,
         "motivationLine": "“If we take care of the moments, the years will take care of themselves.”",
-        "writer": "Edgeworth"
+        "writer": "Edgeworth",
+        "catagory": " about life motivation"
     },
     {
         "id": 5,
         "motivationLine": "“Resilience is when you address uncertainty with flexibility.”",
-        "writer": "Unknown"
+        "writer": "Unknown",
+        "catagory": " about life motivation"
     },
     {
         "id": 6,
         "motivationLine": "“Sometimes magic is just someone spending more time on something than anyone else might reasonably expect.”",
-        "writer": "Raymond Joseph Teller"
+        "writer": "Raymond Joseph Teller",
+        "catagory": " about life motivation"
     },
     {
         "id": 7,
         "motivationLine": "“It’s not the will to win that matters—everyone has that. It’s the will to prepare to win that matters.”",
-        "writer": "Paul Bryant"
+        "writer": "Paul Bryant",
+        "catagory": " about life motivation"
     },
     {
         "id": 8,
         "motivationLine": "“As a single footstep will not make a path on the earth, so a single thought will not make a pathway in the mind. To make a deep physical path, we walk again and again. To make a deep mental path, we must think over and over the kind of thoughts we wish to dominate our lives.” ",
-        "writer": "Henry David Thoreau"
+        "writer": "Henry David Thoreau",
+        "catagory": " about life motivation"
     },
     {
         "id": 9,
         "motivationLine": "“Never give up on a dream just because of the time it will take to accomplish it. The time will pass anyway.” ",
-        "writer": "Earl Nightingale"
+        "writer": "Earl Nightingale",
+        "catagory": " about life motivation"
     },
     {
         "id": 10,
         "motivationLine": "“True humility is not thinking less of yourself; it is thinking of yourself less.” ",
-        "writer": "Unknown"
+        "writer": "Unknown",
+        "catagory": " about life motivation"
     }
 ]
