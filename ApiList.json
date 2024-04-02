@@ -1,0 +1,35 @@
+[
+    {
+        "link":"./Custom_Apis/deepMotv.json"
+    },
+
+    {
+        "link":"./Custom_Apis/successMotv.json"
+    },
+    {
+        "link":"./Custom_Apis/workMotv.json"
+    },
+    {
+        "link":"./Custom_Apis/personalMotv.json"
+    },
+    {
+        "link":"./Custom_Apis/womenMotv.json"
+    },
+    {
+        "link":"./Custom_Apis/menMotvQuotes.json"
+    },
+    {
+        "link":"./Custom_Apis/EncMotv.json"
+    },
+    {
+        "link":"./Custom_Apis/newyearMotv.json"
+    },
+    {
+        "link":"./Custom_Apis/studentMotv.json"
+    },
+    {
+        "link":"./Custom_Apis/teamMotv.json"
+    }
+ 
+
+]
