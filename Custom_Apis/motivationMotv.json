@@ -3,60 +3,60 @@
         "id": 1,
         "motivationLine": "“Everything you’ve ever wanted is sitting on the other side of fear.” ",
         "writer": "George Addair",
-        "catagory": " motivation"
+        "catagory": "motivation"
     },
     {
         "id": 2,
         "motivationLine": "“The question isn’t who is going to let me; it’s who is going to stop me.”",
         "writer": "Ayn Rand",
-        "catagory": " motivation"
+        "catagory": "motivation"
     },
     {
         "id": 3,
         "motivationLine": "“Every strike brings me closer to the next home run.”",
         "writer": "Babe Ruth",
-        "catagory": " motivation"
+        "catagory": "motivation"
     },
     {
         "id": 4,
         "motivationLine": "“I have not failed. I’ve just found 10,000 ways that won’t work.”",
         "writer": "Thomas Edison",
-        "catagory": " motivation"
+        "catagory": "motivation"
     },
     {
         "id": 5,
         "motivationLine": "“Don’t worry about failure; you only have to be right once.”",
         "writer": "Drew Houston",
-        "catagory": " motivation"
+        "catagory": "motivation"
     },
     {
         "id": 6,
         "motivationLine": "“You carry the passport to your own happiness.”",
         "writer": "Diane Von Furstenberg",
-        "catagory": " motivation"
+        "catagory": "motivation"
     },
     {
         "id": 7,
         "motivationLine": "“Never let success get to your head, and never let failure get to your heart.” ",
         "writer": "Drake",
-        "catagory": " motivation"
+        "catagory": "motivation"
     },
     {
         "id": 8,
         "motivationLine": "“Ideation without execution is delusion.”",
         "writer": "Robin Sharma",
-        "catagory": " motivation"
+        "catagory": "motivation"
     },
     {
         "id" : 9,
         "motivationLine":"“You’ve got to get up every morning with determination if you’re going to go to bed with satisfaction.” ",
         "writer" : "George Lorimer",
-        "catagory": " motivation"
+        "catagory": "motivation"
     },
     {
         "id" : 10,
         "motivationLine":". “Believe on Monday the way you believe on Sunday.”",
         "writer" : "Rita Schiano",
-        "catagory": " motivation"
+        "catagory": "motivation"
     }
 ]
