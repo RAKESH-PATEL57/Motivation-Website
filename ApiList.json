@@ -1,0 +1,44 @@
+[
+    {
+        "link":"./Custom_Apis/deepMotv.json",
+        "catagory":"deepmotivation"
+    },
+
+    {
+        "link":"./Custom_Apis/successMotv.json",
+        "catagory":"successmotivation"
+    },
+    {
+        "link":"./Custom_Apis/workMotv.json",
+        "catagory":"workmotivation"
+    },
+    {
+        "link":"./Custom_Apis/personalMotv.json",
+        "catagory":"personalmotivation"
+    },
+    {
+        "link":"./Custom_Apis/womenMotv.json",
+        "catagory":"womenmotivation"
+    },
+    {
+        "link":"./Custom_Apis/menMotvQuotes.json",
+        "catagory":"menmotivation"
+    },
+    {
+        "link":"./Custom_Apis/EncMotv.json",
+        "catagory":"encouragemotivation"
+    },
+    {
+        "link":"./Custom_Apis/newyearMotv.json",
+        "catagory":"newyearmotivation"
+    },
+    {
+        "link":"./Custom_Apis/studentMotv.json",
+        "catagory":"studentmotivation"
+    },
+    {
+        "link":"./Custom_Apis/teamMotv.json",
+        "catagory":"teammotivation"
+    }
+
+]
