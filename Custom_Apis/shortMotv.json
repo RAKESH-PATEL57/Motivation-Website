@@ -1,62 +1,72 @@
 [
     {
         "id": 1,
+        "image":"../images/Short/short-1.png",
         "motivationLine": "“Just one small positive thought in the morning can change your whole day.” ",
         "writer": "Dalai Lama",
-        "catagory": "Short Motivation"
+        "category":"Short Motivation"
     },
     {
         "id": 2,
+        "image":"../images/Short/short-2.png",
         "motivationLine": "“Opportunities don’t happen, you create them.” ",
         "writer": "Chris Grosser",
-        "catagory": "Short Motivation"
+        "category":"Short Motivation"
     },
     {
         "id": 3,
+        "image":"../images/Short/short-3.png",
         "motivationLine": "“Love your family, work super hard, live your passion.” ",
         "writer": "Gary Vaynerchuk",
-        "catagory": "Short Motivation"
+        "category":"Short Motivation"
     },
     {
         "id": 4,
+        "image":"../images/Short/short-4.png",
         "motivationLine": "“It is never too late to be what you might have been.”",
         "writer": "George Eliot",
-        "catagory": "Short Motivation"
+        "category":"Short Motivation"
     },
     {
         "id": 5,
+        "image":"../images/Short/short-5.png",
         "motivationLine": "“Don’t let someone else’s opinion of you become your reality.” ",
         "writer": "Les Brown",
-        "catagory": "Short Motivation"
+        "category":"Short Motivation"
     },
     {
         "id": 6,
+        "image":"../images/Short/short-6.png",
         "motivationLine": "“If you’re not positive energy, you’re negative energy.”",
         "writer": "Mark Cuban",
-        "catagory": "Short Motivation"
+        "category":"Short Motivation"
     },
     {
         "id": 7,
+        "image":"../images/Short/short-7.png",
         "motivationLine": "“I am not a product of my circumstances. I am a product of my decisions.”",
         "writer": "Stephen R. Covey",
-        "catagory": "Short Motivation"
+        "category":"Short Motivation"
     },
     {
         "id": 8,
+        "image":"../images/Short/short-8.png",
         "motivationLine": "“Do the best you can. No one can do more than that.” ",
         "writer": "John Wooden",
-        "catagory": "Short Motivation"
+        "category":"Short Motivation"
     },
     {
         "id": 9,
+        "image":"../images/Short/short-9.png",
         "motivationLine": "“If you can dream it, you can do it.”",
         "writer": "Walt Disney",
-        "catagory": "Short Motivation"
+        "category":"Short Motivation"
     },
     {
         "id": 10,
+        "image":"../images/Short/short-10.png",
         "motivationLine": "“Do what you can, with what you have, where you are.” ",
         "writer": "Theodore Roosevelt",
-        "catagory": "Short Motivation"
+        "category":"Short Motivation"
     }
 ]
