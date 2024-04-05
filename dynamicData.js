@@ -1,136 +1,106 @@
 // creating dynamic datas or card from json file
 "use strict"
-import apiList from "./ApiList.json" with {type: 'json'};
-let nextBtn = document.querySelector("#nextBtn");
-let prevBtn = document.querySelector("#prevBtn");
+import test from "./ApiList.json" with {type: 'json'};
+let cardContainer = document.querySelector(".cards-container");
 
-let firstbrd = document.querySelector(".motivationCardContainer .firstbrd");
-let secondbrd = document.querySelector(".motivationCardContainer .secondbrd");
-let thirdbrd = document.querySelector(".motivationCardContainer .thirdbrd");
-let fourthbrd = document.querySelector(".motivationCardContainer .fourthbrd");
-
-var apiLength = apiList.length;
-
-let motivationCardContainer = document.querySelector(".motivationCardContainer");
-
-gettingDataFromJson(apiList[0]);  // for showing the first motivation
-var count = 1;
-
-nextBtn.addEventListener("click", () => {
-    if(count == apiLength-1)
-    {
-        gettingDataFromJson(apiList[count]);
-        count = 0;
-    }
-    else
-    {
-        gettingDataFromJson(apiList[count]);
-        count++;
-    }
-});
-
-prevBtn.addEventListener("click", () => {
-    if(count == 0)
-    {
-        gettingDataFromJson(apiList[count]);
-        count = apiLength-1;
-    }
-    else
-    {
-        gettingDataFromJson(apiList[count]);
-        count--;
-    }
-});
-
-var test = 0;
-
-async function gettingDataFromJson(allMotivationData)
+for(let i = 0 ; i< test.length; i++)
 {
-    const apiData = await fetch(allMotivationData.link);
-    const allMotivationNamesArray = await apiData.json();
+    const cards = `<div class="card-details"></div>`
+    cardContainer.insertAdjacentHTML("beforeend", cards);
+    let cardDetails = document.querySelectorAll(".card-details");
+    showLoader(cardDetails, i);
 
-
-    let length = allMotivationNamesArray.length;  
-    let imageSource = (allMotivationNamesArray[0].image).slice(1);
-
-    loadingMotv(length, allMotivationData);
-        
-    }
-
-
-function loadingMotv(length, allMotivationData)
-{
-    firstbrd.classList.add("loadFirstbrd");
-    secondbrd.classList.add("loadSecondbrd");
-    thirdbrd.classList.add("loadThirdbrd");
-    fourthbrd.classList.add("loadFourthbrd");
-
-    setTimeout(() => {
-        const cards = `<div class="motivationCard">
-        <div class="mName">
-        <h1 class="changeName">${allMotivationData.catagory}</h1>
-        <h1>Motivation</h1>
-        </div>
-        <button class="openBtn">Open</button>
-        </div>`
-        motivationCardContainer.insertAdjacentHTML("beforeend", cards);  //added dynamic data
-
-        let motivationCards = document.querySelectorAll(".motivationCard");
-        let motivationName = document.querySelectorAll(".mName");
-
-        console.log(motivationCards.length);
-        console.log(test);
-        if(test > 0)
-        {
-            let data = motivationCards[test-1];
-            console.log(data);
-            data.style.display = 'none';
-            console.log('rakesh');
-        }
-        
-        test++;
-        firstbrd.classList.remove("loadFirstbrd");
-        secondbrd.classList.remove("loadSecondbrd");
-        thirdbrd.classList.remove("loadThirdbrd");
-        fourthbrd.classList.remove("loadFourthbrd");
-
-    },500);
 }
 
-// function cardChangeAnimation(motvName) 
-// { 
-//     console.log(motvName);
+const dataInterval = setInterval(jsonData, 500)
+let i = 0;
+function jsonData()
+{
 
-//     firstbrd.classList.add("loadFirstbrd");
-//     secondbrd.classList.add("loadSecondbrd");
-//     thirdbrd.classList.add("loadThirdbrd");
-//     fourthbrd.classList.add("loadFourthbrd");
-//     // openBtn[changeCard].style.bottom = "50%";
-//     // openBtn[changeCard].style.translate = "0%, -50%";
-//     // openBtn[changeCard].style.scale = 0;
-//     // motvName.style.border = '2px solid aqua';
-//     // images[changeCard].style.scale = 0;
-//     // images[changeCard].style.opacity = 0;
-//     // allCardslist[changeCard].style.rotate = "360deg";
-//     setTimeout(() => {
-//         firstbrd.classList.remove("loadFirstbrd");
-//         secondbrd.classList.remove("loadSecondbrd");
-//         thirdbrd.classList.remove("loadThirdbrd");
-//         fourthbrd.classList.remove("loadFourthbrd");
-//         // openBtn[changeCard].style.bottom = "1%";
-//         // openBtn[changeCard].style.translate = "0%, 0%";
-//         // openBtn[changeCard].style.scale = 1;
-//         // motvName.style.scale = 0;
-//         // images[changeCard].style.scale = 1;
-//         // images[changeCard].style.opacity = ".3";
-//         // allCardslist[changeCard].style.rotate = "0deg";
-//     },300);
-// }
+       
+        let cardDetails = document.querySelectorAll(".card-details");
+        gettingDataFromJson(test[i],cardDetails,i);
+      
+
+        if(i > test.length-2)
+        {
+            clearInterval(dataInterval);
+        }
+        i++;
     
-    // <h1>${allMotivationNamesArray[0].category}</h1>
-    
-    // <img class="image" src="${imageSource}" alt="">
-    
-    
-    
-    
+
+}
+
+
+
+function showLoader(cardDetails, i)
+{
+    cardDetails[i].classList.add("skelaton");
+}
+
+
+function removeLoader(cardDetails, i)
+{  
+    cardDetails[i].classList.remove("skelaton");
+}
+
+
+async function gettingDataFromJson(allMotivationData, cardDetails, i)
+{
+    showLoader(cardDetails , i);
+
+    fetch(allMotivationData.link)
+    .then(res => {
+       return res.json();
+    })
+    .then(data => {
+        // console.log(data);
+        const cards = `<div class="cdheading">
+        <h1>${allMotivationData.catagory}<br> Motivation</h1>
+        <h2>Open</h2>
+        </div>
+        <img loading="lazy" class="imgLoad" src="${(data[0].image).slice(0)}" alt="MotivationImage">`
+        cardDetails[i].insertAdjacentHTML("beforeend", cards);
+
+        let imgLoad = document.querySelectorAll(".imgLoad");
+        
+        imgLoad[i].addEventListener("load", () => {
+            // imgLoad[i].style.border= "2px solid red";
+            removeLoader(cardDetails , i);
+        });
+
+        for(let j = 0; j<data.length;j++)
+        {
+
+            cardDetails[i].addEventListener("click",() => {
+                console.log(data[j]);
+                toggleHomePageAndSecondPage()
+            });
+        }
+    })
+ 
+}
+
+let homePage = document.querySelector('.home-page');
+let secondPage = document.querySelector('.second-page');
+
+
+let motivationImg = document.querySelector('.left-side-img-container img');
+let motivationHeading = document.querySelector('#motivation-heading');
+let motivationWriter = document.querySelector('#motivation-writer');
+
+let nextMotvBtn = document.querySelector('#next-Motv');
+let prevMotvBtn = document.querySelector('#prev-Motv');
+let speakerBtn = document.querySelector('#speak');
+
+function toggleHomePageAndSecondPage()
+{
+    homePage.classList.add('homepage-OpenClose');
+    secondPage.classList.add('secondpage-OpenClose');
+}
+
+
+
+
+
+
