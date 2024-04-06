@@ -2,10 +2,10 @@
 "use strict"
 import test from "./ApiList.json" with {type: 'json'};
 let cardContainer = document.querySelector(".cards-container");
-
+var forStyle = 1;
 for(let i = 0 ; i< test.length; i++)
 {
-    const cards = `<div class="card-details"></div>`
+    const cards = `<div class="card-details" style="--i:${forStyle++}"></div>`
     cardContainer.insertAdjacentHTML("beforeend", cards);
     let cardDetails = document.querySelectorAll(".card-details");
     showLoader(cardDetails, i);
@@ -49,7 +49,6 @@ async function gettingDataFromJson(allMotivationData, cardDetails, i)
 {
     showLoader(cardDetails , i);
     // let str = allMotivationData.link;
-    // console.log(str);
     let link;
     fetch(allMotivationData.link)
     .then(res => {
@@ -58,6 +57,7 @@ async function gettingDataFromJson(allMotivationData, cardDetails, i)
     })
     .then(data => {
         // console.log(data);
+        removeLoader(cardDetails , i);
         const cards = `<div class="cdheading">
         <h1>${allMotivationData.catagory}<br> Motivation</h1>
         <h2>Open</h2>
@@ -68,7 +68,6 @@ async function gettingDataFromJson(allMotivationData, cardDetails, i)
       
         imgLoad[i].addEventListener("load", () => {
             // imgLoad[i].style.border= "2px solid red";
-            removeLoader(cardDetails , i);
         });
 
       
@@ -129,7 +128,6 @@ function allMotivations(userChoosedMotivationLink)
     })
     .then(data => {
     //    secondPageLoadingRemove();
-       console.log(data);
     
        motivationImg.src = (data[0].image).slice(1);
        motivationHeading.innerHTML = data[0].motivationLine;
@@ -141,17 +139,37 @@ function allMotivations(userChoosedMotivationLink)
           
         nextMotvBtn.addEventListener('click',() => {
             secondPageLoadingAdd();
+            nextMotv(data);
             motivationImg.addEventListener("load", () => {
                 secondPageLoadingRemove();
                });
-            nextMotv(data);
         });
 
         prevMotvBtn.addEventListener('click',() => {
             secondPageLoadingAdd();
-            secondPageLoadingRemove();
             prevMotv(data);
+            motivationImg.addEventListener("load", () => {
+                secondPageLoadingRemove();
+               });
         });
+
+             //[[[[[[[[[[[[[[[[[[[[************** Arrow detection section   ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+        document.onkeydown = (event) => {
+            switch (event.keyCode) 
+            {
+                case 37:
+                    secondPageLoadingAdd();
+                    prevMotv(data);
+                    secondPageLoadingRemove();
+                    break;
+                case 39:
+                    secondPageLoadingAdd();
+                    nextMotv(data);
+                    secondPageLoadingRemove();
+                    break;
+            }
+        }
+
     
     
     });
@@ -164,14 +182,12 @@ let count = 0; // for speaker repeatedly speek
         speakerBtn.addEventListener('click',() => {
             let voices = window.speechSynthesis.getVoices();
             var motivationLineSpeaker = new SpeechSynthesisUtterance();
-            // console.log(voices);
-            // motivationLineSpeaker.voice = voices[27];
+            
             motivationLineSpeaker.voice = voices[0];
             motivationLineSpeaker.lang = voices.lang;
 
             motivationLineSpeaker.text = motivationHeading.innerHTML;
             speechSynthesis.speak(motivationLineSpeaker);
-            // console.log("click");
         });
         count++;
     }
@@ -208,8 +224,6 @@ let mcount = 0; //number of motivations lines
 
 function nextMotv(motivationLines)
 {
-    console.log(mcount);
-    console.log( motivationLines[mcount].motivationLine);
   
     if(mcount < motivationLines.length - 1)
     {
@@ -226,7 +240,7 @@ function nextMotv(motivationLines)
     }
 }
 
-function  prevMotv(motivationLines)
+function prevMotv(motivationLines)
 {
     let mcount = 0; //number of motivations lines
     if(mcount>0)
