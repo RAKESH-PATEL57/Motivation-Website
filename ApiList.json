@@ -1,44 +1,44 @@
 [
     {
         "link":"./Custom_Apis/deepMotv.json",
-        "catagory":"DEEP"
+        "category":"DEEP"
     },
 
     {
         "link":"./Custom_Apis/successMotv.json",
-        "catagory":"SUCCESS"
+        "category":"SUCCESS"
     },
     {
         "link":"./Custom_Apis/workMotv.json",
-        "catagory":"WORK"
+        "category":"WORK"
     },
     {
         "link":"./Custom_Apis/personalMotv.json",
-        "catagory":"PERSONAL"
+        "category":"PERSONAL_LIFE"
     },
     {
         "link":"./Custom_Apis/womenMotv.json",
-        "catagory":"WOMEN"
+        "category":"WOMEN"
     },
     {
         "link":"./Custom_Apis/menMotvQuotes.json",
-        "catagory":"MEN"
+        "category":"MEN"
     },
     {
         "link":"./Custom_Apis/EncMotv.json",
-        "catagory":"ENCOURAGE"
+        "category":"ENCOURAGE"
     },
     {
         "link":"./Custom_Apis/newyearMotv.json",
-        "catagory":"NEWYEAR"
+        "category":"NEWYEAR"
     },
     {
         "link":"./Custom_Apis/studentMotv.json",
-        "catagory":"STUDENT"
+        "category":"STUDENT"
     },
     {
         "link":"./Custom_Apis/teamMotv.json",
-        "catagory":"TEAM"
+        "category":"TEAM"
     }
  
 ]
