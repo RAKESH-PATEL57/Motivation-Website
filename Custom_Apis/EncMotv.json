@@ -32,13 +32,15 @@
         "id": 5,
         "image":"../images/Encourage/encourage-5.jpg",
         "motivationLine": "“We are what we repeatedly do. Excellence, then, is not an act, but a habit.” ",
-        "writer": "Aristotle"
+        "writer": "Aristotle",
+        "catagory": "Encourage Motivation"
     },
     {
         "id": 6,
         "image":"../images/Encourage/encourage-6.jpg",
         "motivationLine": "“Start where you are. Use what you have. Do what you can.”",
-        "writer": "Arthur Ashe"
+        "writer": "Arthur Ashe",
+        "catagory": "Encourage Motivation"
     },
     {
         "id": 7,
