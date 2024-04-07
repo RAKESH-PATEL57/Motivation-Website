@@ -16,6 +16,7 @@
     --font-color:rgb(255, 255, 255);
     --main-color:aqua;
     --hover-font-color:black;
+    --glow-rgb: 239 42 201;
 }
 
 body
@@ -24,14 +25,29 @@ body
   min-height: 100vh;
 }
 
-.bg img
+::-webkit-scrollbar
 {
-    /* background-attachment: fixed; */
+    background: transparent;
+    width: .5rem;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background: aqua;
+    border-radius: 1rem;
+    box-shadow: 0rem 0rem .5rem aqua;
+}
+
+
+
+/* .bg img
+{
+    /* background-attachment: fixed; 
     height: 90%;
     width: 100%;
     object-fit: cover;
     position: absolute;
-}
+} */
 
 /* canvas
 {
@@ -50,13 +66,14 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 15%;
     padding: 1rem 2rem;
     position: fixed;
     backdrop-filter:blur(1.5px);
     z-index: 100;
-    /* border: 2px solid aqua; */
+    /* border-bottom: 2px solid aqua; */
     width: 100%;
+    backdrop-filter: blur(10px);
+    background: transparent;
 }
 
 header .logo
@@ -170,20 +187,141 @@ header nav .search-section
     text-shadow: 0rem 0rem .4rem var(--main-color);
 } */
 
+main
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    gap: 1rem;
+}
+
+.intropage
+{
+    position: relative;
+    height: 60vh;
+    width: 100%;
+    /* color: var(--bg-color); */
+    color: white;
+    display: grid;
+    font-size: 1.8rem;
+    place-content: center;
+    /* border-bottom: 2px solid red; */
+    overflow: hidden;
+}
+
+.intropage.intropage-OpenClose
+{
+    opacity: 0;
+    display: none;
+}
+
+/**************************** intro page stars on mouse moving [[ start ]]   ***********************/
+  
+  /* .glow-point {
+    position: absolute;
+    box-shadow: 0rem 0rem 1.2rem 0.6rem rgb(var(--glow-rgb));
+    pointer-events: none;
+    border-radius: 50%;
+  }
+  
+  .star {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    font-size: 1rem;
+    animation-duration: 1500ms;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+    border: 2px dotted aqua;
+  }
+  
+  @keyframes fall-1 {
+    0% {
+      transform: translate(0px, 0px) rotateX(45deg) rotateY(30deg) rotateZ(0deg) scale(0.25);
+      opacity: 0;
+    }
+    
+    5% {
+      transform: translate(10px, -10px) rotateX(45deg) rotateY(30deg) rotateZ(0deg) scale(1);
+      opacity: 1;
+    }
+    
+    100% {
+      transform: translate(25px, 200px) rotateX(180deg) rotateY(270deg) rotateZ(90deg) scale(1);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fall-2 {
+    0% {
+      transform: translate(0px, 0px) rotateX(-20deg) rotateY(10deg) scale(0.25);
+      opacity: 0;
+    }
+    
+    10% {
+      transform: translate(-10px, -5px) rotateX(-20deg) rotateY(10deg) scale(1);
+      opacity: 1;
+    }
+    
+    100% {
+      transform: translate(-10px, 160px) rotateX(-90deg) rotateY(45deg) scale(0.25);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fall-3 {
+    0% {
+      transform: translate(0px, 0px) rotateX(0deg) rotateY(45deg) scale(0.5);
+      opacity: 0;
+    }
+    
+    15% {
+      transform: translate(7px, 5px) rotateX(0deg) rotateY(45deg) scale(1);
+      opacity: 1;
+    }
+    
+    100% {
+      transform: translate(20px, 120px) rotateX(-180deg) rotateY(-90deg) scale(0.5);
+      opacity: 0;
+    }
+  } */
+/**************************** intro page stars on mouse moving [[  end  ]]   ***********************/
+
+
 .home-page
 {
-    position: absolute;
+    position: relative;
     display: flex;
-    height: calc(100% - 15%);
+    flex-direction: column;
+    /* min-height:100vh; */
+    min-height:80%;
     bottom: 0;
+    /* height:90vh; */
+    /* bottom: 0; */
+    /* border: 2px solid aqua; */
     width:100%;
     justify-content: center;
     align-items: center;
+
 }
 
 .home-page.homepage-OpenClose
 {
     opacity: 0;
+    display: none;
+}
+
+.home-page #home-heading
+{
+    /* border: 2px solid red; */
+    padding: 5rem 0rem 1rem 0rem;
+    color: white;
+    font-size: 3rem;
+    top: 0;
 }
 
 /*[[[[[[[[[[[[[[[[[[[   motivation-container section    ]]]]]]]]]]]]]]]]]]]]]]]*/
@@ -226,32 +364,16 @@ header nav .search-section
 
 .cards-container
 {
-    height: 100%;
-    position: absolute;
-    width: 100%;
+    
+    /* width: 100%; */
     gap: 2rem;
     display: flex;
     flex-wrap: wrap;
-    overflow-x: scroll;
-    overflow-x: hidden;
     justify-content: center;
     align-items: center;
     z-index: 10;
+    /* border: 2px solid aqua; */
 }
-
-.cards-container::-webkit-scrollbar
-{
-    background: transparent;
-    width: .5rem;
-}
-
-.cards-container::-webkit-scrollbar-thumb
-{
-    background: aqua;
-    border-radius: 1rem;
-    box-shadow: 0rem 0rem .5rem aqua;
-}
-
 
 .cards-container .card-details
 {
@@ -282,6 +404,15 @@ header nav .search-section
     transform: translate(-50%,-50%);
     transition: .5s;
     text-align: center; /* for centering to line motivation heading*/ 
+}
+
+.cdheading .motivationTypeName
+{
+    color: aqua;
+    font-size: 1.6rem;
+    filter: drop-shadow(0rem 0rem .8rem black);
+    -webkit-text-stroke-width: .7px;
+    -webkit-text-stroke-color: black;
 }
 
 .cdheading h2
@@ -317,9 +448,9 @@ header nav .search-section
 /*************[[[[[[[[[[[ second page making   ]]]]]]]]]]]]]]]]]]]]]]************/
 .second-page
 {
-    height: 100vh;
+    position: absolute;
+    height: 100%;
     width: 100%;
-    position: relative;
     /* border: 2px solid red; */
     display: none;
     transition: .5s linear;
