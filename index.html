@@ -10,6 +10,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/logo/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest"> -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"
+    ></script>
 </head>
 <body>
 
@@ -17,136 +22,33 @@
     <header>
         <a href="" class="logo"><img src="./logo//favicon_io/android-chrome-192x192.png" alt=""></a>
         <nav>
-            <!-- <div class="search-section">
-                <input type="text" placeholder="motivation name" class="search-input-box">
-                <i class='bx bx-search search-icon' id="searchBtn"></i>
-            </div> -->
-            <ul>
-                <h1>Motivation Names</h1>
-                <li><a href="#deepMotv"></a>Deep Motivation</li>
-                <li><a href="#succMotv"></a>Deep Motivation</li>
-                <li><a href="#workMotv"></a>Deep Motivation</li>
-                <li><a href="#pleMotv"></a>Deep Motivation</li>
-                <li><a href="#womenMotv"></a>Deep Motivation</li>
-                <li><a href="#menMotv"></a>Deep Motivation</li>
-                <li><a href="#encMotv"></a>Deep Motivation</li>
-                <li><a href="#newyMotv"></a>Deep Motivation</li>
-                <li><a href="#stdMotv"></a>Deep Motivation</li>
-                <li><a href="#teamMotv"></a>Deep Motivation</li>
-            </ul>
+            <div class="search-section">
+                <input type="text" id="searchInput" placeholder="motivation name" class="search-input-box">
+                <!-- <i class='bx bx-search search-icon' id="searchBtn"></i> -->
+            </div>
         </nav>
     </header>
 
     <main>
-        <div class="bg">
-            <!-- <img loading="lazy" src="./images/bg.jpg" alt=""> -->
-        </div>
-
-        <!-- <div class="intro-page">
-            <div class="mainmotivation-container">
-                <h1>The Time Will hill Everything</h1>
-                <h1>Just Stay</h1>
-                <span>Motivated</span>
-            </div>
-            <div class="scroll-container">
-             
-                     <span>Scroll</span>
-                     <span id="scrl-arrow-animate">↓</span>
-            </div>
-        </div> -->
-
+        <section class="intropage">
+          <h1>Empowering Your Journey: Discovering the Fuel to Ignite Your Motivation</h1>
+        </section>
+     
         <section class="home-page">
-            <h1 id="home-heading">Motivations Types</h1>
+            <!-- <h1 id="home-heading">Welcome to Motivations</h1> -->
             <div class="cards-container">
-                <div class="card-details skeleton"  id="deepMotvOpen">
-                    <div class="cdheading">
-                        <h1>Deep <br> Motivation</h1>
-                        <h2>Open</h2>
-                    </div>
-                    <img loading="lazy" src="./images/Deep_Motivation/dm1.jpg" alt="MotivationImage">
-                </div>
-                <div class="card-details skeleton" id="successMotvOpen">
-                    <div class="cdheading">
-                        <h1>Success <br> Motivation</h1>
-                        <h2>Open</h2>
-                    </div>
-                    <img loading="lazy" src="./images/Success/success-1.jpg" alt="MotivationImage">
-                </div>
-                <div class="card-details skeleton">
-                    <div class="cdheading" id="workMotvOpen">
-                        <h1>Work <br> Motivation</h1>
-                        <h2>Open</h2>
-                    </div>
-                    <img loading="lazy" src="./images/Work/Work-1.jpg" alt="MotivationImage">
-                </div>
-                <div class="card-details skeleton">
-                    <div class="cdheading" id="perlifeMotvOpen">
-                        <h1>Personal_Life<br> Motivation</h1>
-                        <h2>Open</h2>
-                    </div>
-                    <img loading="lazy" src="./images/Personal-Life/PL-1.jpg" alt="MotivationImage">
-                </div>
-                <div class="card-details skeleton">
-                    <div class="cdheading" id="womenMotvOpen">
-                        <h1>Women<br> Motivation</h1>
-                        <h2>Open</h2>
-                    </div>
-                    <img loading="lazy" src="./images/Women/women-5.jpg" alt="MotivationImage">
-                </div>
-                <div class="card-details skeleton">
-                    <div class="cdheading" id="menMotvOpen">
-                        <h1>Men<br> Motivation</h1>
-                        <h2>Open</h2>
-                    </div>
-                    <img loading="lazy" src="./images/Men/men-6.jpg" alt="MotivationImage">
-                </div>
-                <div class="card-details skeleton">
-                    <div class="cdheading" id="encMotvOpen">
-                        <h1>Encouraging<br> Motivation</h1>
-                        <h2>Open</h2>
-                    </div>
-                    <img loading="lazy" src="./images/Encourage/encourage-1.jpg" alt="MotivationImage">
-                </div>
-                <div class="card-details skeleton">
-                    <div class="cdheading" id="newYearMotvOpen">
-                        <h1>NewYear<br> Motivation</h1>
-                        <h2>Open</h2>
-                    </div>
-                    <img loading="lazy" src="./images/New_Year/newyear-7.jpg" alt="MotivationImage">
-                </div>
-                <div class="card-details skeleton">
-                    <div class="cdheading" id="studentMotvOpen">
-                        <h1>Student<br> Motivation</h1>
-                        <h2>Open</h2>
-                    </div>
-                    <img loading="lazy" src="./images/Student/student-10.jpg" alt="MotivationImage">
-                </div>
-                <div class="card-details skeleton">
-                    <div class="cdheading" id="teamMotvOpen">
-                        <h1>Team<br> Motivation</h1>
-                        <h2>Open</h2>
-                    </div>
-                    <img loading="lazy" src="./images/Team/team-10.jpg" alt="MotivationImage">
-                </div>
-                <div class="card-details skeleton">
-                    <div class="cdheading" id="funnyMotvOpen">
-                        <h1>Funny<br> Motivation</h1>
-                        <h2>Open</h2>
-                    </div>
-                    <img loading="lazy" src="./images/Team/team-10.jpg" alt="MotivationImage">
-                </div>
             </div>
         </section>
 
     <section class="second-page">
         <div class="second-page-content">
             <div class="left-side-img-container scPage_skeleton">
-                <img id="motivation-img" src="./images/Deep_Motivation/dm1.jpg" alt="motivationImage">
+                <img id="motivation-img" src="" alt="motivationImage">
             </div>
             <div class="right-side-motvcontainer">
                 <div class="headings-writer">
-                    <h1 id="motivation-heading" class="scPage_skeleton">If you have conviction on your self then you will definately conqured</h1>
-                    <h2 id="motivation-writer" class="scPage_skeleton">Writer- <span>R.K.</span></h2>
+                    <h1 id="motivation-heading" class="scPage_skeleton"></h1>
+                    <h2 id="motivation-writer" class="scPage_skeleton"></h2>
                 </div>
                 <div class="prev-next-btn">
                     <button class="btn" id="prev-Motv"><i class='bx bx-left-arrow-alt' ></i></button>
@@ -160,18 +62,12 @@
     
 </main>
     
-    
-    <!-- <div class="result">
-        <div id="Motivatimg">
-            <img id="images" alt="">
-        </div>
-    </div> -->
- 
     <!-- <canvas></canvas> -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- <script src="./vanila.js"></script> -->
     <script src="./script.js"></script>
-    <script type="module" src="./Api.js"></script>
+    <script type="module" src="./dynamicData.js"></script>
+    <!-- <script type="module" src="./Api.js"></script> -->
 </body>
 </html>

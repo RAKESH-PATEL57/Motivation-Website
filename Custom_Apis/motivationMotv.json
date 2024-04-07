@@ -1,62 +1,74 @@
 [
     {
         "id": 1,
+        "image":"../images/Motivation/motivation-1.png",
         "motivationLine": "“Everything you’ve ever wanted is sitting on the other side of fear.” ",
         "writer": "George Addair",
-        "catagory": "motivation"
+        "category":"Motivation Motivation"
+
     },
     {
         "id": 2,
+        "image":"../images/Motivation/motivation-2.png",
         "motivationLine": "“The question isn’t who is going to let me; it’s who is going to stop me.”",
         "writer": "Ayn Rand",
-        "catagory": "motivation"
+        "category":"Motivation Motivation"
+
     },
     {
         "id": 3,
+        "image":"../images/Motivation/motivation-3.png",
         "motivationLine": "“Every strike brings me closer to the next home run.”",
         "writer": "Babe Ruth",
-        "catagory": "motivation"
+        "category":"Motivation Motivation"
     },
     {
         "id": 4,
+        "image":"../images/Motivation/motivation-4.png",
         "motivationLine": "“I have not failed. I’ve just found 10,000 ways that won’t work.”",
         "writer": "Thomas Edison",
-        "catagory": "motivation"
+        "category":"Motivation Motivation"
     },
     {
         "id": 5,
+        "image":"../images/Motivation/motivation-5.png",
         "motivationLine": "“Don’t worry about failure; you only have to be right once.”",
         "writer": "Drew Houston",
-        "catagory": "motivation"
+        "category":"Motivation Motivation"
     },
     {
         "id": 6,
+        "image":"../images/Motivation/motivation-6.png",
         "motivationLine": "“You carry the passport to your own happiness.”",
         "writer": "Diane Von Furstenberg",
-        "catagory": "motivation"
+        "category":"Motivation Motivation"
     },
     {
         "id": 7,
+        "image":"../images/Motivation/motivation-7.png",
         "motivationLine": "“Never let success get to your head, and never let failure get to your heart.” ",
         "writer": "Drake",
-        "catagory": "motivation"
+        "category":"Motivation Motivation"
     },
     {
         "id": 8,
+        "image":"../images/Motivation/motivation-8.png",
         "motivationLine": "“Ideation without execution is delusion.”",
         "writer": "Robin Sharma",
-        "catagory": "motivation"
+        "category":"Motivation Motivation"
     },
     {
         "id" : 9,
+        "image":"../images/Motivation/motivation-9.png",
         "motivationLine":"“You’ve got to get up every morning with determination if you’re going to go to bed with satisfaction.” ",
         "writer" : "George Lorimer",
-        "catagory": "motivation"
+        "category":"Motivation Motivation"
     },
     {
         "id" : 10,
+        "image":"../images/Motivation/motivation-10.png",
         "motivationLine":". “Believe on Monday the way you believe on Sunday.”",
         "writer" : "Rita Schiano",
-        "catagory": "motivation"
+        "category":"Motivation Motivation"
     }
 ]

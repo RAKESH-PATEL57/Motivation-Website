@@ -1,44 +1,44 @@
 [
     {
         "link":"./Custom_Apis/deepMotv.json",
-        "catagory":"deepmotivation"
+        "category":"DEEP"
     },
 
     {
         "link":"./Custom_Apis/successMotv.json",
-        "catagory":"successmotivation"
+        "category":"SUCCESS"
     },
     {
         "link":"./Custom_Apis/workMotv.json",
-        "catagory":"workmotivation"
+        "category":"WORK"
     },
     {
         "link":"./Custom_Apis/personalMotv.json",
-        "catagory":"personalmotivation"
+        "category":"PERSONAL_LIFE"
     },
     {
         "link":"./Custom_Apis/womenMotv.json",
-        "catagory":"womenmotivation"
+        "category":"WOMEN"
     },
     {
         "link":"./Custom_Apis/menMotvQuotes.json",
-        "catagory":"menmotivation"
+        "category":"MEN"
     },
     {
         "link":"./Custom_Apis/EncMotv.json",
-        "catagory":"encouragemotivation"
+        "category":"ENCOURAGE"
     },
     {
         "link":"./Custom_Apis/newyearMotv.json",
-        "catagory":"newyearmotivation"
+        "category":"NEWYEAR"
     },
     {
         "link":"./Custom_Apis/studentMotv.json",
-        "catagory":"studentmotivation"
+        "category":"STUDENT"
     },
     {
         "link":"./Custom_Apis/teamMotv.json",
-        "catagory":"teammotivation"
+        "category":"TEAM"
     }
-
+ 
 ]

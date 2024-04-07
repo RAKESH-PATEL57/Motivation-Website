@@ -1,72 +1,110 @@
 [
     {
         "id": 1,
+        "image":"../images/More/more-1.png",
         "motivationLine": "“The two most important days in your life are the day you’re born and the day you find out why.”",
-        "writer": "Mark Twain"
+        "writer": "Mark Twain",
+        "category":"More Motivation"
+
     },
     {
         "id": 2,
+        "image":"../images/More/more-2.png",
         "motivationLine": "“Nothing ever goes away until it teaches us what we need to know.”",
-        "writer": "Pema Chodron"
+        "writer": "Pema Chodron",
+        "category":"More Motivation"
+
     },
     {
         "id": 3,
+        "image":"../images/More/more-3.png",
         "motivationLine": "“We can see through others only when we can see through ourselves.”",
-        "writer": "Bruce Lee"
+        "writer": "Bruce Lee",
+        "category":"More Motivation"
+
     },
     {
         "id": 4,
+        "image":"../images/More/more-4.png",
         "motivationLine": "“First, forget inspiration. Habit is more dependable. Habit will sustain you whether you’re inspired or not. Habit will help you finish and polish your stories. Inspiration won’t. Habit is persistence in practice.”",
-        "writer": "Octavia Butler"
+        "writer": "Octavia Butler",
+        "category":"More Motivation"
+
     },
     {
         "id": 5,
+        "image":"../images/More/more-5.png",
         "motivationLine": "“The best way out is always through.”",
-        "writer": "Robert Frost"
+        "writer": "Robert Frost",
+        "category":"More Motivation"
+
     },
     {
         "id": 6,
+        "image":"../images/More/more-6.png",
         "motivationLine": "“The battles that count aren’t the ones for gold medals. The struggles within yourself—the invisible, inevitable battles inside all of us—that’s where it’s at.”",
-        "writer": "Jesse Owens"
+        "writer": "Jesse Owens",
+        "category":"More Motivation"
+
     },
     {
         "id": 7,
+        "image":"../images/More/more-7.png",
         "motivationLine": "“If there is no struggle, there is no progress.”",
-        "writer": "Frederick Douglass"
+        "writer": "Frederick Douglass",
+        "category":"More Motivation"
+
     },
     {
         "id": 8,
+        "image":"../images/More/more-8.png",
         "motivationLine": "“Someone will declare, ‘I am the leader!’ and expect everyone to get in line and follow him or her to the gates of heaven or hell. My experience is that it doesn’t happen that way. Others follow you based on the quality of your actions rather than the magnitude of your declarations.”",
-        "writer": "Bill Walsh"
+        "writer": "Bill Walsh",
+        "category":"More Motivation"
+
     },
     {
         "id": 9,
+        "image":"../images/More/more-9.png",
         "motivationLine": "“Courage is like a muscle. We strengthen it by use.”",
-        "writer": "Ruth Gordo"
+        "writer": "Ruth Gordo",
+        "category":"More Motivation"
+
     },
     {
         "id": 10,
+        "image":"../images/More/more-10.png",
         "motivationLine": "“Relentlessly prune bullshit, don’t wait to do things that matter, and savor the time you have. That’s what you do when life is short.”",
-        "writer": "Paul Graham"
+        "writer": "Paul Graham",
+        "category":"More Motivation"
+
     },
     {
         "id": 11,
         "motivationLine": "“More is lost by indecision than wrong decision.”",
-        "writer": "Marcus Tullius Cicero"
+        "writer": "Marcus Tullius Cicero",
+        "category":"More Motivation"
+
     },
     {
         "id": 12,
         "motivationLine": "“If the highest aim of a captain were to preserve his ship, he would keep it in port forever.”",
-        "writer": "Thomas Aquinas"
+        "writer": "Thomas Aquinas",
+        "category":"More Motivation"
+
     },
     {
         "id": 13,
         "motivationLine": "“You can be the ripest, juiciest peach in the world, and there’s still going to be somebody who hates peaches.” ",
-        "writer": "Dita Von Teese"
+        "writer": "Dita Von Teese",
+        "category":"More Motivation"
+
     },
     {
         "id": 14,
         "motivationLine": "“Keep a little fire burning; however small, however hidden.”",
-        "writer": "Cormac McCarthy"
+        "writer": "Cormac McCarthy",
+        "category":"More Motivation"
+
     }
 ]
