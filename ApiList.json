@@ -1,5 +1,10 @@
 [
     {
+        "link":"./Custom_Apis/dailyMotv.json",
+        "category":"DAILY"
+    },
+
+    {
         "link":"./Custom_Apis/deepMotv.json",
         "category":"DEEP"
     },
@@ -39,6 +44,38 @@
     {
         "link":"./Custom_Apis/teamMotv.json",
         "category":"TEAM"
+    },
+    {
+        "link":"./Custom_Apis/aboutLifeMotv.json",
+        "category":"ABOUT_LIFE"
+    },
+    {
+        "link":"./Custom_Apis/bestDayMotv.json",
+        "category":"BESTDAY"
+    },
+    {
+        "link":"./Custom_Apis/fridayMotv.json",
+        "category":"FRIDAY"
+    },
+    {
+        "link":"./Custom_Apis/funnyMotv.json",
+        "category":"FUNNY"
+    },
+    {
+        "link":"./Custom_Apis/InspiMotv.json",
+        "category":"INSPIRATION"
+    },
+    {
+        "link":"./Custom_Apis/postiveMotv.json",
+        "category":"POSSITIVE"
+    },
+    {
+        "link":"./Custom_Apis/shortMotv.json",
+        "category":"SHORT"
+    },
+    {
+        "link":"./Custom_Apis/moreMotv.json",
+        "category":"MORE"
     }
  
 ]
