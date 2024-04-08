@@ -1,66 +1,77 @@
 [
     {
         "id": 1,
+        "images":"../images/Bestday/Bestday-1.jpg",
         "motivationLine": "“You can get everything in life you want if you will just help enough other people get what they want.”z",
         "writer": "Zig Ziglar",
         "category": "Best Day Motivation"
     },
     {
         "id": 2,
+        "images":"../images/Bestday/Bestday-2.jpg",
         "motivationLine": "“Inspiration does exist, but it must find you working.”",
         "writer": "Pablo Picasso",
         "category": "Best Day Motivation"
     },
     {
         "id": 3,
+        "images":"../images/Bestday/Bestday-3.jpg",
         "motivationLine": "“Don’t settle for average. Bring your best to the moment. Then, whether it fails or succeeds, at least you know you gave all you had.”",
         "writer": "Angela Bassett",
         "category": "Best Day Motivation"
     },
     {
         "id": 4,
+        "images":"../images/Bestday/Bestday-4.jpg",
         "motivationLine": "“Show up, show up, show up, and after a while the muse shows up, too.”",
         "writer": "Isabel Allende",
         "category": "Best Day Motivation"
     },
     {
         "id": 5,
+        "images":"../images/Bestday/Bestday-5.jpg",
         "motivationLine": "“Don’t bunt. Aim out of the ballpark. Aim for the company of immortals.”",
         "writer": "David Ogilvy",
         "category": "Best Day Motivation"
     },
     {
         "id": 6,
+        "images":"../images/Bestday/Bestday-6.jpg",
         "motivationLine": "“I have stood on a mountain of no’s for one yes.” ",
         "writer": "Barbara Elaine Smith",
         "category": "Best Day Motivation"
     },
     {
         "id": 7,
+        "images":"../images/Bestday/Bestday-7.jpg",
         "motivationLine": "“If you believe something needs to exist, if it’s something you want to use yourself, don’t let anyone ever stop you from doing it.”",
         "writer": "Tobias Lütke",
         "category": "Best Day Motivation"
     },
     {
         "id": 8,
+        "images":"../images/Bestday/Bestday-8.jpg",
         "motivationLine": "Believe you can and you're halfway there.",
         "writer": "Theodore Roosevelt",
         "category": "Best Day Motivation"
     },
     {
         "id": 9,
+        "images":"../images/Bestday/Bestday-9.jpg",
         "motivationLine": "Life shrinks or expands in proportion to one’s courage.",
         "writer": "Anaïs Nin",
         "category": "Best Day Motivation"
     },
     {
-        "id": 8,
+        "id": 10,
+        "images":"../images/Bestday/Bestday-10.jpg",
         "motivationLine": " Try to be a rainbow in someone's cloud.",
         "writer": " Maya Angelou",
         "category": "Best Day Motivation"
     },
     {
-        "id": 10,
+        "id": 11,
+        "images":"../images/Bestday/Bestday-6.jpg",
         "motivationLine": "Real change, enduring change, happens one step at a time. ",
         "writer": "Ruth Bader",
         "category": "Best Day Motivation"

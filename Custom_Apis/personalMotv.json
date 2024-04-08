@@ -1,0 +1,82 @@
+[
+    {
+        "id":1,
+        "image":"../images/Personal-Life/PL-1.jpg",
+        "motivationLine":"“The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.”",
+        "writer":"Winston Churchill",
+        "category": "Personal Motivation"
+      },
+      {
+        "id":2,
+        "image":"../images/Personal-Life/PL-2.jpg",
+        "motivationLine":"“Don’t let yesterday take up too much of today.”",
+        "writer":"Will Rogers",
+        "category": "Personal Motivation"
+      },
+      {
+        "id":3,
+        "image":"../images/Personal-Life/PL-3.jpg",
+        "motivationLine":"“The people who succeed aren’t the ones who avoid failure; they’re the ones who learn how to respond to failure with optimism.”",
+        "writer":"Darrin Donnelly",
+        "category": "Personal Motivation"
+      },
+      {
+        "id":4,
+        "image":"../images/Personal-Life/PL-4.jpg",
+        "motivationLine":"“If you are working on something that you really care about, you don’t have to be pushed. The vision pulls you.”",
+        "writer":"Steve Jobs",
+        "category": "Personal Motivation"
+      },
+      {
+        "id":5,
+        "image":"../images/Personal-Life/PL-5.jpg",
+        "motivationLine":"“Experience is a hard teacher because she gives the test first, the lesson afterward.”",
+        "writer":"Vernon Sanders Law",
+        "category": "Personal Motivation"
+      },
+      {
+        "id":6,
+        "image":"../images/Personal-Life/PL-6.jpg",
+        "motivationLine":"“To know how much there is to know is the beginning of learning to live.”",
+        "writer":"Dorothy West",
+        "category": "Personal Motivation"
+      },
+      {
+        "id":7,
+        "image":"../images/Personal-Life/PL-7.jpg",
+        "motivationLine":"“Goal setting is the secret to a compelling future.”",
+        "writer":"LeBron James",
+        "category": "Personal Motivation"
+      },
+      {
+        "id":8,
+        "image":"../images/Personal-Life/PL-8.jpg",
+        "motivationLine":"“Don’t be afraid of failure. This is the way to succeed.”",
+        "writer":"Tony Robbins",
+        "category": "Personal Motivation"
+      },
+      {
+        "id":9,
+        "image":"../images/Personal-Life/PL-9.jpg",
+        "motivationLine":"“Failure will never overtake me if my determination to succeed is strong enough.”",
+        "writer":"Og Mandino",
+        "category": "Personal Motivation"
+      },
+      {
+        "id":10,
+        "image":"../images/Personal-Life/PL-10.jpg",
+        "motivationLine":"“It is literally true that you can succeed best and quickest by helping others to succeed.”",
+        "writer":"Napoleon Hill",
+        "category": "Personal Motivation"
+      },
+      {
+        "id":11,
+        "image":"../images/Personal-Life/PL-11.jpg",
+        "motivationLine":"“We met for a reason, either you’re a blessing or a lesson.”",
+        "writer":"Frank Ocean",
+        "category": "Personal Motivation"
+        
+      }
+ 
+      
+]

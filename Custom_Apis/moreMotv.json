@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "image":"../images/More/more-1.png",
+        "image":"../images/more/more-1.jpg",
         "motivationLine": "“The two most important days in your life are the day you’re born and the day you find out why.”",
         "writer": "Mark Twain",
         "category":"More Motivation"
@@ -9,7 +9,7 @@
     },
     {
         "id": 2,
-        "image":"../images/More/more-2.png",
+        "image":"../images/more/more-2.jpg",
         "motivationLine": "“Nothing ever goes away until it teaches us what we need to know.”",
         "writer": "Pema Chodron",
         "category":"More Motivation"
@@ -17,7 +17,7 @@
     },
     {
         "id": 3,
-        "image":"../images/More/more-3.png",
+        "image":"../images/more/more-3.jpg",
         "motivationLine": "“We can see through others only when we can see through ourselves.”",
         "writer": "Bruce Lee",
         "category":"More Motivation"
@@ -25,7 +25,7 @@
     },
     {
         "id": 4,
-        "image":"../images/More/more-4.png",
+        "image":"../images/more/more-4.jpg",
         "motivationLine": "“First, forget inspiration. Habit is more dependable. Habit will sustain you whether you’re inspired or not. Habit will help you finish and polish your stories. Inspiration won’t. Habit is persistence in practice.”",
         "writer": "Octavia Butler",
         "category":"More Motivation"
@@ -33,7 +33,7 @@
     },
     {
         "id": 5,
-        "image":"../images/More/more-5.png",
+        "image":"../images/more/more-5.jpg",
         "motivationLine": "“The best way out is always through.”",
         "writer": "Robert Frost",
         "category":"More Motivation"
@@ -41,7 +41,7 @@
     },
     {
         "id": 6,
-        "image":"../images/More/more-6.png",
+        "image":"../images/more/more-6.jpg",
         "motivationLine": "“The battles that count aren’t the ones for gold medals. The struggles within yourself—the invisible, inevitable battles inside all of us—that’s where it’s at.”",
         "writer": "Jesse Owens",
         "category":"More Motivation"
@@ -49,7 +49,7 @@
     },
     {
         "id": 7,
-        "image":"../images/More/more-7.png",
+        "image":"../images/more/more-7.jpg",
         "motivationLine": "“If there is no struggle, there is no progress.”",
         "writer": "Frederick Douglass",
         "category":"More Motivation"
@@ -57,7 +57,7 @@
     },
     {
         "id": 8,
-        "image":"../images/More/more-8.png",
+        "image":"../images/more/more-8.jpg",
         "motivationLine": "“Someone will declare, ‘I am the leader!’ and expect everyone to get in line and follow him or her to the gates of heaven or hell. My experience is that it doesn’t happen that way. Others follow you based on the quality of your actions rather than the magnitude of your declarations.”",
         "writer": "Bill Walsh",
         "category":"More Motivation"
@@ -65,7 +65,7 @@
     },
     {
         "id": 9,
-        "image":"../images/More/more-9.png",
+        "image":"../images/more/more-9.jpg",
         "motivationLine": "“Courage is like a muscle. We strengthen it by use.”",
         "writer": "Ruth Gordo",
         "category":"More Motivation"
@@ -73,7 +73,7 @@
     },
     {
         "id": 10,
-        "image":"../images/More/more-10.png",
+        "image":"../images/more/more-10.jpg",
         "motivationLine": "“Relentlessly prune bullshit, don’t wait to do things that matter, and savor the time you have. That’s what you do when life is short.”",
         "writer": "Paul Graham",
         "category":"More Motivation"
@@ -81,6 +81,7 @@
     },
     {
         "id": 11,
+        "image":"../images/more/more-11.jpg",
         "motivationLine": "“More is lost by indecision than wrong decision.”",
         "writer": "Marcus Tullius Cicero",
         "category":"More Motivation"
@@ -88,6 +89,7 @@
     },
     {
         "id": 12,
+        "image":"../images/more/more-12.jpg",
         "motivationLine": "“If the highest aim of a captain were to preserve his ship, he would keep it in port forever.”",
         "writer": "Thomas Aquinas",
         "category":"More Motivation"
@@ -95,6 +97,7 @@
     },
     {
         "id": 13,
+        "image":"../images/more/more-13.jpg",
         "motivationLine": "“You can be the ripest, juiciest peach in the world, and there’s still going to be somebody who hates peaches.” ",
         "writer": "Dita Von Teese",
         "category":"More Motivation"
@@ -102,9 +105,83 @@
     },
     {
         "id": 14,
+        "image":"../images/more/more-14.jpg",
         "motivationLine": "“Keep a little fire burning; however small, however hidden.”",
         "writer": "Cormac McCarthy",
         "category":"More Motivation"
 
+    },
+    {
+        "id": 15,
+        "image":"../images/more/more-15.jpg",
+       
+        "motivationLine": "“The greatest discovery of my generation is that a human being can alter his life by altering his attitudes.”",
+        "writer": "William James",
+        "category": "Monday Motivation"
+    },
+    {
+        "id": 16,
+        "image":"../images/more/more-16.jpg",
+        "motivationLine": "“One of the differences between some successful and unsuccessful people is that one group is full of doers, while the other is full of wishers.”",
+        "writer": "Edmond Mbiaka",
+        "category": "Monday Motivation"
+    },
+    {
+        "id": 17,
+        "image":"../images/more/more-17.jpg",
+        "motivationLine": "“I’d rather regret the things I’ve done than regret the things I haven’t done.” ",
+        "writer": "Lucille Ball",
+        "category": "Monday Motivation"
+    },
+    {
+        "id": 18,
+        "image":"../images/more/more-18.jpg",
+        "motivationLine": "“You cannot plow a field by turning it over in your mind. To begin, begin.” ",
+        "writer": "Gordon B. Hinckley.",
+        "category": "Monday Motivation"
+    },
+    {
+        "id": 19,
+        "image":"../images/more/more-19.jpg",
+        "motivationLine": "“When you arise in the morning, think of what a privilege it is to be alive, to think, to enjoy, to love.” ",
+        "writer": "Marcus Aurelius",
+        "category": "Monday Motivation"
+    },
+    {
+        "id": 20,
+        "image":"../images/more/more-20.jpg",
+        "motivationLine": "“Mondays offer new beginnings 52 times a year!” ",
+        "writer": "David Dweck",
+        "category": "Monday Motivation"
+    },
+    {
+        "id": 21,
+        "image":"../images/more/more-3.jpg",
+        "motivationLine": "“Be miserable. Or motivate yourself. Whatever has to be done, it’s always your choice.” ",
+        "writer": "Wayne Dyer",
+        "category": "Monday Motivation"
+    },
+    {
+        "id": 22,
+        "image":"../images/more/more-7.jpg",
+        "motivationLine": "“Your Monday morning thoughts set the tone for your whole week. See yourself getting stronger, and living a fulfilling, happier, and healthier life.” ",
+        "writer": "Germany Kent",
+        "category": "Monday Motivation"
+    },
+    {
+        "id" : 23,
+        "image":"../images/more/more-13.jpg",
+        "motivationLine":"“If Joan of Arc could turn the tide of an entire war before her 18th birthday, you can get out of bed.”",
+        "writer" : "E. Jean Carroll",
+        "category": "Monday Motivation"
+    },
+    {
+        "id" : 24,
+        "image":"../images/more/more-8.jpg",
+        "motivationLine":"“Inspiration comes from within yourself. One has to be positive. When you’re positive, good things happen.”",
+        "writer" : "Deep Roy",
+        "category": "Monday Motivation"
     }
+        
+    
 ]

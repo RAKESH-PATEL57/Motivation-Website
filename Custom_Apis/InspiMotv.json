@@ -1,66 +1,77 @@
 [
     {
         "id": 1,
+        "image":"../images/Inspiration/inspiration-1.jpg",
         "motivationLine": "“Fear of what other people will think is the single most paralyzing dynamic in business and in life. The best moment of my life was the day I realized that I no longer give a damn what anybody thinks. That’s enormously liberating and freeing, and it’s the only way to live your life and do your business” ",
         "writer": "Cindy Gallop",
         "category":"Ispiration Motivation"
     },
     {
         "id": 2,
+        "image":"../images/Inspiration/inspiration-3.jpg",
         "motivationLine": "“The only way of discovering the limits of the possible is to venture a little way past them into the impossible.”",
         "writer": "Arthur C. Clarke",
         "category":"Ispiration Motivation"
     },
     {
         "id": 3,
+        "image":"../images/Inspiration/inspiration-3.jpg",
         "motivationLine": "“Worry is a misuse of imagination.” ",
         "writer": "Unknown",
         "category":"Ispiration Motivation"
     },
     {
         "id": 4,
+        "image":"../images/Inspiration/inspiration-4.jpg",
         "motivationLine": "“Courage is the most important of all the virtues because, without courage, you can’t practice any other virtue consistently.”",
         "writer": "Maya Angelou",
         "category":"Ispiration Motivation"
     },
     {
         "id": 5,
+        "image":"../images/Inspiration/inspiration-5.jpg",
         "motivationLine": "“I never look back, darling. It distracts from the now.”",
         "writer": "Edna Mode",
         "category":"Ispiration Motivation"
     },
     {
         "id": 6,
+        "image":"../images/Inspiration/inspiration-6.jpg",
         "motivationLine": "“A year from now you will wish you had started today.”",
         "writer": "Unknown",
         "category":"Ispiration Motivation"
     },
     {
         "id": 7,
+        "image":"../images/Inspiration/inspiration-7.jpg",
         "motivationLine": "“The reason we struggle with insecurity is because we compare our behind the scenes with everyone else’s highlight reel.” ",
         "writer": "Steve Furtick",
         "category":"Ispiration Motivation"
     },
     {
         "id": 8,
+        "image":"../images/Inspiration/inspiration-8.jpg",
         "motivationLine": "“Somewhere, something incredible is waiting to be known.”",
         "writer": "Carl Sagan",
         "category":"Ispiration Motivation"
     },
     {
         "id": 9,
+        "image":"../images/Inspiration/inspiration-9.jpg",
         "motivationLine": "“I will not lose, for even in defeat, there’s a valuable lesson learned, so it evens up for me.”",
         "writer": "Jay-Z",
         "category":"Ispiration Motivation"
     },
     {
         "id": 10,
+        "image":"../images/Inspiration/inspiration-10.jpg",
         "motivationLine": "“I do not try to dance better than anyone else. I only try to dance better than myself.”",
         "writer": "Arianna Huffington",
         "category":"Ispiration Motivation"
     },
     {
         "id":11,
+        "image":"../images/Inspiration/inspiration-5.jpg",
         "motivationLine":"“If you don’t risk anything, you risk even more.”",
         "writer" : "Erica Jong",
         "category":"Ispiration Motivation"
