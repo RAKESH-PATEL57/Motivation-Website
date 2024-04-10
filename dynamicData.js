@@ -76,7 +76,7 @@ function removeLoader(cardDetails, i)
 // generating dynamic elements [start] ********************************************
 async function gettingDataFromJson(allMotivationData, cardDetails, i)
 {
-    showLoader(cardDetails , i);
+showLoader(cardDetails , i);
     let link;
     fetch(allMotivationData.link)
     .then(res => {
@@ -95,9 +95,9 @@ async function gettingDataFromJson(allMotivationData, cardDetails, i)
         <h1><span class="motivationTypeName">${allMotivationData.category}</span><br>Motivation</h1>
         <h2>Open</h2>
         </div>
-        <img loading="lazy" class="imgLoad" src="${(data[0].image).slice(0)}" alt="MotivationImage">`
+        <img loading="lazy" class="imgLoad" src="${(data[0].image).slice(1)}" alt="MotivationImage">`
         cardDetails[i].insertAdjacentHTML("beforeend", cards);
-        let imgLoad = document.querySelectorAll(".imgLoad");
+        // let imgLoad = document.querySelectorAll(".imgLoad");
       
         // imgLoad[i].addEventListener("load", () => {
         //     // imgLoad[i].style.border= "2px solid red";
