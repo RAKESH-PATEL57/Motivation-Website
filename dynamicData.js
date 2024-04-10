@@ -1,100 +1,123 @@
 // creating dynamic datas or card from json file
 "use strict"
 import test from "./ApiList.json" with {type: 'json'};
+// console.log(test)
+
+//******************* sercah section  [start] ****************************
+let searchInput = document.querySelector('#searchInput');
+let cc = 0;
 let cardContainer = document.querySelector(".cards-container");
 var forStyle = 1;
-for(let i = 0 ; i< test.length; i++)
-{
+
+function creatingCards(dataDisplay, index)
+{     
+    // console.log(numbers);        
+    var forStyle = 1;
+        
     const cards = `<div class="card-details" style="--i:${forStyle++}"></div>`
     cardContainer.insertAdjacentHTML("beforeend", cards);
+
     let cardDetails = document.querySelectorAll(".card-details");
-    showLoader(cardDetails, i);
+    showLoader(cardDetails, index);
+
+    gettingDataFromJson(dataDisplay[index],cardDetails,index);
 
 }
 
-const dataInterval = setInterval(jsonData, 500)
-let i = 0;
-function jsonData()
+function filterData()
 {
+    let query = searchInput.value;
+    
+    let dataDisplay = test.filter((eventData, index) => {
+        if(query === "") {
+            // console.log(eventData);
 
-       
-        let cardDetails = document.querySelectorAll(".card-details");
-        gettingDataFromJson(test[i],cardDetails,i);
-      
-
-        if(i > test.length-2)
-        {
-            clearInterval(dataInterval);
+            return eventData,index;
         }
-        i++;
+        else if(eventData.category.toUpperCase().includes(query.toUpperCase())) {
+            return eventData;
+        }
+    })
+           
+    console.log(dataDisplay);
+    let ln = dataDisplay.length;
+    console.log(ln);
+    for(let i = 0 ; i<ln ; i++)
+    {
+        creatingCards(dataDisplay, i);
+    }
     
 
 }
 
+filterData();
+
+searchInput.addEventListener("input", () => {
+    cardContainer.innerHTML ='';
+    filterData();
+})
+
+//******************* sercah section  [ end ] ****************************
 
 
+// first page loader [start] ******************************
 function showLoader(cardDetails, i)
 {
+    // console.log(i);
     cardDetails[i].classList.add("skelaton");
 }
-
+// first page loader [end] ******************************
 
 function removeLoader(cardDetails, i)
 {  
     cardDetails[i].classList.remove("skelaton");
 }
 
-
+// generating dynamic elements [start] ********************************************
 async function gettingDataFromJson(allMotivationData, cardDetails, i)
 {
     showLoader(cardDetails , i);
-    // let str = allMotivationData.link;
     let link;
     fetch(allMotivationData.link)
     .then(res => {
-        link = res;
-       return res.json();
+        if (!res.ok) {
+            throw new Error('Server returned ' + response.status);
+          }
+        else
+        {
+            link = res;
+            return res.json();
+        }  
     })
     .then(data => {
-        // console.log(data);
         removeLoader(cardDetails , i);
         const cards = `<div class="cdheading">
-        <h1>${allMotivationData.catagory}<br> Motivation</h1>
+        <h1><span class="motivationTypeName">${allMotivationData.category}</span><br>Motivation</h1>
         <h2>Open</h2>
         </div>
         <img loading="lazy" class="imgLoad" src="${(data[0].image).slice(0)}" alt="MotivationImage">`
         cardDetails[i].insertAdjacentHTML("beforeend", cards);
         let imgLoad = document.querySelectorAll(".imgLoad");
       
-        imgLoad[i].addEventListener("load", () => {
-            // imgLoad[i].style.border= "2px solid red";
-        });
-
-      
-
+        // imgLoad[i].addEventListener("load", () => {
+        //     // imgLoad[i].style.border= "2px solid red";
+        // });
 
             cardDetails[i].addEventListener("click",() => {
-                // allMotivations(data[j])
-                
-         
-                    // console.log(data[j].image);
-                    // console.log(link.url);
                     allMotivations(link.url);
                     toggleHomePageAndSecondPage()
                 
             });
     })
+    .catch(error => {
+        console.error('There was a problem with the Fetch operation:', error);
+      });
  
 }
 
-// test.forEach(item =>{
+// generating dynamic elements [ end ] ********************************************
 
-//     test[item].addEventListener("click", () => {
-//         console.log(item);
-// })
-    
-// });
-
+let introPage = document.querySelector('.intropage');
 let homePage = document.querySelector('.home-page');
 let secondPage = document.querySelector('.second-page');
 let backToHomeBtn = document.querySelector('.backtohomebtn');
@@ -107,13 +130,18 @@ let nextMotvBtn = document.querySelector('#next-Motv');
 let prevMotvBtn = document.querySelector('#prev-Motv');
 let speakerBtn = document.querySelector('#speak');
 
+
+
 function toggleHomePageAndSecondPage()
 {
+    introPage.classList.add('intropage-OpenClose');
     homePage.classList.add('homepage-OpenClose');
     secondPage.classList.add('secondpage-OpenClose');
 }
 
-backToHomeBtn.addEventListener('click',() => {
+backToHomeBtn.addEventListener('click',(e) => {
+    e.preventDefault();
+    introPage.classList.remove('intropage-OpenClose');
     homePage.classList.remove('homepage-OpenClose');
     secondPage.classList.remove('secondpage-OpenClose');
 });
@@ -137,20 +165,22 @@ function allMotivations(userChoosedMotivationLink)
        });
 
           
-        nextMotvBtn.addEventListener('click',() => {
+        nextMotvBtn.addEventListener('click',(e) => {
+            e.preventDefault();
             secondPageLoadingAdd();
             nextMotv(data);
-            motivationImg.addEventListener("load", () => {
-                secondPageLoadingRemove();
-               });
+            secondPageLoadingRemove();
+            // motivationImg.addEventListener("load", () => {
+            //    });
         });
 
-        prevMotvBtn.addEventListener('click',() => {
+        prevMotvBtn.addEventListener('click',(e) => {
+            e.preventDefault();
             secondPageLoadingAdd();
             prevMotv(data);
-            motivationImg.addEventListener("load", () => {
-                secondPageLoadingRemove();
-               });
+            secondPageLoadingRemove();
+            // motivationImg.addEventListener("load", () => {
+            //    });
         });
 
              //[[[[[[[[[[[[[[[[[[[[************** Arrow detection section   ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
@@ -242,7 +272,6 @@ function nextMotv(motivationLines)
 
 function prevMotv(motivationLines)
 {
-    let mcount = 0; //number of motivations lines
     if(mcount>0)
     {
         mcount--;
