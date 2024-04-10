@@ -24,50 +24,72 @@
         <nav>
             <div class="search-section">
                 <input type="text" id="searchInput" placeholder="motivation name" class="search-input-box">
-                <!-- <i class='bx bx-search search-icon' id="searchBtn"></i> -->
+                <i class='bx bx-search search-icon' id="searchBtn"></i>
             </div>
         </nav>
     </header>
 
+    <div class="starting-loading">
+        <span class="leftTop"></span>
+        <span class="leftBottom"></span>
+        <span class="rightTop"></span>
+        <span class="rightBottom"></span>
+    </div>
+
+    <section class="intropage test">
+        <canvas id="canvas"></canvas>
+        <h1 id="introtext"></h1>
+        <h2>Don't give up until you achive the goel</h2>
+    </section>
     <main>
-        <section class="intropage">
-          <h1>Empowering Your Journey: Discovering the Fuel to Ignite Your Motivation</h1>
-        </section>
      
         <section class="home-page">
-            <!-- <h1 id="home-heading">Welcome to Motivations</h1> -->
-            <div class="cards-container">
-            </div>
+            <div class="cards-container"></div>
         </section>
 
-    <section class="second-page">
-        <div class="second-page-content">
-            <div class="left-side-img-container scPage_skeleton">
-                <img id="motivation-img" src="" alt="motivationImage">
-            </div>
-            <div class="right-side-motvcontainer">
-                <div class="headings-writer">
-                    <h1 id="motivation-heading" class="scPage_skeleton"></h1>
-                    <h2 id="motivation-writer" class="scPage_skeleton"></h2>
+        <section class="second-page">
+            <div class="second-page-content">
+                <div class="left-side-img-container scPage_skeleton">
+                    <img id="motivation-img" src="" alt="motivationImage">
                 </div>
-                <div class="prev-next-btn">
-                    <button class="btn" id="prev-Motv"><i class='bx bx-left-arrow-alt' ></i></button>
-                    <button class="btn" id="next-Motv"><i class='bx bx-right-arrow-alt' ></i></button>
-                    <button class="btn" id="speak"><i class='bx bx-volume-full'></i></button>
+                <div class="right-side-motvcontainer">
+                    <div class="headings-writer">
+                        <h1 id="motivation-heading" class="scPage_skeleton"></h1>
+                        <h2 id="motivation-writer" class="scPage_skeleton"></h2>
+                    </div>
+                    <div class="prev-next-btn">
+                        <button class="btn" id="prev-Motv"><i class='bx bx-left-arrow-alt' ></i></button>
+                        <button class="btn" id="next-Motv"><i class='bx bx-right-arrow-alt' ></i></button>
+                        <button class="btn" id="speak"><i class='bx bx-volume-full'></i></button>
+                    </div>
                 </div>
-            </div>
-       </div>
-       <button class="backtohomebtn">BACK TO HOME PAGE</button>
-    </section>
-    
+        </div>
+        <button class="backtohomebtn">BACK TO HOME PAGE</button>
+        </section>   
 </main>
     
-    <!-- <canvas></canvas> -->
+    <footer>
+        <div class="footer-container">
+            <div class="contact footer-flex-column">
+                <h1 class="footer-heading"><i class='bx bx-envelope'></i>Contact</h1>
+                <a href="mailto:rakesh246808@gmail.com">rakesh246808@gmail.com</a>
+                <a href="mailto:devapradhan130@gmail.com">devapradhan130@gmail.com</a>
+                <a href="mailto:Shuruchisinghrajput27@gmail.com">Shuruchisinghrajput27@gmail.com</a>
+            </div>
+            <div class="github footer-flex-column">
+                <h1 class="footer-heading"> <i class='bx bxl-github'></i>Github</h1>
+                <a href="https://github.com/RAKESH-PATEL57">https://github.com/RAKESH-PATEL57</a>
+                <a href="https://github.com/Muskan27Kumari">https://github.com/Muskan27Kumari</a>
+                <a href="https://github.com/Deva099">https://github.com/Deva099</a>
+            </div>
+            <!-- <a href="" class="logo"><img src="./logo//favicon_io/android-chrome-192x192.png" alt=""></a> -->
+        </div>
+    </footer>
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- <script src="./vanila.js"></script> -->
     <script src="./script.js"></script>
+    <script src="./canva.js"></script>
     <script type="module" src="./dynamicData.js"></script>
-    <!-- <script type="module" src="./Api.js"></script> -->
 </body>
 </html>
