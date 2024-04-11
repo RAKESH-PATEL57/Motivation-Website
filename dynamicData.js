@@ -12,7 +12,6 @@ var forStyle = 1;
 function creatingCards(dataDisplay, index)
 {     
     // console.log(numbers);        
-    var forStyle = 1;
         
     const cards = `<div class="card-details" style="--i:${forStyle++}"></div>`
     cardContainer.insertAdjacentHTML("beforeend", cards);
@@ -41,7 +40,7 @@ function filterData()
            
     console.log(dataDisplay);
     let ln = dataDisplay.length;
-    console.log(ln);
+    // console.log(ln);
     for(let i = 0 ; i<ln ; i++)
     {
         creatingCards(dataDisplay, i);
