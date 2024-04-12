@@ -30,4 +30,4 @@ setTimeout( () =>{
     mainContainer.style.display = "flex";
     footer.style.display = "flex";
 
-},0);
+},1500);
