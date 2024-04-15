@@ -1,8 +1,15 @@
 const intropage = document.querySelector(".intropage");
+
+// let fontSizeCanva = document.documentElement;
+let rootVariables = document.querySelector(":root");
+
+var canvaFontSize = getComputedStyle(rootVariables);
+
+
 window.addEventListener('load', function(){
     
     const canvas = document.getElementById("canvas");
-    console.log(intropage.offsetHeight);
+    // console.log(intropage.offsetHeight);
     const ctx = canvas.getContext('2d', {
         willReadFrequently: true
     });
@@ -67,8 +74,8 @@ window.addEventListener('load', function(){
               this.canvasWidth = canvasWidth;
               this.canvasHeight = canvasHeight;
               this.textX = this.canvasWidth / 2;
-              this.textY = this.canvasHeight / 2;
-              this.fontSize = 120;
+              this.textY = this.canvasHeight ;
+              this.fontSize = canvaFontSize.getPropertyValue('--fontSizeof-canvas');
               this.lineHeight = this.fontSize *  1.1;
               this.maxTextWidth = this.canvasWidth * 0.8;
               this.textInput = document.getElementById('introtext');
@@ -90,8 +97,8 @@ window.addEventListener('load', function(){
                 y: 0
               }
               intropage.addEventListener('mousemove', (e) =>{
-                this.mouse.x = e.clientX;
-                this.mouse.y = e.clientY;
+                this.mouse.x = e.clientX + 130;
+                this.mouse.y = e.clientY - 40;
                 // console.log(this.mouse.x, this.mouse.y);
               });
         }
@@ -104,8 +111,8 @@ window.addEventListener('load', function(){
             gradient.addColorStop(0.5, 'pink');
             gradient.addColorStop(0.7, 'red');
             this.context.fillStyle = gradient;
-            // this.context.font = this.fontSize + 'px Helvetica'
-            this.context.font = this.fontSize + 'px Impact'
+            // this.context.font = this.fontSize + 'px Impact'
+            this.context.font = this.fontSize + 'px Helvetica'
             this.context.textAlign = 'center';
             this.context.textBaseline = 'middle';
 
@@ -209,3 +216,7 @@ window.addEventListener('load', function(){
     });
     
 });
+
+window.addEventListener('resize', function(e){
+    e.preventDefault();    
+})
