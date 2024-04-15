@@ -4,11 +4,9 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    list-style: none;
     scroll-behavior: smooth;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
 
 :root
 {
@@ -17,7 +15,9 @@
     --main-color:aqua;
     --hover-font-color:black;
     --glow-rgb: 239 42 201;
+    --fontSizeof-canvas:120;
 }
+
 
 body
 {
@@ -46,9 +46,9 @@ body
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     height: 5vh;
     width: 5vw;
-    transform: translate(-50%, -50%);
     z-index: 1;
     /* border: 2px solid red; */
   }
@@ -59,17 +59,13 @@ body
     height: 100%;
     border: 3px solid;
     padding: 10px;
-    animation: rotatefirst 2s alternate-reverse infinite;
-    border-image-source: radial-gradient(
-      circle at top left,
-      aqua,
-      /* rgb(89, 255, 0), */ transparent 25%
-    );
+    animation: rotatefirst 1.5s alternate-reverse infinite;
+    border-image-source: radial-gradient(      circle at top left,      aqua,      /* rgb(89, 255, 0), */ transparent 25%    );
     border-image-slice: 1;
     z-index: 1;
     transition: 0.5s;
     filter: drop-shadow(10px 10px 10px aqua);
-  }
+}
   
   @keyframes rotatefirst {
     0% {
@@ -95,7 +91,7 @@ body
     height: 100%;
     border: 3px solid;
     padding: 10px;
-    animation: rotatesecond 2s alternate-reverse infinite;
+    animation: rotatesecond 1.5s alternate-reverse infinite;
     border-image-source: radial-gradient(
       circle at top right,
       aqua,
@@ -131,7 +127,7 @@ body
     height: 100%;
     border: 3px solid;
     padding: 10px;
-    animation: rotatethird 2s alternate-reverse infinite;
+    animation: rotatethird 1.5s alternate-reverse infinite;
     border-image-source: radial-gradient(
       circle at bottom right,
       aqua,
@@ -167,7 +163,7 @@ body
     height: 100%;
     border: 3px solid;
     padding: 10px;
-    animation: rotatefour 2s alternate-reverse infinite;
+    animation: rotatefour 1.5s alternate-reverse infinite;
     border-image-source: radial-gradient(
       circle at bottom left,
       aqua,
@@ -205,7 +201,8 @@ header
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    position: fixed;
+    position: sticky;
+    top: 0;
     backdrop-filter:blur(1.5px);
     z-index: 1000;
     /* border-bottom: 2px solid aqua; */
@@ -276,7 +273,6 @@ header nav .search-section
     /* border: 2px solid red; */
     font-size: 1.3rem;
     text-transform: capitalize;
-
 }
 
 .search-section .search-icon
@@ -310,8 +306,10 @@ main
 .intropage
 {
     position: relative;
+    /* margin-top: 5rem; */
     height: 60vh;
     width: 100%;
+    /* border: 2px solid red; */
     /* color: var(--bg-color); */
     color: white;
     font-size: 1.8rem;
@@ -329,23 +327,14 @@ main
 }
 
 .intropage canvas{
-    /* background: black; */
     position: absolute;
+    top: 20%;
     width: 55%;
     height: 55%;
     top: 50%;
     left: 50%;
-    /* border: 2px solid red; */
     transform: translate(-50%, -50%);
-}
-
-.intropage #introtext{
-    position: absolute;
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin: 10px;
-    z-index: 100;
-    font-size: 1rem;
+    /* border: 2px solid red; */
 }
 
 .intropage h2
@@ -356,7 +345,8 @@ main
     left: 50%;
     transform: translate(-50%, 0%);
     position: absolute;
-    width: max-content;
+    width: 50rem;
+    /* border: 2px solid red; */
 }
 
 /*[[[[[[[[[[[[[[[[[[[   Front-page section  [ end ] ********]]]]]]]]]]]]]]]]]]]]]]]*/
@@ -369,11 +359,9 @@ main
     position: relative;
     display: flex;
     flex-direction: column;
-    min-height:80%;
+    min-height:80vh;
     bottom: 0;
     width:100%;
-    justify-content: center;
-    align-items: center;
     padding-bottom: 5rem;
 }
 
@@ -385,7 +373,6 @@ main
 
 .home-page #home-heading
 {
-    /* border: 2px solid red; */
     padding: 5rem 0rem 1rem 0rem;
     color: white;
     font-size: 3rem;
@@ -398,14 +385,12 @@ main
 .cards-container
 {
     
-    /* width: 100%; */
+    width: 100%;
     gap: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     z-index: 10;
-    /* border: 2px solid aqua; */
 }
 
 .cards-container .card-details
@@ -454,12 +439,12 @@ main
 
 .cdheading h1
 {
-    bottom: 30%;
+    top: 50%;
 }
 
 .card-details:hover .cdheading h1
 {
-    bottom: -100%;
+    top:-20%
 }
 
 .card-details:hover .cdheading h2
@@ -484,8 +469,7 @@ main
     position: absolute;
     height: 0%;
     width: 100%;
-    /* border: 2px solid red; */
-    /* display: none; */
+
     transition: .3s linear;
     pointer-events: none;
     scale: 0;
@@ -495,7 +479,6 @@ main
 
 .second-page.secondpage-OpenClose
 {
-    display: block;
     height: 100%;
     opacity: 1;
     scale: 1;
@@ -533,7 +516,6 @@ main
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* border: 2px solid red; */
     gap: 3rem;
 }
 
@@ -605,7 +587,6 @@ main
 
 .skelaton {
     position: relative;
-    border: 2px solid red;
 }
 .skelaton::before {
     content: '';
@@ -656,6 +637,71 @@ main
 }
 
 /*[[[[[[[[[[[[[[[[[[[   Loading Part   [  end  ] ********]]]]]]]]]]]]]]]]]]]]]]]*/
+.alertMessageContainer
+{
+    opacity: 0;
+    scale: 0;
+    pointer-events: none;
+    transition: .3s ease-in-out;
+}
+
+.alertMessageContainer.alertMsgToggle
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left: 0;
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scale: 1;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.alertMessageContainer .alertContent
+{
+    min-height: 10rem;
+    width: 30rem;
+    border: 2px solid var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    color: var(--font-color);
+    background: #0a33389a;
+    border-radius: 1rem;
+    padding: 1rem .5rem;
+}
+
+.alertContent h1
+{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.alertContent #userQuery
+{
+    color: red;
+}
+
+.alertContent #alertBtn
+{
+    padding: .5rem 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+}
+
+
+/*[[[[[[[[[[[[[[[[[[[   Alert  section   [ Start ] ********]]]]]]]]]]]]]]]]]]]]]]]*/
+
+/*[[[[[[[[[[[[[[[[[[[   Alert  section   [  End ] ********]]]]]]]]]]]]]]]]]]]]]]]*/
+
 
 /*[[[[[[[[[[[[[[[[[[[   Footer section   [ Start ] ********]]]]]]]]]]]]]]]]]]]]]]]*/
 
@@ -679,6 +725,7 @@ footer .footer-container
     /* border: 2px solid red; */
     position: absolute;
     display: flex;
+    justify-content: center;
     /* justify-content: space-between; */
     gap: 10vw;
 }
@@ -724,15 +771,99 @@ footer .footer-container
 
 /*******************[[[[[[[[[[[[[[[[[[[[    responssive section   ]]]]]]]]]]]]]]]]]]]]]]]]]]]*******************/
 
-@media(max-width:470px)
+@media(max-width:1120px)
 {
-    header
+    .second-page .left-side-img-container
     {
-    
-        padding:0rem .3rem 0rem .8rem;
-        /* border: 2px solid red; */
+        height: 23rem;
+        width: 23rem;
+    }
+}
+@media(max-width:870px)
+{
+   html
+   {
+    font-size: 80%;
+   }
+
+   .cards-container .card-details
+    {
+        height: 20rem;
+        width: 20rem;
     }
 
+    .cdheading h1 .motivationTypeName
+    {
+        font-size: 2rem;
+    }
+
+    .cdheading h1, .cdheading h2
+    {
+      font-size: 2rem;
+    }
+}
+@media(max-width:800px)
+{
+
+    .intropage canvas{
+        top: 40%;
+    }
+
+    .second-page .left-side-img-container
+    {
+        height: 20rem;
+        width: 20rem;
+    }
+}
+@media(max-width:660px)
+{
+    :root
+    {
+        --fontSizeof-canvas:80;
+    }
+    .intropage h2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        bottom: 10%;
+    }
+    .second-page .second-page-content
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .second-page .right-side-motvcontainer
+    {
+        width: 90%;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.1rem;
+    }  
+}
+@media(max-width:560px)
+{
+    html
+    {
+     font-size: 70%;
+    }
+    .intropage h2{
+        display: inline-block;
+        text-align: center;
+        width: 30rem;
+    }
+}
+@media(max-width:470px)
+{
+    :root
+    {
+        --fontSizeof-canvas:60;
+    }
+    header
+    {
+        padding:0rem .3rem 0rem .8rem;
+    }
     header nav .search-section
     {
         border: 2px solid var(--main-color);
@@ -743,48 +874,22 @@ footer .footer-container
         justify-content: space-between;
         align-items: center;
     }
-
+    .second-page .second-page-content
+    {
+        padding:0rem;
+    }
     .second-page
     {
         padding-top: 4rem;
     }
-
-    .second-page .second-page-content
-    {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding:0rem;
-        /* border: 2px solid rgb(166, 0, 255); */
-    }
-
     .second-page .left-side-img-container
     {
         height: 15rem;
         width: 22.8rem;
-        /* border: 2px solid red; */
     }
-
-    .second-page .right-side-motvcontainer
-    {
-        width: 90%;
-        align-items: center;
-        gap: 1rem;
-        font-size: .8rem;
-    }
-    
     .second-page .backtohomebtn
     {
         padding: .5rem .8rem;
         bottom: 2%;
-    }
-
-}
-
-@media(max-width:720px)
-{
-    html
-    {
-        font-size: 40%;
     }
 }
