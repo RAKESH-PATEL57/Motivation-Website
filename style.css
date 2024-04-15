@@ -862,17 +862,17 @@ footer .footer-container
     }
     header
     {
-        padding:0rem .3rem 0rem .8rem;
+        padding:.5rem 1rem;
     }
     header nav .search-section
     {
         border: 2px solid var(--main-color);
         border-radius: 1rem;
         padding: .2rem .5rem;
-        width: 15rem;
-        display: flex;
+        width: 20rem;
+        /* display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: center; */
     }
     .second-page .second-page-content
     {
@@ -882,11 +882,34 @@ footer .footer-container
     {
         padding-top: 4rem;
     }
+
+    
+   .cards-container .card-details
+   {
+       height: 28rem;
+       width: 28rem;
+   }
+
+   .cdheading h1 .motivationTypeName
+   {
+       font-size: 2.5rem;
+   }
+
+   .cdheading h1, .cdheading h2
+   {
+     font-size: 2.5rem;
+   }
     .second-page .left-side-img-container
     {
-        height: 15rem;
-        width: 22.8rem;
+        height: 20rem;
+        width: 28rem;
     }
+
+    .second-page .right-side-motvcontainer
+    {
+        gap: 3rem;
+    }  
+
     .second-page .backtohomebtn
     {
         padding: .5rem .8rem;
