@@ -5,8 +5,12 @@ import test from "./ApiList.json" with {type: 'json'};
 
 //******************* sercah section  [start] ****************************
 let searchInput = document.querySelector('#searchInput');
-let cc = 0;
 let cardContainer = document.querySelector(".cards-container");
+
+let alertMessageContainer = document.querySelector(".alertMessageContainer");
+let alertBtn = document.querySelector("#alertBtn");
+let userQuery = document.querySelector("#userQuery");
+
 var forStyle = 1;
 
 function creatingCards(dataDisplay, index)
@@ -21,6 +25,15 @@ function creatingCards(dataDisplay, index)
 
     gettingDataFromJson(dataDisplay[index],cardDetails,index);
 
+}
+
+function showAlertMessage()
+{
+    alertMessageContainer.classList.add('alertMsgToggle');
+    userQuery.innerHTML = searchInput.value; 
+    alertBtn.addEventListener("click", () => {
+        alertMessageContainer.classList.remove('alertMsgToggle');
+    });
 }
 
 function filterData()
@@ -38,14 +51,20 @@ function filterData()
         }
     })
            
-    console.log(dataDisplay);
+    // console.log(dataDisplay);
     let ln = dataDisplay.length;
-    // console.log(ln);
-    for(let i = 0 ; i<ln ; i++)
+    if(ln == 0)
     {
-        creatingCards(dataDisplay, i);
+        showAlertMessage();
     }
-    
+    // console.log(ln);
+    else
+    {
+        for(let i = 0 ; i<ln ; i++)
+        {
+            creatingCards(dataDisplay, i);
+        }
+    }  
 
 }
 
@@ -223,14 +242,6 @@ let count = 0; // for speaker repeatedly speek
 
 count = 0;
  
-
-   
-
-    
-
-
-  
-
 
     //  //[[[[[[[[[[[[[[[[[[[[************** Arrow detection section   ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
     //  document.onkeydown = (event) => {
