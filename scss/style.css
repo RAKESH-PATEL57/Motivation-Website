@@ -60,11 +60,7 @@ body {
   transition: 0.5s;
   filter: drop-shadow(10px 10px 10px aqua);
   animation: rotatefirst 1.5s alternate-reverse infinite;
-  border-image-source: radial-gradient(
-    circle at top left,
-    aqua,
-    transparent 25%
-  );
+  border-image-source: radial-gradient(circle at top left, aqua, transparent 25%);
 }
 
 @keyframes rotatefirst {
@@ -95,11 +91,7 @@ body {
   transition: 0.5s;
   filter: drop-shadow(10px 10px 10px aqua);
   animation: rotatesecond 1.5s alternate-reverse infinite;
-  border-image-source: radial-gradient(
-    circle at top right,
-    aqua,
-    transparent 25%
-  );
+  border-image-source: radial-gradient(circle at top right, aqua, transparent 25%);
 }
 
 @keyframes rotatesecond {
@@ -130,11 +122,7 @@ body {
   transition: 0.5s;
   filter: drop-shadow(10px 10px 10px aqua);
   animation: rotatethird 1.5s alternate-reverse infinite;
-  border-image-source: radial-gradient(
-    circle at bottom right,
-    aqua,
-    transparent 25%
-  );
+  border-image-source: radial-gradient(circle at bottom right, aqua, transparent 25%);
 }
 
 @keyframes rotatethird {
@@ -165,11 +153,7 @@ body {
   transition: 0.5s;
   filter: drop-shadow(10px 10px 10px aqua);
   animation: rotatefour 1.5s alternate-reverse infinite;
-  border-image-source: radial-gradient(
-    circle at bottom left,
-    aqua,
-    transparent 25%
-  );
+  border-image-source: radial-gradient(circle at bottom left, aqua, transparent 25%);
 }
 
 @keyframes rotatefour {
@@ -199,11 +183,11 @@ header {
   position: sticky;
   top: 0;
   -webkit-backdrop-filter: blur(1.5px);
-  backdrop-filter: blur(1.5px);
-  z-index: 1000;
+          backdrop-filter: blur(1.5px);
+  z-index: 1200;
   width: 100%;
   -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   background: transparent;
   display: none;
 }
@@ -423,7 +407,7 @@ main {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   opacity: 0.3;
 }
 
@@ -466,7 +450,7 @@ main {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .second-page .right-side-motvcontainer {
@@ -611,7 +595,7 @@ main {
   top: 0;
   left: 0;
   -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   z-index: 1000;
   display: flex;
   justify-content: center;
@@ -642,7 +626,7 @@ main {
 }
 
 .alertContent #userQuery {
-  color: red;
+  color: var(--main-color);
 }
 
 .alertContent #alertBtn {
@@ -819,4 +803,4 @@ footer .footer-container {
     padding: 0.5rem 0.8rem;
     bottom: 2%;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
