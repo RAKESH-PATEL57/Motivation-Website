@@ -151,7 +151,7 @@ header {
     position: sticky;
     top: 0;
     backdrop-filter: blur(1.5px);
-    z-index: 1000;
+    z-index: 1200;
     width: 100%;
     backdrop-filter: blur(10px);
     background: transparent;
@@ -571,7 +571,7 @@ main {
 }
 
 .alertContent #userQuery {
-    color: red;
+    color: var(--main-color);
 }
 
 .alertContent #alertBtn {
