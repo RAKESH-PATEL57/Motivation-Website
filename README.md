@@ -19,7 +19,7 @@ Check out the live demo [here](https://rakesh-patel57.github.io/Motivation-Websi
 - **Responsive Design:** Ensures the website looks great on all devices, from desktops to mobile phones.
 - **Interactive Elements:** Engaging features that enhance the user experience.
 
-##Contributing
+## Contributing
 
 Contributions are welcome! If you have any suggestions or improvements, please create an issue or submit a pull request.
 
