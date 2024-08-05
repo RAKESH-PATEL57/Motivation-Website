@@ -5,6 +5,7 @@ import test from "../ApiList.json" with {type: 'json'};
 
 //******************* sercah section  [start] ****************************
 let searchInput = document.querySelector('#searchInput');
+
 let cardContainer = document.querySelector(".cards-container");
 
 let alertMessageContainer = document.querySelector(".alertMessageContainer");
@@ -30,8 +31,12 @@ function creatingCards(dataDisplay, index)
 function showAlertMessage()
 {
     alertMessageContainer.classList.add('alertMsgToggle');
+    searchInput.disabled = true;
+    document.body.classList.add("disableScrolling");
     userQuery.innerHTML = `"${searchInput.value}"`; 
     alertBtn.addEventListener("click", () => {
+        document.body.classList.remove("disableScrolling");
+        searchInput.disabled = false;
         alertMessageContainer.classList.remove('alertMsgToggle');
         searchInput.value = ""; 
         filterData();
