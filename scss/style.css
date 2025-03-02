@@ -260,10 +260,8 @@ header nav .search-section {
 /*[[[[[[[[[[[[[[[[[[[   Main-page section   [start] ********]]]]]]]]]]]]]]]]]]]]]]]*/
 main {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   min-height: 100vh;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
   gap: 1rem;
@@ -274,7 +272,7 @@ main {
 /*[[[[[[[[[[[[[[[[[[[   Front-page section   [start] ********]]]]]]]]]]]]]]]]]]]]]]]*/
 .intropage {
   position: relative;
-  height: 60vh;
+  height: 50vh;
   width: 100%;
   color: white;
   font-size: 1.8rem;
@@ -294,7 +292,7 @@ main {
   position: absolute;
   top: 20%;
   width: 55%;
-  height: 55%;
+  height: 60%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -318,8 +316,7 @@ main {
   justify-content: unset;
   align-items: unset;
   flex-direction: column;
-  min-height: 80vh;
-  bottom: 0;
+  height: 100%;
   width: 100%;
   padding-bottom: 5rem;
 }
@@ -414,25 +411,27 @@ main {
 /*[[[[[[[[[[[[[[[[[[[   Home-page section   [ end ] ********]]]]]]]]]]]]]]]]]]]]]]]*/
 /*************[[[[[[[[[[[ second page making   ]]]]]]]]]]]]]]]]]]]]]]************/
 .second-page {
-  position: absolute;
   height: 0%;
   width: 100%;
   transition: 0.3s linear;
   pointer-events: none;
   scale: 0;
   opacity: 0;
-  top: 0;
+  display: none;
 }
 
 .second-page.secondpage-OpenClose {
-  height: 100%;
+  height: 100vh;
+  position: absolute;
   opacity: 1;
   scale: 1;
   pointer-events: auto;
+  top: -10%;
+  display: block;
 }
 
 .second-page .second-page-content {
-  min-height: 93%;
+  min-height: 100%;
   width: 100%;
   padding: 0rem 2rem;
   display: flex;
@@ -465,7 +464,7 @@ main {
 }
 
 .right-side-motvcontainer .headings-writer {
-  color: white;
+  color: var(--font-color);
   height: 9rem;
   display: flex;
   justify-content: center;
@@ -589,10 +588,10 @@ main {
 }
 
 .alertMessageContainer.alertMsgToggle {
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
-  top: 9%;
+  top: 0;
   left: 0;
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
