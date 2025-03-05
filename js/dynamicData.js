@@ -1,10 +1,11 @@
 // creating dynamic datas or card from json file
 "use strict"
-import test from "./ApiList.json" with {type: 'json'};
+import test from "../ApiList.json" with {type: 'json'};
 // console.log(test)
 
 //******************* sercah section  [start] ****************************
 let searchInput = document.querySelector('#searchInput');
+
 let cardContainer = document.querySelector(".cards-container");
 
 let alertMessageContainer = document.querySelector(".alertMessageContainer");
@@ -15,7 +16,7 @@ var forStyle = 1;
 
 function creatingCards(dataDisplay, index)
 {     
-    // console.log(numbers);        
+    console.log(index);        
         
     const cards = `<div class="card-details" style="--i:${forStyle++}"></div>`
     cardContainer.insertAdjacentHTML("beforeend", cards);
@@ -30,9 +31,15 @@ function creatingCards(dataDisplay, index)
 function showAlertMessage()
 {
     alertMessageContainer.classList.add('alertMsgToggle');
-    userQuery.innerHTML = searchInput.value; 
+    searchInput.disabled = true;
+    document.body.classList.add("disableScrolling");
+    userQuery.innerHTML = `"${searchInput.value}"`; 
     alertBtn.addEventListener("click", () => {
+        document.body.classList.remove("disableScrolling");
+        searchInput.disabled = false;
         alertMessageContainer.classList.remove('alertMsgToggle');
+        searchInput.value = ""; 
+        filterData();
     });
 }
 
@@ -51,8 +58,8 @@ function filterData()
         }
     })
            
-    // console.log(dataDisplay);
     let ln = dataDisplay.length;
+  
     if(ln == 0)
     {
         showAlertMessage();
@@ -60,6 +67,7 @@ function filterData()
     // console.log(ln);
     else
     {
+        cardContainer.innerHTML = "";
         for(let i = 0 ; i<ln ; i++)
         {
             creatingCards(dataDisplay, i);
@@ -216,9 +224,7 @@ function allMotivations(userChoosedMotivationLink)
                     secondPageLoadingRemove();
                     break;
             }
-        }
-
-    
+        } 
     
     });
 
@@ -242,22 +248,6 @@ let count = 0; // for speaker repeatedly speek
 
 count = 0;
  
-
-    //  //[[[[[[[[[[[[[[[[[[[[************** Arrow detection section   ***********************]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
-    //  document.onkeydown = (event) => {
-    //     switch (event.keyCode) 
-    //     {
-    //         case 37:
-    //             loading();
-    //             prevMotv(motivationLines);
-    //             break;
-    //         case 39:
-    //             loading();
-    //             nextMotv(motivationLines);
-    //             break;
-    //     }
-    // }
-
 }
 
 let mcount = 0; //number of motivations lines

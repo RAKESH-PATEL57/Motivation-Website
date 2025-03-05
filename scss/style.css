@@ -60,11 +60,7 @@ body {
   transition: 0.5s;
   filter: drop-shadow(10px 10px 10px aqua);
   animation: rotatefirst 1.5s alternate-reverse infinite;
-  border-image-source: radial-gradient(
-    circle at top left,
-    aqua,
-    transparent 25%
-  );
+  border-image-source: radial-gradient(circle at top left, aqua, transparent 25%);
 }
 
 @keyframes rotatefirst {
@@ -95,11 +91,7 @@ body {
   transition: 0.5s;
   filter: drop-shadow(10px 10px 10px aqua);
   animation: rotatesecond 1.5s alternate-reverse infinite;
-  border-image-source: radial-gradient(
-    circle at top right,
-    aqua,
-    transparent 25%
-  );
+  border-image-source: radial-gradient(circle at top right, aqua, transparent 25%);
 }
 
 @keyframes rotatesecond {
@@ -130,11 +122,7 @@ body {
   transition: 0.5s;
   filter: drop-shadow(10px 10px 10px aqua);
   animation: rotatethird 1.5s alternate-reverse infinite;
-  border-image-source: radial-gradient(
-    circle at bottom right,
-    aqua,
-    transparent 25%
-  );
+  border-image-source: radial-gradient(circle at bottom right, aqua, transparent 25%);
 }
 
 @keyframes rotatethird {
@@ -165,11 +153,7 @@ body {
   transition: 0.5s;
   filter: drop-shadow(10px 10px 10px aqua);
   animation: rotatefour 1.5s alternate-reverse infinite;
-  border-image-source: radial-gradient(
-    circle at bottom left,
-    aqua,
-    transparent 25%
-  );
+  border-image-source: radial-gradient(circle at bottom left, aqua, transparent 25%);
 }
 
 @keyframes rotatefour {
@@ -199,11 +183,11 @@ header {
   position: sticky;
   top: 0;
   -webkit-backdrop-filter: blur(1.5px);
-  backdrop-filter: blur(1.5px);
-  z-index: 1000;
+          backdrop-filter: blur(1.5px);
+  z-index: 1200;
   width: 100%;
   -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   background: transparent;
   display: none;
 }
@@ -276,10 +260,8 @@ header nav .search-section {
 /*[[[[[[[[[[[[[[[[[[[   Main-page section   [start] ********]]]]]]]]]]]]]]]]]]]]]]]*/
 main {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   min-height: 100vh;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
   gap: 1rem;
@@ -290,7 +272,7 @@ main {
 /*[[[[[[[[[[[[[[[[[[[   Front-page section   [start] ********]]]]]]]]]]]]]]]]]]]]]]]*/
 .intropage {
   position: relative;
-  height: 60vh;
+  height: 50vh;
   width: 100%;
   color: white;
   font-size: 1.8rem;
@@ -310,7 +292,7 @@ main {
   position: absolute;
   top: 20%;
   width: 55%;
-  height: 55%;
+  height: 60%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -334,8 +316,7 @@ main {
   justify-content: unset;
   align-items: unset;
   flex-direction: column;
-  min-height: 80vh;
-  bottom: 0;
+  height: 100%;
   width: 100%;
   padding-bottom: 5rem;
 }
@@ -423,32 +404,34 @@ main {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   opacity: 0.3;
 }
 
 /*[[[[[[[[[[[[[[[[[[[   Home-page section   [ end ] ********]]]]]]]]]]]]]]]]]]]]]]]*/
 /*************[[[[[[[[[[[ second page making   ]]]]]]]]]]]]]]]]]]]]]]************/
 .second-page {
-  position: absolute;
   height: 0%;
   width: 100%;
   transition: 0.3s linear;
   pointer-events: none;
   scale: 0;
   opacity: 0;
-  top: 0;
+  display: none;
 }
 
 .second-page.secondpage-OpenClose {
-  height: 100%;
+  height: 100vh;
+  position: absolute;
   opacity: 1;
   scale: 1;
   pointer-events: auto;
+  top: -10%;
+  display: block;
 }
 
 .second-page .second-page-content {
-  min-height: 93%;
+  min-height: 100%;
   width: 100%;
   padding: 0rem 2rem;
   display: flex;
@@ -466,7 +449,7 @@ main {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .second-page .right-side-motvcontainer {
@@ -481,7 +464,7 @@ main {
 }
 
 .right-side-motvcontainer .headings-writer {
-  color: white;
+  color: var(--font-color);
   height: 9rem;
   display: flex;
   justify-content: center;
@@ -605,14 +588,14 @@ main {
 }
 
 .alertMessageContainer.alertMsgToggle {
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
   -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  z-index: 1000;
+          backdrop-filter: blur(20px);
+  z-index: 1500;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -620,6 +603,11 @@ main {
   scale: 1;
   pointer-events: auto;
   opacity: 1;
+}
+
+.disableScrolling {
+  height: 100vh;
+  overflow-y: hidden;
 }
 
 .alertMessageContainer .alertContent {
@@ -630,7 +618,6 @@ main {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  color: var(--font-color);
   background: rgba(10, 51, 56, 0.6039215686);
   border-radius: 1rem;
   padding: 1rem 0.5rem;
@@ -639,10 +626,11 @@ main {
 .alertContent h1 {
   text-align: center;
   font-size: 1.5rem;
+  color: var(--font-color);
 }
 
 .alertContent #userQuery {
-  color: red;
+  color: var(--main-color);
 }
 
 .alertContent #alertBtn {
@@ -819,4 +807,4 @@ footer .footer-container {
     padding: 0.5rem 0.8rem;
     bottom: 2%;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

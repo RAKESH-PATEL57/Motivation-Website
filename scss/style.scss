@@ -151,7 +151,7 @@ header {
     position: sticky;
     top: 0;
     backdrop-filter: blur(1.5px);
-    z-index: 1000;
+    z-index: 1200;
     width: 100%;
     backdrop-filter: blur(10px);
     background: transparent;
@@ -216,8 +216,11 @@ header nav .search-section {
 
 /*[[[[[[[[[[[[[[[[[[[   Main-page section   [start] ********]]]]]]]]]]]]]]]]]]]]]]]*/
 main {
-    @include flexpro(flex, center, center, column);
-    min-height: 100vh;
+    // @include flexpro(flex, unset, unset, column);
+    display: flex;
+    min-height:100vh;
+    flex-direction: column;
+    // border: 2px solid red;
     position: relative;
     overflow: hidden;
     gap: 1rem;
@@ -230,7 +233,7 @@ main {
 
 .intropage {
     position: relative;
-    height: 60vh;
+    height:50vh;
     width: 100%;
     color: white;
     font-size: 1.8rem;
@@ -250,7 +253,7 @@ main {
     position: absolute;
     top: 20%;
     width: 55%;
-    height: 55%;
+    height: 60%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -274,8 +277,9 @@ main {
 .home-page {
     position: relative;
     @include flexpro(flex, unset, unset, column);
-    min-height: 80vh;
-    bottom: 0;
+    height: 100%;
+    // bottom: 0;
+    // border: 2px solid red;
     width: 100%;
     padding-bottom: 5rem;
 }
@@ -370,28 +374,31 @@ main {
 
 /*************[[[[[[[[[[[ second page making   ]]]]]]]]]]]]]]]]]]]]]]************/
 .second-page {
-    position: absolute;
     height: 0%;
     width: 100%;
     transition: .3s linear;
     pointer-events: none;
     scale: 0;
     opacity: 0;
-    top: 0;
+    display: none;
 }
 
 .second-page.secondpage-OpenClose {
-    height: 100%;
+    height: 100vh;
+    position: absolute;
     opacity: 1;
     scale: 1;
     pointer-events: auto;
+    top: -10%;
+    display: block;
 }
 
 .second-page .second-page-content {
-    min-height: 93%;
+    min-height: 100%;
     width: 100%;
     padding: 0rem 2rem;
     @include flexpro(flex, space-between, center, unset);
+    // border: 2px solid red;
 }
 
 .second-page .left-side-img-container {
@@ -414,7 +421,7 @@ main {
 }
 
 .right-side-motvcontainer .headings-writer {
-    color: white;
+    color: var(--font-color);
     height: 9rem;
     @include flexpro(flex, center, unset, column);
     gap: 1rem;
@@ -529,6 +536,7 @@ main {
     }
 }
 
+
 /*[[[[[[[[[[[[[[[[[[[   Loading Part   [  end  ] ********]]]]]]]]]]]]]]]]]]]]]]]*/
 
 /*[[[[[[[[[[[[[[[[[[[   Alert  section   [ Start ] ********]]]]]]]]]]]]]]]]]]]]]]]*/
@@ -541,17 +549,23 @@ main {
 }
 
 .alertMessageContainer.alertMsgToggle {
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
     backdrop-filter: blur(20px);
-    z-index: 1000;
+    z-index: 1500;
     @include flexpro(flex, center, center, unset);
     scale: 1;
     pointer-events: auto;
     opacity: 1;
+}
+
+.disableScrolling 
+{
+    height: 100vh;
+    overflow-y: hidden;
 }
 
 .alertMessageContainer .alertContent {
@@ -559,7 +573,6 @@ main {
     width: 30rem;
     border: 2px solid var(--main-color);
     @include flexpro(flex, space-between, center, column);
-    color: var(--font-color);
     background: #0a33389a;
     border-radius: 1rem;
     padding: 1rem .5rem;
@@ -568,10 +581,11 @@ main {
 .alertContent h1 {
     text-align: center;
     font-size: 1.5rem;
+    color: var(--font-color);
 }
 
 .alertContent #userQuery {
-    color: red;
+    color: var(--main-color);
 }
 
 .alertContent #alertBtn {
