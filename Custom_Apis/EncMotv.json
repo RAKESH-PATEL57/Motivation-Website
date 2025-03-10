@@ -1,0 +1,71 @@
+[
+    {
+        "id": 1,
+        "image":"../images/Encourage/encourage-1.webp",
+        "motivationLine": "“I can’t tell you how many times I’ve been given a no, only to find that a better, brighter, bigger yes was right around the corner.”",
+        "writer": "Arlan Hamilton",
+        "category": "Encourage Motivation"
+    },
+    {
+        "id": 2,
+        "image":"../images/Encourage/encourage-2.webp",
+        "motivationLine": "“We need to accept that we won’t always make the right decisions, that we’ll screw up royally sometimes—understanding that failure is not the opposite of success, it’s part of success.” ",
+        "writer": "Ariana Huffington",
+        "category": "Encourage Motivation"
+    },
+    {
+        "id": 3,
+        "image":"../images/Encourage/encourage-3.webp",
+        "motivationLine": "“When everything seems to be going against you, remember that the airplane takes off against the wind, not with it.”",
+        "writer": "Henry Ford",
+        "category": "Encourage Motivation"
+    },
+    {
+        "id": 4,
+        "image":"../images/Encourage/encourage-4.webp",
+        "motivationLine": "“You cannot always control what goes on outside. But you can always control what goes on inside.”",
+        "writer": "Wayne Dyer",
+        "category": "Encourage Motivation"
+        
+    },
+    {
+        "id": 5,
+        "image":"../images/Encourage/encourage-5.webp",
+        "motivationLine": "“We are what we repeatedly do. Excellence, then, is not an act, but a habit.” ",
+        "writer": "Aristotle"
+    },
+    {
+        "id": 6,
+        "image":"../images/Encourage/encourage-6.webp",
+        "motivationLine": "“Start where you are. Use what you have. Do what you can.”",
+        "writer": "Arthur Ashe"
+    },
+    {
+        "id": 7,
+        "image":"../images/Encourage/encourage-7.webp",
+        "motivationLine": "“Hustle beats talent when talent doesn’t hustle.”",
+        "writer": "Ross Simmonds",
+        "category": "Encourage Motivation"
+    },
+    {
+        "id" : 8,
+        "image": "../images/Encourage/encourage-3.webp",
+        "motivationLine":"Success is not final, failure is not fatal: it is the courage to continue that counts.",
+        "writer":"Winston Churchill",
+        "category": "Encourage Motivation"
+    },
+    {
+        "id" : 9,
+        "image":"../images/Encourage/encourage-1.webp",
+        "motivationLine":"Through discipline comes freedom",
+        "writer":"Confucius",
+        "category": "Encourage Motivation"
+    },
+    {
+        "id":10,
+        "image":"../images/Encourage/encourage-2.webp",
+        "motivationLine":"Don’t be afraid to give up the good to go for the great." ,
+        "writer":"John D. Rockefeller",
+        "category": "Encourage Motivation"
+    }
+]

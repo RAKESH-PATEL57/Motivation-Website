@@ -1,0 +1,87 @@
+[
+    {
+        "id": 1,
+        "image":"../images/daily/daily-1.webp",
+        "motivationLine": "“Life can be much broader once you discover one simple fact: Everything around you that you call life was made up by people that were no smarter than you. And you can change it, you can influence it. … Once you learn that, you’ll never be the same again.” ",
+        "writer": "Steve Jobs",
+        "category": "Daily Motivation"
+    },
+    {
+        "id": 2,
+        "image":"../images/daily/daily-2.webp",
+        "motivationLine": "“Life is like riding a bicycle. To keep your balance, you must keep moving.”",
+        "writer": "Albert Einstein",
+        "category": "Daily Motivation"
+    },
+    {
+        "id": 3,
+        "image":"../images/daily/daily-3.webp",
+        "motivationLine": "“What you do speaks so loudly that I cannot hear what you say.” ",
+        "writer": "Ralph Waldo Emerson",
+        "category": "Daily Motivation"
+    },
+    {
+        "id": 4,
+        "image":"../images/daily/daily-4.webp",
+        "motivationLine": "“I have never let my schooling interfere with my education.”",
+        "writer": "Mark Twain",
+        "category": "Daily Motivation"
+    },
+    {
+        "id": 5,
+        "image":"../images/daily/daily-5.webp",
+        "motivationLine": "“If you can’t yet do great things, do small things in a great way.”",
+        "writer": "Napoleon Hill",
+        "category": "Daily Motivation"
+    },
+    {
+        "id": 6,
+        "image":"../images/daily/daily-6.webp",
+        "motivationLine": "“If you really want to do something, you’ll find a way. If you don’t, you’ll find an excuse.”",
+        "writer": "Jim Rohn",
+        "category": "Daily Motivation"
+    },
+    {
+        "id": 7,
+        "image":"../images/daily/daily-7.webp",
+        "motivationLine": "“Be sure you put your feet in the right place, then stand firm.”",
+        "writer": "Abraham Lincoln",
+        "category": "Daily Motivation"
+    },
+    {
+        "id": 8,
+        "image":"../images/daily/daily-8.webp",
+        "motivationLine": "“Live out of your imagination, not your history.”",
+        "writer": "Stephen Covey",
+        "category": "Daily Motivation"
+    },
+    {
+        "id": 9,
+        "image":"../images/daily/daily-9.webp",
+        "motivationLine": "“Do not wait for the perfect time and place to enter, for you are already onstage.”",
+        "writer": "Unknown",
+        "category": "Daily Motivation"
+    },
+    {
+        "id": 10,
+        "image":"../images/daily/daily-10.webp",
+        "motivationLine": "“The greater the difficulty, the more the glory in surmounting it.”",
+        "writer": "Epicurus ",
+        "category": "Daily Motivation"
+    },
+    {
+        "id":11,
+        "image":"../images/daily/daily-4.webp",
+        "motivationLine": "“Courage doesn’t always roar. Sometimes courage is a quiet voice at the end of the day saying, ‘I will try again tomorrow.’”",
+        "writer": "Mary Anne Radmacher",
+        "category": "Daily Motivation"
+    },
+    {
+        "id": 12,
+        "image":"../images/daily/daily-7.webp",
+        "motivationLine": "“If the decisions you make about where you invest your blood, sweat, and tears are not consistent with the person you aspire to be, you’ll never become that person.”",
+        "writer": "Clayton M. Christensen",
+        "category": "Daily Motivation"
+    }
+   
+]
