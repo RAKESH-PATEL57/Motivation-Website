@@ -121,7 +121,7 @@ showLoader(cardDetails , i);
         <h1><span class="motivationTypeName">${allMotivationData.category}</span><br>Motivation</h1>
         <h2>Open</h2>
         </div>
-        <img loading="lazy" class="imgLoad" src="${(data[0].image)}" alt="MotivationImage">`
+        <img loading="lazy" class="imgLoad" src="${(data[0].image).slice(1)}" alt="MotivationImage">`
         cardDetails[i].insertAdjacentHTML("beforeend", cards);
         // let imgLoad = document.querySelectorAll(".imgLoad");
       
@@ -183,7 +183,7 @@ function allMotivations(userChoosedMotivationLink)
     .then(data => {
     //    secondPageLoadingRemove();
     
-       motivationImg.src = (data[0].image);
+       motivationImg.src = (data[0].image).slice(1);
        motivationHeading.innerHTML = data[0].motivationLine;
        motivationWriter.innerHTML = data[0].writer;
        motivationImg.addEventListener("load", () => {
@@ -196,9 +196,9 @@ function allMotivations(userChoosedMotivationLink)
             secondPageLoadingAdd();
             nextMotv(data);
             secondPageLoadingRemove();
-            motivationImg.addEventListener("load", (ele) => {
-                 console.log(e);
-               });
+            // motivationImg.addEventListener("load", (ele) => {
+            //      console.log(e);
+            //    });
         });
 
         prevMotvBtn.addEventListener('click',(e) => {
@@ -260,7 +260,7 @@ function nextMotv(motivationLines)
     {
 
         mcount++;
-        motivationImg.src = (motivationLines[mcount].image);
+        motivationImg.src = (motivationLines[mcount].image).slice(1);
         motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
         motivationWriter.innerHTML = motivationLines[mcount].writer;
         
@@ -276,7 +276,7 @@ function prevMotv(motivationLines)
     if(mcount>0)
     {
         mcount--;
-        motivationImg.src = (motivationLines[mcount].image);
+        motivationImg.src = (motivationLines[mcount].image).slice(1);
         motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
         motivationWriter.innerHTML = motivationLines[mcount].writer;
     }
@@ -302,5 +302,5 @@ function secondPageLoadingRemove()
         scPgAllLoadingElmts.forEach(item=> {
             item.classList.remove('scPage_skeleton')
         });
-    },1000)
+    },500);
 }
