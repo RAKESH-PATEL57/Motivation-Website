@@ -16,7 +16,7 @@ var forStyle = 1;
 
 function creatingCards(dataDisplay, index)
 {     
-    console.log(index);        
+    // console.log(index);   
         
     const cards = `<div class="card-details" style="--i:${forStyle++}"></div>`
     cardContainer.insertAdjacentHTML("beforeend", cards);
@@ -121,7 +121,7 @@ showLoader(cardDetails , i);
         <h1><span class="motivationTypeName">${allMotivationData.category}</span><br>Motivation</h1>
         <h2>Open</h2>
         </div>
-        <img loading="lazy" class="imgLoad" src="${(data[0].image).slice(1)}" alt="MotivationImage">`
+        <img loading="lazy" class="imgLoad" src="${(data[0].image)}" alt="MotivationImage">`
         cardDetails[i].insertAdjacentHTML("beforeend", cards);
         // let imgLoad = document.querySelectorAll(".imgLoad");
       
@@ -183,7 +183,7 @@ function allMotivations(userChoosedMotivationLink)
     .then(data => {
     //    secondPageLoadingRemove();
     
-       motivationImg.src = (data[0].image).slice(1);
+       motivationImg.src = (data[0].image);
        motivationHeading.innerHTML = data[0].motivationLine;
        motivationWriter.innerHTML = data[0].writer;
        motivationImg.addEventListener("load", () => {
@@ -196,15 +196,16 @@ function allMotivations(userChoosedMotivationLink)
             secondPageLoadingAdd();
             nextMotv(data);
             secondPageLoadingRemove();
-            // motivationImg.addEventListener("load", () => {
-            //    });
+            motivationImg.addEventListener("load", (ele) => {
+                 console.log(e);
+               });
         });
 
         prevMotvBtn.addEventListener('click',(e) => {
             e.preventDefault();
-            secondPageLoadingAdd();
+            // secondPageLoadingAdd();
             prevMotv(data);
-            secondPageLoadingRemove();
+            // secondPageLoadingRemove();
             // motivationImg.addEventListener("load", () => {
             //    });
         });
@@ -237,7 +238,7 @@ let count = 0; // for speaker repeatedly speek
             let voices = window.speechSynthesis.getVoices();
             var motivationLineSpeaker = new SpeechSynthesisUtterance();
             
-            motivationLineSpeaker.voice = voices[0];
+            motivationLineSpeaker.voice = voices[1];
             motivationLineSpeaker.lang = voices.lang;
 
             motivationLineSpeaker.text = motivationHeading.innerHTML;
@@ -259,7 +260,7 @@ function nextMotv(motivationLines)
     {
 
         mcount++;
-        motivationImg.src = (motivationLines[mcount].image).slice(1);
+        motivationImg.src = (motivationLines[mcount].image);
         motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
         motivationWriter.innerHTML = motivationLines[mcount].writer;
         
@@ -275,7 +276,7 @@ function prevMotv(motivationLines)
     if(mcount>0)
     {
         mcount--;
-        motivationImg.src = (motivationLines[mcount].image).slice(1);
+        motivationImg.src = (motivationLines[mcount].image);
         motivationHeading.innerHTML = motivationLines[mcount].motivationLine;
         motivationWriter.innerHTML = motivationLines[mcount].writer;
     }
